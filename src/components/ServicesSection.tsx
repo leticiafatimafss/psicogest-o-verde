@@ -1,33 +1,23 @@
-import { Search, ClipboardCheck, ShieldCheck, Users, BarChart3 } from "lucide-react";
+import { Search, ShieldCheck, Users, BarChart3, ArrowRight } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
-const steps = [
+const services = [
   {
-    num: "01",
     icon: Search,
-    title: "Levantamento da exposição",
-    desc: "Identificamos os principais riscos e fragilidades da empresa.",
+    title: "Diagnóstico da exposição",
+    desc: "Identificamos riscos, fragilidades e pontos de atenção da empresa.",
   },
   {
-    num: "02",
-    icon: ClipboardCheck,
-    title: "Diagnóstico e direcionamento",
-    desc: "Definimos o que precisa ser ajustado para atender à NR-01.",
-  },
-  {
-    num: "03",
     icon: ShieldCheck,
     title: "Estruturação da adequação",
-    desc: "Organizamos processos, responsáveis e frentes de ação.",
+    desc: "Organizamos processos, responsáveis e frentes de ação alinhadas à NR-01.",
   },
   {
-    num: "04",
     icon: Users,
     title: "Apoio à liderança",
     desc: "Preparamos lideranças e áreas-chave para atuar com mais segurança.",
   },
   {
-    num: "05",
     icon: BarChart3,
     title: "Acompanhamento contínuo",
     desc: "Monitoramos a evolução e sustentamos a conformidade no tempo.",
@@ -52,33 +42,34 @@ const ServicesSection = () => {
           </h2>
 
           <p className="reveal reveal-delay-2 text-muted-foreground mt-4 text-lg leading-relaxed max-w-2xl mx-auto">
-            Uma atuação prática para estruturar a adequação, reduzir riscos e fortalecer a segurança da empresa.
+            Uma atuação prática para reduzir riscos, estruturar a adequação e fortalecer a segurança da empresa.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-5">
-          {steps.map((s, i) => (
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-6xl mx-auto">
+          {services.map((item, i) => (
             <div
-              key={s.num}
-              className={`reveal reveal-delay-${i + 1} bg-background rounded-3xl p-6 border border-border/60 shadow-sm hover:shadow-md transition-all duration-300 relative overflow-hidden`}
+              key={item.title}
+              className={`reveal reveal-delay-${i + 1} group relative bg-white rounded-[28px] border border-border/60 p-8 md:p-9 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 overflow-hidden`}
             >
-              <div className="absolute top-0 left-0 w-full h-1 bg-accent/70" />
+              <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-accent/80 via-accent to-accent/50" />
 
-              <div className="flex items-center justify-between mb-5">
-                <div className="w-11 h-11 rounded-2xl bg-primary flex items-center justify-center">
-                  <s.icon className="text-primary-foreground" size={20} />
+              <div className="flex items-start justify-between gap-4 mb-8">
+                <div className="w-16 h-16 rounded-2xl bg-primary flex items-center justify-center shadow-sm">
+                  <item.icon className="text-primary-foreground" size={26} />
                 </div>
-                <span className="text-sm font-semibold text-accent tracking-wider">
-                  {s.num}
-                </span>
+
+                <div className="w-10 h-10 rounded-full border border-accent/20 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all">
+                  <ArrowRight size={18} />
+                </div>
               </div>
 
-              <h3 className="font-heading text-base font-semibold text-foreground mb-2 leading-snug">
-                {s.title}
+              <h3 className="font-heading text-2xl font-semibold text-foreground mb-4 leading-snug max-w-[16ch]">
+                {item.title}
               </h3>
 
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {s.desc}
+              <p className="text-muted-foreground text-lg leading-relaxed max-w-[34ch]">
+                {item.desc}
               </p>
             </div>
           ))}
