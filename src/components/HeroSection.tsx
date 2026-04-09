@@ -1,51 +1,44 @@
 import { ArrowRight } from "lucide-react";
 
+const highlights = [
+  "Atuação prática",
+  "Foco em conformidade",
+  "Aplicação real na empresa",
+];
+
 const HeroSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center hero-bg overflow-hidden">
-      {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-accent/10 blob animate-float" />
-      <div
-        className="absolute bottom-32 left-10 w-48 h-48 bg-primary-foreground/5 blob-2 animate-float"
-        style={{ animationDelay: "2s" }}
-      />
-      <div
-        className="absolute top-1/2 right-1/4 w-32 h-32 rounded-full bg-accent/5 animate-float"
-        style={{ animationDelay: "4s" }}
-      />
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[linear-gradient(135deg,#0f2d22_0%,#174734_45%,#1f6a48_100%)]">
+      {/* Glow layers */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.08),transparent_28%),radial-gradient(circle_at_80%_30%,rgba(212,175,55,0.10),transparent_30%),radial-gradient(circle_at_50%_85%,rgba(255,255,255,0.05),transparent_24%)]" />
+      <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: "radial-gradient(circle at 1px 1px, white 1px, transparent 0)", backgroundSize: "44px 44px" }} />
 
-      {/* Subtle grid pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.03]"
-        style={{
-          backgroundImage:
-            "radial-gradient(circle at 1px 1px, white 1px, transparent 0)",
-          backgroundSize: "48px 48px",
-        }}
-      />
+      <div className="absolute top-24 right-[8%] h-72 w-72 rounded-full bg-white/5 blur-3xl" />
+      <div className="absolute bottom-16 left-[6%] h-64 w-64 rounded-full bg-accent/10 blur-3xl" />
 
       <div className="container relative z-10 pt-28 pb-20">
-        <div className="max-w-4xl mx-auto text-center space-y-8">
-          <div className="inline-flex items-center gap-2 border border-primary-foreground/15 rounded-full px-5 py-2 text-sm text-primary-foreground/70 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
-            Adequação à NR-01 e gestão de riscos psicossociais
+        <div className="max-w-5xl mx-auto text-center">
+          <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-5 py-2 text-sm text-white/75 backdrop-blur-sm">
+            <span className="w-2 h-2 rounded-full bg-accent" />
+            NR-01 e gestão de riscos psicossociais
           </div>
 
-          <h1 className="font-heading text-4xl md:text-5xl lg:text-[3.6rem] font-bold text-primary-foreground leading-[1.1] tracking-tight">
-            Menos risco de multa.{" "}
-            <span className="gold-gradient-text">Mais controle e segurança para sua empresa.</span>
+          <h1 className="mt-8 font-heading text-4xl md:text-6xl lg:text-[4.4rem] font-bold text-white leading-[1.02] tracking-tight max-w-5xl mx-auto">
+            Reduza o risco de multa.
+            <br />
+            <span className="gold-gradient-text">Ganhe controle e segurança na sua empresa.</span>
           </h1>
 
-          <p className="text-lg md:text-xl text-primary-foreground/70 max-w-3xl mx-auto font-body leading-relaxed">
-            Apoiamos empresas na identificação, estruturação e tratamento dos riscos psicossociais
-            com uma atuação prática, técnica e estratégica, promovendo conformidade com a NR-01,
-            redução de exposição trabalhista e fortalecimento da gestão interna.
+          <p className="mt-6 text-lg md:text-2xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Adequação à NR-01 com método, clareza e segurança.
+            <br className="hidden md:block" />
+            Sem improviso. Sem exposição desnecessária.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-2">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center pt-10">
             <a
               href="#contato"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:shadow-lg hover:scale-[1.02] transition-all"
+              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all"
             >
               Solicitar diagnóstico
               <ArrowRight size={18} />
@@ -53,36 +46,23 @@ const HeroSection = () => {
 
             <a
               href="#servicos"
-              className="inline-flex items-center justify-center gap-2 border border-primary-foreground/20 text-primary-foreground px-8 py-4 rounded-xl font-medium text-base hover:bg-primary-foreground/5 transition-all"
+              className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-8 py-4 rounded-xl font-medium text-base hover:bg-white/10 transition-all backdrop-blur-sm"
             >
-              Entender a solução
+              Como funciona
             </a>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 pt-12 max-w-3xl mx-auto">
-            {[
-              { value: "NR-01", label: "adequação com direcionamento prático" },
-              { value: "Menos risco", label: "redução de exposição e passivos" },
-              { value: "Mais controle", label: "gestão estruturada e preventiva" },
-            ].map((s) => (
-              <div
-                key={s.value}
-                className="text-center border border-white/10 rounded-2xl px-6 py-5 bg-white/5 backdrop-blur-sm"
-              >
-                <div className="text-2xl md:text-3xl font-bold text-primary-foreground font-heading">
-                  {s.value}
-                </div>
-                <div className="text-xs text-primary-foreground/50 mt-2 uppercase tracking-wider leading-relaxed">
-                  {s.label}
-                </div>
+          <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 pt-8 text-sm md:text-base text-white/65">
+            {highlights.map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent" />
+                <span>{item}</span>
               </div>
             ))}
           </div>
         </div>
       </div>
 
-      {/* Bottom wave */}
       <div className="absolute bottom-0 left-0 right-0">
         <svg viewBox="0 0 1440 80" fill="none" className="w-full">
           <path
