@@ -12,21 +12,27 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-28 bg-background relative overflow-hidden">
+    <section id="contato" className="py-24 bg-background relative overflow-hidden">
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-light rounded-full translate-x-1/3 translate-y-1/3" />
 
       <div ref={ref} className="container relative">
-        <div className="max-w-2xl mx-auto text-center mb-20">
-          <span className="reveal text-xs font-semibold text-accent uppercase tracking-[0.25em]">Contato</span>
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="reveal text-xs font-semibold text-accent uppercase tracking-[0.25em]">
+            Fale com a Essência Psi
+          </span>
+
           <h2 className="reveal reveal-delay-1 font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mt-4 leading-tight">
-            Vamos <span className="italic gold-gradient-text">transformar</span> essa realidade?
+            Dê o primeiro passo para reduzir riscos e fortalecer a
+            <span className="gold-gradient-text"> conformidade da sua empresa</span>
           </h2>
-          <p className="reveal reveal-delay-2 text-muted-foreground mt-6 text-lg leading-relaxed font-light">
-            Entenda como podemos apoiar sua empresa na gestão psicossocial de forma clara, segura e alinhada às normas.
+
+          <p className="reveal reveal-delay-2 text-muted-foreground mt-5 text-lg leading-relaxed max-w-2xl mx-auto">
+            Entenda como estruturar a adequação à NR-01 e a gestão dos riscos psicossociais
+            com mais clareza, método e respaldo técnico.
           </p>
         </div>
 
-        <div className="reveal reveal-delay-2 grid lg:grid-cols-5 gap-12 max-w-5xl mx-auto">
+        <div className="reveal reveal-delay-2 grid lg:grid-cols-5 gap-10 max-w-5xl mx-auto">
           <div className="lg:col-span-2 space-y-6">
             {[
               { icon: Mail, label: "Email", value: "essenciapsic3@gmail.com" },
@@ -49,9 +55,11 @@ const ContactSection = () => {
             <div className="mt-4 p-5 bg-gold-muted rounded-2xl border border-accent/10">
               <p className="text-sm text-foreground font-medium mb-1 flex items-center gap-2">
                 <ArrowRight size={14} className="text-accent" />
-                Retorno rápido
+                Diagnóstico inicial
               </p>
-              <p className="text-sm text-muted-foreground">Respondemos em até 24h úteis.</p>
+              <p className="text-sm text-muted-foreground">
+                Converse com a gente e entenda o nível de exposição da sua empresa.
+              </p>
             </div>
           </div>
 
@@ -61,18 +69,27 @@ const ContactSection = () => {
                 <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-4">
                   <Send className="text-primary" size={28} />
                 </div>
-                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">Mensagem enviada!</h3>
-                <p className="text-muted-foreground">Entraremos em contato em breve.</p>
+                <h3 className="font-heading text-xl font-semibold text-foreground mb-2">
+                  Solicitação enviada!
+                </h3>
+                <p className="text-muted-foreground">
+                  Em breve entraremos em contato para entender sua necessidade.
+                </p>
               </div>
             ) : (
-              <form onSubmit={handleSubmit} className="bg-background rounded-2xl p-8 border border-border/50 shadow-sm space-y-5">
+              <form
+                onSubmit={handleSubmit}
+                className="bg-background rounded-2xl p-8 border border-border/50 shadow-sm space-y-5"
+              >
                 {[
                   { label: "Nome *", type: "text", placeholder: "Seu nome completo", required: true },
                   { label: "Telefone *", type: "tel", placeholder: "(11) 99999-9999", required: true },
-                  { label: "Empresa", type: "text", placeholder: "Nome da empresa", required: false },
+                  { label: "Empresa *", type: "text", placeholder: "Nome da empresa", required: true },
                 ].map((field) => (
                   <div key={field.label}>
-                    <label className="text-sm font-medium text-foreground mb-1.5 block">{field.label}</label>
+                    <label className="text-sm font-medium text-foreground mb-1.5 block">
+                      {field.label}
+                    </label>
                     <input
                       required={field.required}
                       type={field.type}
@@ -81,19 +98,23 @@ const ContactSection = () => {
                     />
                   </div>
                 ))}
+
                 <div>
-                  <label className="text-sm font-medium text-foreground mb-1.5 block">Mensagem</label>
+                  <label className="text-sm font-medium text-foreground mb-1.5 block">
+                    Mensagem
+                  </label>
                   <textarea
                     rows={4}
                     className="w-full px-4 py-3 rounded-xl border border-input bg-background text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"
-                    placeholder="Como podemos ajudar sua empresa?"
+                    placeholder="Conte brevemente o cenário da sua empresa ou a sua necessidade."
                   />
                 </div>
+
                 <button
                   type="submit"
-                  className="w-full bg-primary text-primary-foreground py-3.5 rounded-full font-semibold text-sm hover:opacity-90 transition-all hover:shadow-md"
+                  className="w-full bg-primary text-primary-foreground py-3.5 rounded-xl font-semibold text-sm hover:opacity-90 transition-all hover:shadow-md"
                 >
-                  Solicitar diagnóstico gratuito
+                  Solicitar diagnóstico
                 </button>
               </form>
             )}
