@@ -80,21 +80,16 @@ export default {
           from: { opacity: "0", transform: "translateY(30px)" },
           to: { opacity: "1", transform: "translateY(0)" },
         },
-        "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "1" },
-        },
-        "count-up": {
-          from: { opacity: "0", transform: "scale(0.8)" },
-          to: { opacity: "1", transform: "scale(1)" },
+        "float": {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "fade-up": "fade-up 0.7s ease-out forwards",
-        "fade-in": "fade-in 0.5s ease-out forwards",
-        "count-up": "count-up 0.6s ease-out forwards",
+        "float": "float 6s ease-in-out infinite",
       },
     },
   },
