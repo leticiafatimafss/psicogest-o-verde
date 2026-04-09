@@ -1,49 +1,81 @@
-import { TrendingUp, Zap, FolderCheck, ShieldCheck } from "lucide-react";
+import { ShieldCheck, FileCheck2, Radar, Briefcase } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 const results = [
-  { icon: TrendingUp, title: "Redução de Afastamentos", desc: "Atuação preventiva sobre fatores de risco, reduzindo significativamente os afastamentos por saúde mental." },
-  { icon: Zap, title: "Aumento da Produtividade", desc: "Equipes mais saudáveis e engajadas, com redução do presenteísmo e melhoria de performance." },
-  { icon: FolderCheck, title: "Gestão Organizada", desc: "Processos estruturados para identificar, acompanhar e gerenciar riscos psicossociais continuamente." },
-  { icon: ShieldCheck, title: "Conformidade Legal", desc: "Adequação completa às normas com registro e acompanhamento das ações implementadas." },
+  {
+    icon: ShieldCheck,
+    title: "Menos exposição jurídica",
+    desc: "A empresa passa a atuar com mais estrutura, prevenção e registro, reduzindo vulnerabilidades trabalhistas e regulatórias.",
+  },
+  {
+    icon: FileCheck2,
+    title: "Mais conformidade com a NR-01",
+    desc: "A adequação deixa de ser apenas intenção e passa a ter direcionamento técnico, processo e acompanhamento prático.",
+  },
+  {
+    icon: Radar,
+    title: "Mais controle e previsibilidade",
+    desc: "Com uma gestão estruturada, a empresa identifica riscos com mais clareza e age antes que eles se agravem.",
+  },
+  {
+    icon: Briefcase,
+    title: "Mais segurança para a operação",
+    desc: "Lideranças, áreas internas e empresa passam a atuar com mais alinhamento, critério e respaldo organizacional.",
+  },
 ];
 
 const ResultsSection = () => {
   const ref = useScrollReveal();
 
   return (
-    <section id="resultados" className="py-28 bg-green-light relative overflow-hidden">
+    <section id="resultados" className="py-24 bg-green-light relative overflow-hidden">
       <div className="absolute top-10 right-0 w-48 h-48 bg-accent/5 blob animate-float" />
 
       <div ref={ref} className="container relative">
-        <div className="max-w-2xl mx-auto text-center mb-20">
-          <span className="reveal text-xs font-semibold text-accent uppercase tracking-[0.25em]">Resultados Entregues</span>
+        <div className="max-w-3xl mx-auto text-center mb-16">
+          <span className="reveal text-xs font-semibold text-accent uppercase tracking-[0.25em]">
+            O que sua empresa ganha
+          </span>
+
           <h2 className="reveal reveal-delay-1 font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mt-4 leading-tight">
-            Impactos reais para o <span className="italic gold-gradient-text">seu negócio</span>
+            O impacto vai além da <span className="gold-gradient-text">conformidade</span>
           </h2>
-          <p className="reveal reveal-delay-2 text-muted-foreground mt-6 text-lg leading-relaxed font-light">
-            Entregas estruturadas para gerar resultados mensuráveis, reduzir riscos e fortalecer a cultura organizacional.
+
+          <p className="reveal reveal-delay-2 text-muted-foreground mt-5 text-lg leading-relaxed max-w-2xl mx-auto">
+            Nossa atuação ajuda a empresa a sair da exposição e avançar para uma estrutura mais preventiva, organizada e segura.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {results.map((r, i) => (
-            <div key={r.title} className={`reveal reveal-delay-${i + 1} bg-background rounded-2xl p-8 card-modern border border-border/50 text-center group`}>
+            <div
+              key={r.title}
+              className={`reveal reveal-delay-${i + 1} bg-background rounded-2xl p-8 card-modern border border-border/50 text-center group`}
+            >
               <div className="w-16 h-16 rounded-2xl bg-gold-muted flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-300">
                 <r.icon className="text-accent" size={28} />
               </div>
-              <h3 className="font-heading text-lg font-semibold text-foreground mb-3">{r.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">{r.desc}</p>
+
+              <h3 className="font-heading text-lg font-semibold text-foreground mb-3">
+                {r.title}
+              </h3>
+
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                {r.desc}
+              </p>
             </div>
           ))}
         </div>
 
-        <blockquote className="reveal reveal-delay-3 mt-20 max-w-2xl mx-auto text-center relative">
-          <div className="absolute -top-6 left-1/2 -translate-x-1/2 text-6xl text-accent/20 font-heading">"</div>
-          <p className="font-heading text-xl md:text-2xl italic text-foreground/80 leading-relaxed">
-            Cuidar da saúde mental dos colaboradores não é custo — é o investimento mais inteligente que uma empresa pode fazer.
-          </p>
-        </blockquote>
+        <div className="reveal reveal-delay-3 mt-16 max-w-4xl mx-auto">
+          <div className="bg-background border border-border/60 rounded-3xl px-8 py-10 text-center shadow-sm">
+            <p className="font-heading text-xl md:text-2xl text-foreground leading-relaxed">
+              Mais do que atender uma exigência, sua empresa passa a ter
+              <span className="gold-gradient-text"> estrutura, prevenção e segurança </span>
+              para lidar com um tema cada vez mais crítico.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   );
