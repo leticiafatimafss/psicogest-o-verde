@@ -18,16 +18,16 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="mt-8 font-heading text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
-            Sua empresa está exposta.
+            Reduza o risco de multa.
             <br />
             <span className="gold-gradient-hero">
-              Você só ainda não tem visibilidade disso.
+              Ganhe controle e segurança na sua empresa.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Estruturamos a adequação à NR-01 com método, processo e acompanhamento real.
+            Estruturamos a adequação à NR-01 com método, clareza e aplicação real na operação.
           </p>
 
           {/* CTA */}
@@ -44,13 +44,13 @@ const HeroSection = () => {
               href="#servicos"
               className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-8 py-4 rounded-xl font-medium text-base hover:bg-white/10 transition-all backdrop-blur-sm"
             >
-              Entender método
+              Como funciona
             </a>
           </div>
 
           {/* Prova leve */}
           <div className="pt-8 text-sm text-white/60">
-            Atuação prática • Estruturação completa • Aplicação real
+            Método prático • Estruturação completa • Aplicação na empresa
           </div>
         </div>
       </div>
