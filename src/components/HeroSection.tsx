@@ -20,7 +20,7 @@ const HeroSection = () => {
           <h1 className="mt-8 font-heading text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
             Sua empresa está exposta.
             <br />
-            <span className="gold-gradient-text">
+            <span className="gold-gradient-hero">
               Você só ainda não tem visibilidade disso.
             </span>
           </h1>
