@@ -25,7 +25,7 @@
     --muted-foreground: 160 8% 50%;
 
     /* Dourado principal */
-    --accent: 40 34% 47%;
+    --accent: 40 30% 44%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 72% 55%;
@@ -33,16 +33,16 @@
 
     --border: 45 10% 90%;
     --input: 45 10% 88%;
-    --ring: 40 34% 47%;
+    --ring: 40 30% 44%;
 
     --radius: 1rem;
 
     /* Paleta dourada refinada */
-    --gold: 40 34% 47%;
-    --gold-dark: 38 32% 34%;
-    --gold-light: 42 42% 66%;
-    --gold-soft: 43 35% 82%;
-    --gold-muted: 42 28% 92%;
+    --gold: 40 30% 44%;
+    --gold-dark: 38 28% 32%;
+    --gold-light: 42 36% 63%;
+    --gold-soft: 43 30% 80%;
+    --gold-muted: 42 24% 92%;
 
     --green-light: 150 25% 96%;
     --green-soft: 150 30% 90%;
@@ -55,7 +55,7 @@
     );
 
     --card-shadow: 0 2px 10px hsl(0 0% 0% / 0.05), 0 8px 24px hsl(0 0% 0% / 0.04);
-    --card-shadow-hover: 0 8px 24px hsl(40 34% 47% / 0.14), 0 18px 40px hsl(0 0% 0% / 0.06);
+    --card-shadow-hover: 0 8px 24px hsl(40 30% 44% / 0.14), 0 18px 40px hsl(0 0% 0% / 0.06);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -118,14 +118,26 @@
     transform: translateY(-4px);
   }
 
+  /* Dourado do restante do site */
   .gold-gradient-text {
     @apply bg-clip-text text-transparent;
     background-image: linear-gradient(
       135deg,
-      #c39a4a 0%,
-      #a97a28 38%,
-      #e3c57a 68%,
-      #f2dfab 100%
+      #b8964a 0%,
+      #d9be7a 42%,
+      #a8843c 100%
+    );
+  }
+
+  /* Dourado específico para fundo escuro do hero */
+  .gold-gradient-hero {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(
+      135deg,
+      #d8bf86 0%,
+      #f1dfb0 40%,
+      #c7a65f 72%,
+      #b58a3a 100%
     );
   }
 
@@ -136,10 +148,10 @@
   .gold-gradient-bg {
     background: linear-gradient(
       135deg,
-      #c39a4a 0%,
-      #a97a28 38%,
-      #d8b566 70%,
-      #f0dca4 100%
+      #b8964a 0%,
+      #caa45a 38%,
+      #dfc37f 70%,
+      #f0ddb0 100%
     );
   }
 
