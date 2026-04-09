@@ -4,7 +4,7 @@ import { useScrollReveal } from "@/hooks/useScrollReveal";
 const services = [
   {
     icon: Search,
-    title: "Diagnóstico da exposição",
+    title: "Diagnóstico de riscos",
     desc: "Mapeamos riscos, fragilidades e pontos críticos da empresa.",
   },
   {
@@ -39,8 +39,8 @@ const ServicesSection = () => {
           </span>
 
           <h2 className="reveal reveal-delay-1 font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mt-4 leading-tight">
-            Um método claro para sair da{" "}
-            <span className="gold-gradient-text">exposição</span>
+            Um método claro para estruturar e{" "}
+            <span className="gold-gradient-text">reduzir riscos na empresa</span>
           </h2>
 
           <p className="reveal reveal-delay-2 text-muted-foreground mt-4 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
