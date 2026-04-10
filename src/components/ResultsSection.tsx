@@ -25,7 +25,6 @@ const ResultsSection = () => {
   return (
     <section className="py-24 bg-secondary/40">
       <div className="container max-w-6xl text-center">
-
         <span className="text-xs font-semibold text-accent uppercase tracking-[0.25em]">
           Resultados para a empresa
         </span>
@@ -47,7 +46,6 @@ const ResultsSection = () => {
               <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-3">
                 {item.title}
               </h3>
-
               <p className="text-muted-foreground leading-relaxed">
                 {item.desc}
               </p>
