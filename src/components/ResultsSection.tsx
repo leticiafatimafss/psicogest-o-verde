@@ -1,56 +1,71 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 const results = [
   {
-    title: "Redução de absenteísmo",
-    desc: "Estratégias estruturadas para diminuir impactos do adoecimento e das ausências no ambiente de trabalho.",
+    title: "Mais conformidade",
+    desc: "A adequação à NR-01 passa a ter direção, estrutura e acompanhamento.",
   },
   {
-    title: "Diminuição de afastamentos",
-    desc: "Atuação preventiva para reduzir fatores organizacionais que comprometem a saúde mental dos colaboradores.",
+    title: "Mais controle",
+    desc: "A empresa ganha previsibilidade e reduz decisões no improviso.",
   },
   {
-    title: "Melhoria do clima organizacional",
-    desc: "Ambientes mais saudáveis, relações mais equilibradas e maior percepção de apoio organizacional.",
-  },
-  {
-    title: "Fortalecimento da cultura organizacional",
-    desc: "Práticas alinhadas à responsabilidade corporativa, ao cuidado com pessoas e à sustentabilidade da gestão.",
-  },
-  {
-    title: "Prevenção de riscos trabalhistas",
-    desc: "Maior preparo da empresa para atender exigências legais e reduzir vulnerabilidades.",
+    title: "Menos exposição",
+    desc: "Mais clareza, prevenção e respaldo reduzem vulnerabilidades jurídicas.",
   },
 ];
 
 const ResultsSection = () => {
+  const ref = useScrollReveal();
+
   return (
-    <section className="py-24 bg-secondary/40">
-      <div className="container max-w-6xl text-center">
-        <span className="text-xs font-semibold text-accent uppercase tracking-[0.25em]">
-          Resultados para a empresa
-        </span>
+    <section id="resultados" className="py-16 md:py-24 bg-green-light relative overflow-hidden">
+      <div className="absolute top-10 right-0 w-48 h-48 bg-accent/5 blob animate-float" />
 
-        <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mt-4 leading-tight">
-          Impactos da gestão psicossocial no ambiente organizacional
-        </h2>
+      <div ref={ref} className="container relative">
+        <div className="max-w-3xl mx-auto text-center mb-10 md:mb-12">
+          <span className="reveal text-xs font-semibold text-accent uppercase tracking-[0.25em]">
+            O que muda na prática
+          </span>
 
-        <p className="text-muted-foreground mt-5 text-base md:text-lg leading-relaxed max-w-3xl mx-auto">
-          A atuação estruturada sobre riscos psicossociais contribui para ambientes mais saudáveis, maior segurança organizacional e redução de vulnerabilidades trabalhistas.
-        </p>
+          <h2 className="reveal reveal-delay-1 font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold text-foreground mt-4 leading-tight">
+            Mais estrutura. <span className="gold-gradient-text">Menos exposição.</span>
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-6 md:gap-8 mt-12 text-left">
-          {results.map((item) => (
-            <div
-              key={item.title}
-              className="bg-white rounded-[24px] border border-border/60 p-6 md:p-8 shadow-sm"
-            >
-              <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-3">
-                {item.title}
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                {item.desc}
-              </p>
+          <p className="reveal reveal-delay-2 text-muted-foreground mt-5 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
+            A empresa deixa de apenas reagir e passa a atuar com mais prevenção, clareza e segurança.
+          </p>
+        </div>
+
+        <div className="max-w-5xl mx-auto">
+          <div className="bg-background border border-border/60 rounded-[28px] px-6 py-8 md:px-10 md:py-10 shadow-sm">
+            <div className="grid md:grid-cols-3 gap-6 md:gap-8">
+              {results.map((item, i) => (
+                <div key={item.title} className={`reveal reveal-delay-${i + 1} relative`}>
+                  <span className="block text-sm font-semibold text-accent mb-3">
+                    0{i + 1}
+                  </span>
+
+                  <h3 className="font-heading text-xl md:text-2xl font-semibold text-foreground mb-2 leading-snug">
+                    {item.title}
+                  </h3>
+
+                  <p className="text-muted-foreground text-sm md:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
+                </div>
+              ))}
             </div>
-          ))}
+          </div>
+        </div>
+
+        <div className="reveal reveal-delay-3 mt-10 md:mt-12 max-w-4xl mx-auto">
+          <div className="text-center">
+            <p className="font-heading text-lg md:text-2xl text-foreground leading-relaxed">
+              Mais do que atender uma exigência, sua empresa passa a ter
+              <span className="gold-gradient-text"> método, prevenção e segurança</span>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
