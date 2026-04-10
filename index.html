@@ -1,27 +1,37 @@
-import Navbar from "@/components/Navbar";
-import HeroSection from "@/components/HeroSection";
-import ImageCarousel from "@/components/ImageCarousel";
-import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/ServicesSection";
-import ResultsSection from "@/components/ResultsSection";
-import ContactSection from "@/components/ContactSection";
-import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-const Index = () => {
-  return (
-    <div className="min-h-screen bg-background">
-      <Navbar />
-      <HeroSection />
-      <ImageCarousel />
-      <AboutSection />
-      <ServicesSection />
-      <ResultsSection />
-      <ContactSection />
-      <Footer />
-      <WhatsAppButton />
-    </div>
-  );
-};
+    <title>Essência Psi — Gestão Psicossocial Corporativa</title>
 
-export default Index;
+    <meta
+      name="description"
+      content="Consultoria especializada em gestão psicossocial corporativa. Adequação à NR-01, saúde mental e redução de riscos trabalhistas."
+    />
+
+    <meta name="author" content="Essência Psi" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Essência Psi — Gestão Psicossocial Corporativa" />
+    <meta
+      property="og:description"
+      content="Consultoria especializada em gestão psicossocial corporativa. Adequação à NR-01 e promoção da saúde mental."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="/og-image.png" />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
