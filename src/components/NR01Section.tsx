@@ -7,7 +7,7 @@ const NR01Section = () => {
   return (
     <section
       id="nr01"
-      className="relative py-14 md:py-18 bg-[hsl(120_18%_97%)] overflow-hidden"
+      className="relative py-14 md:py-20 bg-[hsl(120_18%_97%)] overflow-hidden"
     >
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-16 right-0 w-64 h-64 rounded-full bg-white/70 blur-3xl" />
@@ -15,77 +15,102 @@ const NR01Section = () => {
       </div>
 
       <div ref={ref} className="container relative">
-        <div className="max-w-6xl mx-auto rounded-[28px] border border-border/50 bg-white/80 backdrop-blur-md shadow-[0_18px_50px_rgba(0,0,0,0.05)] overflow-hidden">
-          <div className="grid lg:grid-cols-[1.1fr_0.9fr]">
-            {/* lado esquerdo */}
-            <div className="p-6 md:p-8 lg:p-10">
-              <span className="inline-flex items-center rounded-full border border-accent/15 bg-accent/5 px-3 py-1.5 text-[10px] font-semibold uppercase tracking-[0.24em] text-accent">
-                NR-01 • O que muda
-              </span>
+        <div className="max-w-5xl mx-auto">
+          {/* topo */}
+          <div className="reveal text-center max-w-3xl mx-auto">
+            <span className="inline-flex items-center rounded-full border border-accent/15 bg-white/70 px-4 py-2 text-[10px] md:text-[11px] font-semibold uppercase tracking-[0.28em] text-accent backdrop-blur-sm">
+              NR-01 • O que muda na prática
+            </span>
 
-              <h2 className="mt-4 font-heading text-2xl md:text-4xl font-bold leading-[1.02] tracking-tight text-foreground max-w-2xl">
-                A nova NR-01 exige gestão dos
-                <span className="gold-gradient-text"> riscos psicossociais.</span>
-              </h2>
+            <h2 className="mt-5 font-heading text-3xl md:text-5xl font-bold leading-[1.02] tracking-tight text-foreground">
+              A nova NR-01 exige
+              <span className="gold-gradient-text"> estrutura de gestão.</span>
+            </h2>
 
-              <p className="mt-4 text-sm md:text-base leading-relaxed text-muted-foreground max-w-2xl">
-                Na prática, isso significa sair do improviso e estruturar identificação,
-                priorização e acompanhamento dos fatores que impactam saúde mental,
-                liderança e ambiente de trabalho.
-              </p>
+            <p className="mt-4 text-sm md:text-lg leading-relaxed text-muted-foreground max-w-2xl mx-auto">
+              Não é só uma exigência formal. É a necessidade de identificar,
+              organizar e acompanhar riscos psicossociais com mais clareza,
+              prevenção e responsabilidade.
+            </p>
+          </div>
 
-              <div className="mt-6 flex flex-wrap gap-2.5">
-                <span className="rounded-full border border-border bg-background px-3 py-2 text-sm text-foreground">
-                  Mais clareza
-                </span>
-                <span className="rounded-full border border-border bg-background px-3 py-2 text-sm text-foreground">
-                  Menos exposição
-                </span>
-                <span className="rounded-full border border-border bg-background px-3 py-2 text-sm text-foreground">
-                  Mais prevenção
-                </span>
-              </div>
-            </div>
-
-            {/* lado direito */}
-            <div className="border-t lg:border-t-0 lg:border-l border-border/50 bg-[linear-gradient(180deg,rgba(249,250,249,0.95)_0%,rgba(255,255,255,0.98)_100%)] p-6 md:p-8 lg:p-10 flex flex-col justify-between">
-              <div>
+          {/* conteúdo sem cards no mobile */}
+          <div className="reveal reveal-delay-1 mt-10 md:mt-14">
+            <div className="grid md:grid-cols-2 gap-8 md:gap-12">
+              <div className="pb-6 md:pb-0 border-b md:border-b-0 border-border/60">
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                   Sem estrutura
                 </p>
 
-                <div className="mt-4 space-y-3">
+                <h3 className="mt-3 font-heading text-2xl md:text-3xl font-semibold leading-tight text-foreground">
+                  O risco continua existindo,
+                  <span className="block text-muted-foreground">
+                    só fica menos visível.
+                  </span>
+                </h3>
+
+                <div className="mt-5 space-y-4">
                   <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-                    Riscos ficam difusos, decisões seguem reativas e a empresa amplia vulnerabilidades desnecessárias.
+                    A empresa reage aos problemas sem critério claro, com mais
+                    improviso e menos previsibilidade.
+                  </p>
+                  <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                    Isso amplia desgaste interno, vulnerabilidades jurídicas e
+                    decisões pouco sustentáveis.
                   </p>
                 </div>
+              </div>
 
-                <div className="my-6 h-px w-full bg-border/70" />
-
+              <div>
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
                   Com gestão estruturada
                 </p>
 
-                <div className="mt-4 space-y-3">
+                <h3 className="mt-3 font-heading text-2xl md:text-3xl font-semibold leading-tight text-foreground">
+                  Mais método, mais controle,
+                  <span className="block gold-gradient-text">
+                    menos exposição.
+                  </span>
+                </h3>
+
+                <div className="mt-5 space-y-4">
                   <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
-                    A empresa ganha método, previsibilidade e mais segurança para lidar com o tema de forma madura.
+                    Os riscos passam a ser identificados, priorizados e
+                    acompanhados com mais clareza.
+                  </p>
+                  <p className="text-sm md:text-base leading-relaxed text-muted-foreground">
+                    A liderança ganha direção, e a empresa atua com prevenção em
+                    vez de apenas reagir.
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
 
-              <div className="mt-8 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
-                <p className="font-heading text-lg md:text-xl leading-tight text-foreground max-w-sm">
-                  Mais estrutura. Menos exposição.
+          {/* faixa final */}
+          <div className="reveal reveal-delay-2 mt-10 md:mt-14 pt-6 border-t border-border/60">
+            <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
+              <div className="max-w-2xl">
+                <p className="font-heading text-xl md:text-3xl leading-tight text-foreground">
+                  Mais do que atender uma norma,
+                  <span className="gold-gradient-text">
+                    {" "}a empresa ganha solidez.
+                  </span>
                 </p>
 
-                <a
-                  href="#contato"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm font-semibold text-accent-foreground hover:shadow-lg hover:scale-[1.02] transition-all whitespace-nowrap"
-                >
-                  Falar com especialista
-                  <ArrowUpRight size={16} />
-                </a>
+                <p className="mt-3 text-sm md:text-base leading-relaxed text-muted-foreground">
+                  Clareza para agir, mais segurança na gestão e menos exposição
+                  desnecessária ao longo do tempo.
+                </p>
               </div>
+
+              <a
+                href="#contato"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-sm md:text-base font-semibold text-accent-foreground hover:shadow-lg hover:scale-[1.02] transition-all whitespace-nowrap"
+              >
+                Falar com especialista
+                <ArrowUpRight size={16} />
+              </a>
             </div>
           </div>
         </div>
