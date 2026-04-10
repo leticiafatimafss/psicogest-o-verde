@@ -1,4 +1,4 @@
-import { Search, ShieldCheck, Users, BarChart3, Briefcase } from "lucide-react";
+import { Search, ShieldCheck, Users, BarChart3, BriefcaseBusiness } from "lucide-react";
 
 const services = [
   {
@@ -22,7 +22,7 @@ const services = [
     desc: "Treinamento de gestores para identificação e manejo de fatores psicossociais nas equipes.",
   },
   {
-    icon: Briefcase,
+    icon: BriefcaseBusiness,
     title: "Consultoria Psicossocial Contínua",
     desc: "Acompanhamento estratégico da organização para fortalecer práticas organizacionais saudáveis e sustentáveis.",
   },
@@ -32,7 +32,6 @@ const ServicesSection = () => {
   return (
     <section id="servicos" className="py-24 bg-white">
       <div className="container text-center max-w-6xl">
-
         <span className="text-xs font-semibold text-accent uppercase tracking-[0.25em]">
           O que fazemos
         </span>
@@ -55,6 +54,7 @@ const ServicesSection = () => {
                 <div className="bg-accent/10 text-accent p-3 rounded-xl">
                   <item.icon size={24} />
                 </div>
+
                 <h3 className="font-heading text-xl font-semibold text-foreground">
                   {item.title}
                 </h3>
