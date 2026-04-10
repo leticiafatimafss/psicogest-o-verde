@@ -5,7 +5,8 @@ import logo from "@/assets/logo-essencia.png";
 const navLinks = [
   { label: "Home", href: "#home" },
   { label: "Sobre", href: "#sobre" },
-  { label: "Serviços", href: "#servicos" },
+  { label: "Soluções", href: "#servicos" },
+  { label: "NR-01", href: "#nr01" },
   { label: "Contato", href: "#contato" },
 ];
 
@@ -28,6 +29,8 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-20">
+        
+        {/* Logo */}
         <a href="#home" className="flex items-center gap-3">
           <img
             src={logo}
@@ -54,6 +57,7 @@ const Navbar = () => {
           </div>
         </a>
 
+        {/* Menu Desktop */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
@@ -67,6 +71,7 @@ const Navbar = () => {
             </a>
           ))}
 
+          {/* CTA */}
           <a
             href="#contato"
             className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-all shadow-md"
@@ -75,6 +80,7 @@ const Navbar = () => {
           </a>
         </div>
 
+        {/* Menu Mobile Button */}
         <button
           className={`lg:hidden transition-colors ${
             scrolled ? "text-foreground" : "text-primary-foreground"
@@ -85,6 +91,7 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Menu Mobile */}
       {open && (
         <div className="lg:hidden bg-background/98 backdrop-blur-xl border-t border-border px-6 pb-6 pt-4 space-y-4 shadow-lg">
           {navLinks.map((link) => (
@@ -97,6 +104,8 @@ const Navbar = () => {
               {link.label}
             </a>
           ))}
+
+          {/* CTA Mobile */}
           <a
             href="#contato"
             onClick={() => setOpen(false)}
@@ -110,4 +119,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default Navbar;export default Navbar;
