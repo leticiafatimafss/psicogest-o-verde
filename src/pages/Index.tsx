@@ -15,17 +15,16 @@ const Index = () => {
       {/* Hero */}
       <HeroSection />
 
-      {/* IMAGEM LOGO DEPOIS DO HERO */}
+      {/* Imagens logo depois do hero */}
       <ImageCarousel />
 
-      {/* Conteúdo */}
-      <AboutSection />
+      {/* O que fazemos */}
       <ServicesSection />
 
-      {/* NR-01 (sem aquele bloco feio) */}
+      {/* NR-01 */}
       <NR01Section />
 
-      {/* Conversão */}
+      {/* Contato */}
       <ContactSection />
 
       <Footer />
