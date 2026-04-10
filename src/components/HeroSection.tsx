@@ -18,16 +18,20 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="mt-8 font-heading text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
-            Reduza o risco de multa.
+            Gestão de Riscos Psicossociais
             <br />
             <span className="gold-gradient-hero">
-              Ganhe controle e segurança na sua empresa.
+              nas Organizações
             </span>
           </h1>
 
           {/* Subheadline */}
-          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-2xl mx-auto leading-relaxed">
-            Estruturamos a adequação à NR-01 com método, clareza e aplicação real na operação.
+          <p className="mt-6 text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+            A Essência Gestão Psicossocial apoia empresas na identificação, gestão e prevenção de riscos psicossociais no ambiente de trabalho, alinhada às exigências da NR-01.
+          </p>
+
+          <p className="mt-4 text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
+            Atuamos com estratégias estruturadas que contribuem para a redução de afastamentos, melhoria do clima organizacional e fortalecimento da saúde mental nas equipes.
           </p>
 
           {/* CTA */}
@@ -36,7 +40,7 @@ const HeroSection = () => {
               href="#contato"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-8 py-4 rounded-xl font-semibold text-base hover:shadow-xl hover:scale-[1.02] transition-all"
             >
-              Solicitar diagnóstico
+              Agendar conversa
               <ArrowRight size={18} />
             </a>
 
@@ -50,7 +54,7 @@ const HeroSection = () => {
 
           {/* Prova leve */}
           <div className="pt-8 text-sm text-white/60">
-            Método prático • Estruturação completa • Aplicação na empresa
+            Método estruturado • Redução de riscos • Aplicação prática na empresa
           </div>
         </div>
       </div>
