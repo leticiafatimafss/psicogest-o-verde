@@ -6,9 +6,45 @@ const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
   const ref = useScrollReveal();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setSubmitted(true);
+
+    const form = e.currentTarget;
+    const inputs = form.querySelectorAll("input");
+    const textarea = form.querySelector("textarea");
+
+    const nome = (inputs[0] as HTMLInputElement).value;
+    const telefone = (inputs[1] as HTMLInputElement).value;
+    const empresa = (inputs[2] as HTMLInputElement).value;
+    const mensagem = (textarea as HTMLTextAreaElement)?.value || "";
+
+    try {
+      const response = await fetch(
+        "https://hook.us2.make.com/pcpcatn7yx4yu7homqo1ykgjewd4mhnu",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            nome,
+            telefone,
+            empresa,
+            mensagem,
+          }),
+        }
+      );
+
+      if (!response.ok) {
+        throw new Error("Erro ao enviar para o Make");
+      }
+
+      setSubmitted(true);
+      form.reset();
+    } catch (error) {
+      console.error("Erro ao enviar:", error);
+      alert("Não foi possível enviar sua solicitação. Tente novamente.");
+    }
   };
 
   return (
@@ -46,7 +82,9 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-foreground text-sm mb-0.5">{item.label}</h4>
                   {item.value.split("\n").map((v) => (
-                    <p key={v} className="text-muted-foreground text-sm">{v}</p>
+                    <p key={v} className="text-muted-foreground text-sm">
+                      {v}
+                    </p>
                   ))}
                 </div>
               </div>
