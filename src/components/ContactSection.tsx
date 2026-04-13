@@ -19,24 +19,21 @@ const ContactSection = () => {
     const mensagem = (textarea as HTMLTextAreaElement)?.value || "";
 
     try {
-      const response = await fetch(
-        "https://hook.us2.make.com/pcpcatn7yx4yu7homqo1ykgjewd4mhnu",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            nome,
-            telefone,
-            empresa,
-            mensagem,
-          }),
-        }
-      );
+      const response = await fetch("/api/lead", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nome,
+          telefone,
+          empresa,
+          mensagem,
+        }),
+      });
 
       if (!response.ok) {
-        throw new Error("Erro ao enviar para o Make");
+        throw new Error("Erro ao enviar");
       }
 
       setSubmitted(true);
