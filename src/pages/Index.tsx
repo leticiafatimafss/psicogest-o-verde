@@ -23,7 +23,7 @@ const Index = () => {
       <ServicesSection />
 
       {/* Método Essência */}
-      <MetodoSection>
+      <MetodoSection />
 
       {/* NR-01 */}
       <NR01Section />
