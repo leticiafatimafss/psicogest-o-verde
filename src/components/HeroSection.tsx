@@ -40,13 +40,12 @@ const HeroSection = () => {
               <ArrowRight size={16} />
             </a>
 
-            <a
-              href="#servicos"
-              className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-medium text-sm md:text-base hover:bg-white/10 transition-all backdrop-blur-sm"
-            >
-              Método Essência
-            </a>
-          </div>
+           <a
+  href="#metodo"
+  className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white ..."
+>
+  Método Essência
+</a>
 
           {/* Prova leve */}
           <div className="pt-6 text-xs md:text-sm text-white/60">
