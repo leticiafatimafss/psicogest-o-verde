@@ -1,4 +1,7 @@
+import { useScrollReveal } from "@/hooks/useScrollReveal";
+
 export default function MetodoSection() {
+  const ref = useScrollReveal();
   const Card = ({
     numero,
     titulo,
@@ -55,7 +58,10 @@ export default function MetodoSection() {
       id="MetodoSection"
       className="bg-white py-28 px-6"
     >
-      <div className="max-w-7xl mx-auto">
+      <div
+  ref={ref}
+  className="max-w-7xl mx-auto"
+>
 
         <div className="text-center mb-20">
 
@@ -63,11 +69,11 @@ export default function MetodoSection() {
             Método Essência
           </span>
 
-          <h2 className="mt-6 text-5xl font-bold text-black">
+          <h2 className="reveal reveal-delay-1 mt-6 text-5xl font-bold text-black">
             Como conduzimos a Gestão Psicossocial
           </h2>
 
-          <p className="mt-5 text-lg text-gray-500 max-w-3xl mx-auto">
+          <p className="reveal reveal-delay-2 mt-5 text-lg text-gray-500 max-w-3xl mx-auto">
             Um processo estruturado para transformar a gestão psicossocial da
             sua empresa em conformidade com a NR-01.
           </p>
@@ -78,7 +84,7 @@ export default function MetodoSection() {
         <div className="hidden lg:block">
 
           {/* Linha 1 */}
-          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
+          <div className="reveal reveal-delay-1 grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
             <Card
               numero="1"
@@ -102,7 +108,7 @@ export default function MetodoSection() {
 
           {/* Linha 2 */}
 
-          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
+          <div className="reveal reveal-delay-2 grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
             <Card
               numero="4"
@@ -126,7 +132,7 @@ export default function MetodoSection() {
 
           {/* Linha 3 */}
 
-          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
+          <div className="reveal reveal-delay-3 grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
             <Card
               numero="5"
