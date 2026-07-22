@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import AudienceSection from "@/components/AudienceSection";
 
-const Index = () => {
+const HomePage = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
@@ -27,4 +27,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default HomePage;
