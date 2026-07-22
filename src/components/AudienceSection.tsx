@@ -8,7 +8,6 @@ const segmentos = [
   "Comércio",
   "Empresas de Tecnologia",
 ];
-  const ref = useScrollReveal();
 
 export default function AudienceSection() {
   return (
