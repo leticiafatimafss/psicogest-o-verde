@@ -35,7 +35,10 @@ const etapas = [
 
 export default function Metodo() {
   return (
-    <main className="min-h-screen bg-[#0F5132] text-white py-24 px-6">
+    <section
+  id="metodo"
+  className="min-h-screen bg-[#0F5132] text-white py-24 px-6"
+>
       <div className="max-w-6xl mx-auto">
 
         <span className="inline-block px-4 py-2 rounded-full bg-white/10 text-sm">
