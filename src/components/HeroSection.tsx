@@ -32,25 +32,26 @@ const HeroSection = () => {
          
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-8">
-            <a
-              href="#contato"
-              className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:shadow-xl hover:scale-[1.02] transition-all"
-            >
-              Solicitar diagnóstico
-              <ArrowRight size={16} />
-            </a>
+  <a
+    href="#contato"
+    className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:shadow-xl hover:scale-[1.02] transition-all"
+  >
+    Solicitar diagnóstico
+    <ArrowRight size={16} />
+  </a>
 
-           <a
-  href="#MetodoSection"
-  className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
->
-  Método Essência
-</a>
+  <a
+    href="#MetodoSection"
+    className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
+  >
+    Método Essência
+  </a>
+</div>
 
-          {/* Prova leve */}
-          <div className="pt-6 text-xs md:text-sm text-white/60">
-            Método estruturado • Redução de riscos • Aplicação prática
-          </div>
+{/* Prova leve */}
+<div className="pt-6 text-xs md:text-sm text-white/60">
+  Método estruturado • Redução de riscos • Aplicação prática
+</div>
         </div>
       </div>
 
