@@ -92,7 +92,7 @@ const Navbar = () => {
             Sobre
           </NavLink>
 
-          {/* Serviços */}
+          {/* Soluções */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
@@ -105,7 +105,7 @@ const Navbar = () => {
                   : "text-primary-foreground/90"
               } hover:text-accent`}
             >
-              Serviços
+              Soluções
 
               <ChevronDown
                 size={16}
@@ -119,24 +119,17 @@ const Navbar = () => {
               <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
 
                 <NavLink
-                  to="/metodo"
+                  to="/solucoes/metodologia"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
-                  Método Essência
+                  Metodologia
                 </NavLink>
 
                 <NavLink
-                  to="/solucoes"
+                  to="/solucoes/servicos"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
-                  Soluções
-                </NavLink>
-
-                <NavLink
-                  to="/nr01"
-                  className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
-                >
-                  Adequação à NR-01
+                  Serviços
                 </NavLink>
 
               </div>
@@ -171,14 +164,14 @@ const Navbar = () => {
               <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
 
                 <NavLink
-                  to="/ebooks"
+                  to="/materiais/ebooks"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   E-books
                 </NavLink>
 
                 <NavLink
-                  to="/plataforma"
+                  to="/materiais/plataforma"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   Plataforma Essência
@@ -246,7 +239,7 @@ const Navbar = () => {
             Sobre
           </NavLink>
 
-          {/* Serviços */}
+          {/* Soluções */}
 
           <div>
 
@@ -254,7 +247,7 @@ const Navbar = () => {
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               className="flex w-full items-center justify-between py-2 text-sm font-medium"
             >
-              Serviços
+              Soluções
 
               <ChevronDown
                 size={18}
@@ -268,27 +261,19 @@ const Navbar = () => {
               <div className="ml-4 mt-2 border-l border-border pl-4 space-y-2">
 
                 <NavLink
-                  to="/metodo"
+                  to="/solucoes/metodologia"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
-                  Método Essência
+                  Metodologia
                 </NavLink>
 
                 <NavLink
-                  to="/solucoes"
+                  to="/solucoes/servicos"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
-                  Soluções
-                </NavLink>
-
-                <NavLink
-                  to="/nr01"
-                  onClick={() => setOpen(false)}
-                  className="block py-1 text-sm text-muted-foreground hover:text-foreground"
-                >
-                  Adequação à NR-01
+                  Serviços
                 </NavLink>
 
               </div>
@@ -318,7 +303,7 @@ const Navbar = () => {
               <div className="ml-4 mt-2 border-l border-border pl-4 space-y-2">
 
                 <NavLink
-                  to="/ebooks"
+                  to="/materiais/ebooks"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
@@ -326,7 +311,7 @@ const Navbar = () => {
                 </NavLink>
 
                 <NavLink
-                  to="/plataforma"
+                  to="/materiais/plataforma"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
