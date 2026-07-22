@@ -1,11 +1,14 @@
 import {
+  ClipboardCheck,
+  ShieldCheck,
+  HeartHandshake,
   GraduationCap,
+  BriefcaseBusiness,
+  ArrowUpRight,
   Users,
   MessageCircleMore,
-  HeartHandshake,
   CalendarDays,
   Hand,
-  BriefcaseBusiness,
 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
