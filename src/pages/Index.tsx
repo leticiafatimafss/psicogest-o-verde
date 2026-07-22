@@ -6,6 +6,7 @@ import NR01Section from "@/components/NR01Section";
 import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import MetodoSection from "@/components/MetodoSection";
 
 const Index = () => {
   return (
@@ -20,6 +21,9 @@ const Index = () => {
 
       {/* O que fazemos */}
       <ServicesSection />
+
+      {/* Método Essência */}
+      <MetodoSection>
 
       {/* NR-01 */}
       <NR01Section />
