@@ -42,7 +42,7 @@ const HeroSection = () => {
 
            <a
   href="#metodo"
-  className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white ..."
+  className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
 >
   Método Essência
 </a>
