@@ -7,6 +7,7 @@ import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import MetodoSection from "@/components/MetodoSection";
+import AudienceSection from "@/components/AudienceSection";
 
 const Index = () => {
   return (
@@ -18,6 +19,9 @@ const Index = () => {
 
       {/* Imagens logo depois do hero */}
       <ImageCarousel />
+
+      {/* Para quem é */}
+      <AudienceSection />
 
       {/* O que fazemos */}
       <ServicesSection />
