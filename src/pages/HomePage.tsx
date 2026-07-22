@@ -4,7 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ResultsSection from "@/components/ResultsSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Metodo from "@/components/metodo";
+import Metodo from "@/components/MetodoSection";
 
 const HomePage = () => {
   return (
@@ -12,7 +12,7 @@ const HomePage = () => {
       <Navbar />
 <HeroSection />
 <ServicesSection />
-<Metodo />
+<MetodoSection />
 <ResultsSection />
 <Footer />
 <WhatsAppButton />
