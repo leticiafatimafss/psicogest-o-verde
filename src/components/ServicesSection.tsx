@@ -103,8 +103,7 @@ const ServicesSection = () => {
           </h2>
 
           <p className="reveal reveal-delay-2 text-muted-foreground mt-5 text-sm md:text-base leading-relaxed max-w-2xl mx-auto">
-            Da identificação dos riscos psicossociais à implantação da NR-01 e
-            ao desenvolvimento de ações preventivas, oferecemos soluções
+            Da identificação dos riscos psicossociais à implantação da NR-01, oferecemos soluções
             completas para promover ambientes de trabalho mais saudáveis,
             seguros e em conformidade com a legislação.
           </p>
