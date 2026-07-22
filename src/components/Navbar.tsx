@@ -82,7 +82,7 @@ const Navbar = () => {
 
         <div className="hidden lg:flex items-center gap-8">
 
-          {/* Home */}
+          {/* XXX */}
           <NavLink to="/" className={navClass}>
             Home
           </NavLink>
