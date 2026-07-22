@@ -1,49 +1,65 @@
-import { ArrowDown } from "lucide-react";
-
-const etapas = [
-  {
-    titulo: "Diagnosticar",
-    descricao:
-      "Compreendemos a realidade da organização, identificando fatores de risco psicossociais e necessidades específicas.",
-  },
-  {
-    titulo: "Avaliar",
-    descricao:
-      "Realizamos análises técnicas para mensurar riscos, impactos e prioridades conforme a NR-01.",
-  },
-  {
-    titulo: "Planejar",
-    descricao:
-      "Desenvolvemos um plano de ação personalizado, alinhado à cultura e aos objetivos da empresa.",
-  },
-  {
-    titulo: "Implementar",
-    descricao:
-      "Colocamos as ações em prática de forma estruturada, envolvendo lideranças e colaboradores.",
-  },
-  {
-    titulo: "Capacitar",
-    descricao:
-      "Promovemos treinamentos e desenvolvimento para fortalecer a prevenção e a saúde mental.",
-  },
-  {
-    titulo: "Monitorar",
-    descricao:
-      "Acompanhamos indicadores, revisamos estratégias e garantimos a melhoria contínua.",
-  },
-];
-
 export default function MetodoSection() {
+  const Card = ({
+    numero,
+    titulo,
+    descricao,
+  }: {
+    numero: string;
+    titulo: string;
+    descricao: string;
+  }) => (
+    <div className="bg-[#155B38] rounded-3xl p-8 shadow-lg h-full">
+      <div className="flex items-center gap-5 mb-6">
+        <div className="w-14 h-14 rounded-full bg-[#C7A56A] flex items-center justify-center text-black font-bold text-xl flex-shrink-0">
+          {numero}
+        </div>
+
+        <h3 className="text-3xl font-bold text-white">
+          {titulo}
+        </h3>
+      </div>
+
+      <p className="text-white/80 text-lg leading-8">
+        {descricao}
+      </p>
+    </div>
+  );
+
+  const Horizontal = ({ reverse = false }) => (
+    <div className="hidden lg:flex items-center justify-center w-32">
+      {!reverse && <div className="h-[2px] flex-1 bg-[#C7A56A]" />}
+
+      <div
+        className={`w-0 h-0 border-y-[8px] border-y-transparent ${
+          reverse
+            ? "border-r-[12px] border-r-[#C7A56A]"
+            : "border-l-[12px] border-l-[#C7A56A]"
+        }`}
+      />
+
+      {reverse && <div className="h-[2px] flex-1 bg-[#C7A56A]" />}
+    </div>
+  );
+
+  const Vertical = () => (
+    <div className="hidden lg:flex justify-center py-4">
+      <div className="flex flex-col items-center">
+        <div className="w-[2px] h-12 bg-[#C7A56A]" />
+        <div className="w-0 h-0 border-x-[8px] border-x-transparent border-t-[12px] border-t-[#C7A56A]" />
+      </div>
+    </div>
+  );
+
   return (
     <section
       id="MetodoSection"
       className="bg-white py-28 px-6"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         <div className="text-center mb-20">
 
-          <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#0F5132]/10 text-[#0F5132] font-medium text-sm">
+          <span className="inline-flex px-5 py-2 rounded-full bg-[#155B38]/10 text-[#155B38] font-medium text-sm">
             Método Essência
           </span>
 
@@ -58,59 +74,117 @@ export default function MetodoSection() {
 
         </div>
 
-        <div className="flex flex-col">
+        {/* Desktop */}
+        <div className="hidden lg:block">
 
-          {etapas.map((etapa, index) => (
+          {/* Linha 1 */}
+          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
-            <div key={index}>
+            <Card
+              numero="1"
+              titulo="Diagnosticar"
+              descricao="Compreendemos a realidade da organização, identificando fatores de risco psicossociais e necessidades específicas."
+            />
 
-              <div
-                className={`flex ${
-                  index % 2 === 0
-                    ? "justify-start"
-                    : "justify-end"
-                }`}
-              >
+            <Horizontal />
 
-                <div className="w-full md:w-[70%] bg-[#0F5132] rounded-3xl p-10 shadow-lg">
+            <Card
+              numero="2"
+              titulo="Avaliar"
+              descricao="Realizamos análises técnicas para mensurar riscos, impactos e prioridades conforme a NR-01."
+            />
 
-                  <div className="flex items-center gap-5 mb-6">
+          </div>
 
-                    <div className="w-14 h-14 rounded-full bg-[#C7A56A] flex items-center justify-center text-black font-bold text-xl">
-                      {index + 1}
-                    </div>
+          <div className="flex justify-end pr-[24%]">
+            <Vertical />
+          </div>
 
-                    <h3 className="text-3xl font-bold text-white">
-                      {etapa.titulo}
-                    </h3>
+          {/* Linha 2 */}
 
-                  </div>
+          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
-                  <p className="text-white/80 leading-8 text-lg">
-                    {etapa.descricao}
-                  </p>
+            <Card
+              numero="4"
+              titulo="Implementar"
+              descricao="Colocamos as ações em prática de forma estruturada, envolvendo lideranças e colaboradores."
+            />
 
-                </div>
+            <Horizontal reverse />
 
-              </div>
+            <Card
+              numero="3"
+              titulo="Planejar"
+              descricao="Desenvolvemos um plano de ação personalizado, alinhado à cultura e aos objetivos da empresa."
+            />
 
-              {index < etapas.length - 1 && (
+          </div>
 
-                <div className="flex justify-center py-6">
+          <div className="flex justify-start pl-[24%]">
+            <Vertical />
+          </div>
 
-                  <ArrowDown
-                    size={34}
-                    strokeWidth={1.5}
-                    className="text-[#C7A56A]"
-                  />
+          {/* Linha 3 */}
 
-                </div>
+          <div className="grid grid-cols-[1fr_auto_1fr] gap-8 items-center">
 
-              )}
+            <Card
+              numero="5"
+              titulo="Capacitar"
+              descricao="Promovemos treinamentos e desenvolvimento para fortalecer a prevenção e a saúde mental."
+            />
 
-            </div>
+            <Horizontal />
 
-          ))}
+            <Card
+              numero="6"
+              titulo="Monitorar"
+              descricao="Acompanhamos indicadores, revisamos estratégias e garantimos a melhoria contínua."
+            />
+
+          </div>
+
+        </div>
+
+        {/* Mobile */}
+
+        <div className="lg:hidden space-y-6">
+
+          <Card
+            numero="1"
+            titulo="Diagnosticar"
+            descricao="Compreendemos a realidade da organização, identificando fatores de risco psicossociais e necessidades específicas."
+          />
+
+          <Card
+            numero="2"
+            titulo="Avaliar"
+            descricao="Realizamos análises técnicas para mensurar riscos, impactos e prioridades conforme a NR-01."
+          />
+
+          <Card
+            numero="3"
+            titulo="Planejar"
+            descricao="Desenvolvemos um plano de ação personalizado, alinhado à cultura e aos objetivos da empresa."
+          />
+
+          <Card
+            numero="4"
+            titulo="Implementar"
+            descricao="Colocamos as ações em prática de forma estruturada, envolvendo lideranças e colaboradores."
+          />
+
+          <Card
+            numero="5"
+            titulo="Capacitar"
+            descricao="Promovemos treinamentos e desenvolvimento para fortalecer a prevenção e a saúde mental."
+          />
+
+          <Card
+            numero="6"
+            titulo="Monitorar"
+            descricao="Acompanhamos indicadores, revisamos estratégias e garantimos a melhoria contínua."
+          />
 
         </div>
 
