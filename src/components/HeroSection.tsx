@@ -18,36 +18,30 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="mt-6 font-heading text-[2.2rem] sm:text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
-            Gestão de Riscos
-            <br />
-            Psicossociais
-            <br />
-            <span className="gold-gradient-hero">
-              nas Organizações
-            </span>
-          </h1>
-
+  A NR-01 mudou.
+  <br />
+  <span className="gold-gradient-hero">
+    Sua empresa está pronta?
+  </span>
+</h1>
+          
           {/* Subheadline MOBILE */}
-          <p className="mt-5 text-base text-white/85 max-w-md mx-auto leading-relaxed md:hidden">
-            Adequação à NR-01 com foco em prevenção, segurança e saúde mental nas empresas.
-          </p>
-
+          <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl text-white/85 leading-relaxed">
+  Apoiamos organizações na identificação, avaliação e gestão dos riscos psicossociais, garantindo conformidade legal e ambientes de trabalho mais saudáveis.
+</p>
+          
           {/* Subheadline DESKTOP */}
-          <p className="mt-6 hidden md:block text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
-            A Essência Gestão Psicossocial apoia empresas na identificação, gestão e prevenção de riscos psicossociais no ambiente de trabalho, alinhada às exigências da NR-01.
-          </p>
-
-          <p className="mt-4 hidden md:block text-base md:text-lg text-white/70 max-w-3xl mx-auto leading-relaxed">
-            Atuamos com estratégias estruturadas que contribuem para a redução de afastamentos, melhoria do clima organizacional e fortalecimento da saúde mental nas equipes.
-          </p>
-
+         <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl text-white/85 leading-relaxed">
+  Apoiamos organizações na identificação, avaliação e gestão dos riscos psicossociais, garantindo conformidade legal e ambientes de trabalho mais saudáveis.
+</p>
+         
           {/* CTA */}
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-8">
             <a
               href="#contato"
               className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:shadow-xl hover:scale-[1.02] transition-all"
             >
-              Agendar conversa
+              Solicitar diagnóstico
               <ArrowRight size={16} />
             </a>
 
@@ -55,7 +49,7 @@ const HeroSection = () => {
               href="#servicos"
               className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-medium text-sm md:text-base hover:bg-white/10 transition-all backdrop-blur-sm"
             >
-              Como funciona
+              Método Essência
             </a>
           </div>
 
