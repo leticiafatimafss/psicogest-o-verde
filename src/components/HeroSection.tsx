@@ -25,11 +25,6 @@ const HeroSection = () => {
   </span>
 </h1>
           
-          {/* Subheadline MOBILE */}
-          <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl text-white/85 leading-relaxed">
-  Apoiamos organizações na identificação, avaliação e gestão dos riscos psicossociais, garantindo conformidade legal e ambientes de trabalho mais saudáveis.
-</p>
-          
           {/* Subheadline DESKTOP */}
          <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl text-white/85 leading-relaxed">
   Apoiamos organizações na identificação, avaliação e gestão dos riscos psicossociais, garantindo conformidade legal e ambientes de trabalho mais saudáveis.
