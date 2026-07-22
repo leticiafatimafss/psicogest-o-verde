@@ -18,9 +18,6 @@ const Index = () => {
       <ImageCarousel />
       <AudienceSection />
 
-      {/* O que fazemos */}
-      <ServicesSection />
-
       {/* Contato */}
       <ContactSection />
 
