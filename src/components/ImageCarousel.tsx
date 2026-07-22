@@ -1,89 +1,74 @@
-import { useEffect, useState } from "react";
-
-const slides = [
-  {
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
-    title: "Diagnóstico da exposição psicossocial",
-    text: "Identificamos riscos, fragilidades e pontos de atenção com olhar técnico e estratégico.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
-    title: "Apoio à liderança e áreas-chave",
-    text: "Fortalecemos a atuação das lideranças para lidar com o tema com mais preparo e segurança.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
-    title: "Estruturação da adequação à NR-01",
-    text: "Transformamos exigência em processo, direcionamento e acompanhamento prático.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
-    title: "Mais controle, menos exposição",
-    text: "Sua empresa avança para uma gestão mais preventiva, organizada e segura.",
-  },
-];
-
-const ImageCarousel = () => {
-  const [current, setCurrent] = useState(0);
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 4500);
-
-    return () => clearInterval(timer);
-  }, []);
-
+const AboutSection = () => {
   return (
-    <section className="py-24 bg-background">
+    <section id="quem-somos" className="py-24 bg-background">
       <div className="container">
+
         <div className="relative overflow-hidden rounded-[2rem] border border-border/50 shadow-sm">
-          <div className="relative h-[420px] md:h-[520px]">
+
+          {/* Imagem */}
+
+          <div className="relative h-[420px] md:h-[560px]">
+
             <img
-              src={slides[current].image}
-              alt={slides[current].title}
-              className="w-full h-full object-cover transition-all duration-700"
+              src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80"
+              alt="Equipe em reunião"
+              className="w-full h-full object-cover"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
+            {/* Overlay */}
 
-            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
-              <div className="max-w-2xl">
-                <span className="inline-block text-xs md:text-sm font-semibold uppercase tracking-[0.25em] text-white/70 mb-3">
-                  Essência Psi
+            <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/55 to-black/20" />
+
+            {/* Conteúdo */}
+
+            <div className="absolute inset-0 flex items-center">
+
+              <div className="max-w-2xl px-8 md:px-16">
+
+                <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-sm px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white mb-6">
+                  Quem somos
                 </span>
 
-                <h3 className="text-2xl md:text-4xl font-bold text-white leading-tight mb-3">
-                  {slides[current].title}
-                </h3>
+                <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-6">
+                  Essência
+                  <br />
+                  <span className="gold-gradient-text">
+                    Gestão Psicossocial
+                  </span>
+                </h2>
 
-                <p className="text-white/85 text-sm md:text-lg leading-relaxed max-w-xl">
-                  {slides[current].text}
+                <p className="text-white/90 text-base md:text-lg leading-relaxed max-w-xl">
+                  A Essência Gestão Psicossocial é uma consultoria especializada
+                  em saúde mental no trabalho, gestão de riscos psicossociais e
+                  adequação à NR-01.
                 </p>
+
+                <p className="text-white/80 text-base md:text-lg leading-relaxed max-w-xl mt-5">
+                  Atuamos ao lado de empresas, desenvolvendo soluções técnicas,
+                  estratégicas e humanizadas para promover ambientes de trabalho
+                  mais saudáveis, seguros e em conformidade com a legislação.
+                </p>
+
+                                <a
+                  href="/sobre"
+                  className="inline-flex items-center gap-2 mt-8 rounded-xl bg-primary px-7 py-3 text-sm md:text-base font-semibold text-primary-foreground hover:opacity-90 transition-all duration-300"
+                >
+                  Conheça nossa história
+                  <span className="text-lg">→</span>
+                </a>
+
               </div>
+
             </div>
 
-            <div className="absolute bottom-8 right-8 flex gap-2">
-              {slides.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrent(index)}
-                  aria-label={`Ir para slide ${index + 1}`}
-                  className={`h-2.5 rounded-full transition-all duration-300 ${
-                    current === index ? "w-8 bg-white" : "w-2.5 bg-white/50"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
+
         </div>
+
       </div>
+
     </section>
   );
 };
 
-export default ImageCarousel;
+export default AboutSection;
