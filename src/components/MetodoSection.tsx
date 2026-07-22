@@ -1,81 +1,115 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const etapas = [
   {
     titulo: "Diagnosticar",
     descricao:
-      "Compreendemos a realidade da organização, identificando fatores de risco psicossociais e necessidades específicas."
+      "Compreendemos a realidade da organização, identificando fatores de risco psicossociais e necessidades específicas.",
   },
   {
     titulo: "Avaliar",
     descricao:
-      "Realizamos análises técnicas para mensurar riscos, impactos e prioridades conforme a NR-01."
+      "Realizamos análises técnicas para mensurar riscos, impactos e prioridades conforme a NR-01.",
   },
   {
     titulo: "Planejar",
     descricao:
-      "Desenvolvemos um plano de ação personalizado, alinhado à cultura e aos objetivos da empresa."
+      "Desenvolvemos um plano de ação personalizado, alinhado à cultura e aos objetivos da empresa.",
   },
   {
     titulo: "Implementar",
     descricao:
-      "Colocamos as ações em prática de forma estruturada, envolvendo lideranças e colaboradores."
+      "Colocamos as ações em prática de forma estruturada, envolvendo lideranças e colaboradores.",
   },
   {
     titulo: "Capacitar",
     descricao:
-      "Promovemos treinamentos e desenvolvimento para fortalecer a prevenção e a saúde mental."
+      "Promovemos treinamentos e desenvolvimento para fortalecer a prevenção e a saúde mental.",
   },
   {
     titulo: "Monitorar",
     descricao:
-      "Acompanhamos indicadores, revisamos estratégias e garantimos a melhoria contínua."
-  }
+      "Acompanhamos indicadores, revisamos estratégias e garantimos a melhoria contínua.",
+  },
 ];
 
-export default function Metodo() {
+export default function MetodoSection() {
   return (
     <section
-  id="MetodoSection"
-  className="min-h-screen bg-[#0F5132] text-white py-24 px-6"
->
+      id="MetodoSection"
+      className="bg-white py-28 px-6"
+    >
       <div className="max-w-6xl mx-auto">
 
-        <span className="inline-block px-4 py-2 rounded-full bg-white/10 text-sm">
-          Método Essência
-        </span>
+        <div className="text-center mb-20">
 
-        <h1 className="text-5xl font-bold mt-8">
-          Como conduzimos a Gestão Psicossocial
-        </h1>
+          <span className="inline-flex items-center px-5 py-2 rounded-full bg-[#0F5132]/10 text-[#0F5132] font-medium text-sm">
+            Método Essência
+          </span>
 
-        <p className="text-xl text-white/80 mt-6 max-w-3xl">
-          Nosso método foi desenvolvido para apoiar empresas desde o diagnóstico
-          inicial até o acompanhamento contínuo, garantindo conformidade com a
-          NR-01 e ambientes de trabalho mais saudáveis.
-        </p>
+          <h2 className="mt-6 text-5xl font-bold text-black">
+            Como conduzimos a Gestão Psicossocial
+          </h2>
 
-        <div className="grid md:grid-cols-2 gap-8 mt-20">
+          <p className="mt-5 text-lg text-gray-500 max-w-3xl mx-auto">
+            Um processo estruturado para transformar a gestão psicossocial da
+            sua empresa em conformidade com a NR-01.
+          </p>
+
+        </div>
+
+        <div className="flex flex-col">
 
           {etapas.map((etapa, index) => (
-            <div
-              key={index}
-              className="bg-white/5 border border-white/10 rounded-3xl p-8"
-            >
-              <div className="flex items-center gap-4 mb-5">
-                <div className="w-12 h-12 rounded-full bg-[#C7A56A] text-black font-bold flex items-center justify-center">
-                  {index + 1}
+
+            <div key={index}>
+
+              <div
+                className={`flex ${
+                  index % 2 === 0
+                    ? "justify-start"
+                    : "justify-end"
+                }`}
+              >
+
+                <div className="w-full md:w-[70%] bg-[#0F5132] rounded-3xl p-10 shadow-lg">
+
+                  <div className="flex items-center gap-5 mb-6">
+
+                    <div className="w-14 h-14 rounded-full bg-[#C7A56A] flex items-center justify-center text-black font-bold text-xl">
+                      {index + 1}
+                    </div>
+
+                    <h3 className="text-3xl font-bold text-white">
+                      {etapa.titulo}
+                    </h3>
+
+                  </div>
+
+                  <p className="text-white/80 leading-8 text-lg">
+                    {etapa.descricao}
+                  </p>
+
                 </div>
 
-                <h2 className="text-2xl font-semibold">
-                  {etapa.titulo}
-                </h2>
               </div>
 
-              <p className="text-white/75 leading-7">
-                {etapa.descricao}
-              </p>
+              {index < etapas.length - 1 && (
+
+                <div className="flex justify-center py-6">
+
+                  <ArrowDown
+                    size={34}
+                    strokeWidth={1.5}
+                    className="text-[#C7A56A]"
+                  />
+
+                </div>
+
+              )}
+
             </div>
+
           ))}
 
         </div>
