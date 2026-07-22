@@ -5,7 +5,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Index from "./pages/Index";
-import AboutSection from "./pages/AboutSection";
+import About from "./pages/About";
 import Solutions from "./pages/Solutions";
 import Methodology from "./pages/Methodology";
 import Services from "./pages/Services";
