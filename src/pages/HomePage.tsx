@@ -4,7 +4,7 @@ import ServicesSection from "@/components/ServicesSection";
 import ResultsSection from "@/components/ResultsSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import Metodo from "@/components/MetodoSection";
+import MetodoSection from "@/components/MetodoSection";
 
 const HomePage = () => {
   return (
