@@ -50,9 +50,9 @@ const ImageCarousel = () => {
 
           {/* IMAGEM */}
 
-          <div className="reveal reveal-delay-2">
+                               <div className="overflow-hidden rounded-[32px] shadow-xl">
 
-                          <img
+              <img
                 src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
                 alt="Equipe da Essência Gestão Psicossocial"
                 className="w-full h-[420px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700"
