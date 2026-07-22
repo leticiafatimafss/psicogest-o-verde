@@ -56,6 +56,20 @@ export default function AudienceSection() {
 
         </div>
 
+        {/* BOTÃO */}
+
+        <div className="reveal reveal-delay-3 flex justify-center mt-12">
+
+          <a
+            href="/servicos"
+            className="inline-flex items-center gap-2 rounded-xl bg-primary px-7 py-3 text-sm md:text-base font-semibold text-primary-foreground hover:opacity-90 transition-all duration-300"
+          >
+            Conheça nossos serviços
+            <span className="text-lg">→</span>
+          </a>
+
+        </div>
+
       </div>
     </section>
   );
