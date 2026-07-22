@@ -70,5 +70,3 @@ const ImageCarousel = () => {
 };
 
 export default ImageCarousel;
-
-            <div className="overflow-hidden rounded-[32px] shadow-xl">
