@@ -81,6 +81,6 @@ export default function Metodo() {
         </div>
 
       </div>
-    </main>
+    </section>
   );
 }
