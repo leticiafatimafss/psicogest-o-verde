@@ -1,10 +1,11 @@
 import {
-  ClipboardCheck,
-  ShieldCheck,
- HeartHandshake,
   GraduationCap,
+  Users,
+  MessageCircleMore,
+  HeartHandshake,
+  CalendarDays,
+  Hand,
   BriefcaseBusiness,
-  ArrowUpRight,
 } from "lucide-react";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
@@ -14,21 +15,21 @@ const featuredServices = [
     title: "Diagnóstico Psicossocial",
     desc: "Identificamos fatores de risco psicossociais, avaliamos o ambiente organizacional e entregamos um diagnóstico técnico para orientar decisões estratégicas.",
     href: "/blog/diagnostico-psicossocial-organizacional",
-    tag: "Diagnóstico",
+    tag: "Diagnosticar",
   },
   {
     icon: ShieldCheck,
     title: "Implantação da NR-01",
     desc: "Estruturamos todo o processo de adequação da empresa, com planejamento, documentação e acompanhamento especializado.",
     href: "/blog/implantacao-nr-01",
-    tag: "NR-01",
+    tag: "Implantar",
   },
   {
     icon: HeartHandshake,
     title: "Promoção da Saúde Mental",
     desc: "Desenvolvemos palestras, rodas de conversa, campanhas, eventos corporativos, ações de bem-estar e programas preventivos para fortalecer a saúde mental dos colaboradores.",
     href: "/blog/programas-de-saude-mental-corporativa",
-    tag: "Prevenção",
+    tag: "Promover",
   },
 ];
 
@@ -39,12 +40,12 @@ const secondaryServices = [
     href: "#",
   },
   {
-    icon: HeartHandshake,
+    icon: Users,
     title: "Palestras Corporativas",
     href: "#",
   },
   {
-    icon: HeartHandshake,
+    icon: MessageCircleMore,
     title: "Rodas de Conversa",
     href: "#",
   },
@@ -54,12 +55,12 @@ const secondaryServices = [
     href: "#",
   },
   {
-    icon: HeartHandshake,
+    icon: CalendarDays,
     title: "Eventos de Bem-estar",
     href: "#",
   },
   {
-    icon: HeartHandshake,
+    icon: Hand,
     title: "Massagem Corporativa",
     href: "#",
   },
