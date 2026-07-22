@@ -8,6 +8,7 @@ const segmentos = [
   "Comércio",
   "Empresas de Tecnologia",
 ];
+  const ref = useScrollReveal();
 
 export default function AudienceSection() {
   return (
@@ -15,10 +16,6 @@ export default function AudienceSection() {
       <div className="max-w-6xl mx-auto">
 
         <div className="text-center mb-14">
-
-          <span className="inline-flex px-5 py-2 rounded-full bg-[#0F5132]/10 text-[#0F5132] text-sm font-medium">
-            Para quem é
-          </span>
 
           <h2 className="mt-6 text-4xl font-bold text-black">
             Soluções para diferentes segmentos
