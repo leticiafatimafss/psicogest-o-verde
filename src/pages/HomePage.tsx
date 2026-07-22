@@ -1,23 +1,30 @@
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
-import ResultsSection from "@/components/ResultsSection";
+import ImageCarousel from "@/components/ImageCarousel";
+import ContactSection from "@/components/ContactSection";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
-import MetodoSection from "@/components/MetodoSection";
+import AudienceSection from "@/components/AudienceSection";
 
-const HomePage = () => {
+const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-<HeroSection />
-<ServicesSection />
-<MetodoSection />
-<ResultsSection />
-<Footer />
-<WhatsAppButton />
+
+      {/* Hero */}
+      <HeroSection />
+
+      {/* Imagens logo depois do hero */}
+      <ImageCarousel />
+      <AudienceSection />
+
+      {/* Contato */}
+      <ContactSection />
+
+      <Footer />
+      <WhatsAppButton />
     </div>
   );
 };
 
-export default HomePage;
+export default Index;
