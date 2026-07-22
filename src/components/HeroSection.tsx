@@ -13,15 +13,15 @@ const HeroSection = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2 text-xs md:text-sm text-white/70 backdrop-blur-sm">
             <span className="w-2 h-2 rounded-full bg-accent" />
-            NR-01 • Gestão Psicossocial
+            Consultoria em Saúde Mental Corporativa
           </div>
 
           {/* Headline */}
           <h1 className="mt-6 font-heading text-[2.2rem] sm:text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
-  A NR-01 mudou.
+  Ambientes de trabalho
   <br />
   <span className="gold-gradient-hero">
-    Sua empresa está pronta?
+    mais saudáveis, seguros e em conformidade.
   </span>
 </h1>
           
@@ -36,7 +36,7 @@ const HeroSection = () => {
     href="#contato"
     className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:shadow-xl hover:scale-[1.02] transition-all"
   >
-    Solicitar diagnóstico
+    Falar com um especialista
     <ArrowRight size={16} />
   </a>
 
@@ -44,13 +44,13 @@ const HeroSection = () => {
     href="#MetodoSection"
     className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
   >
-    Método Essência
+    Conheça nosso método
   </a>
 </div>
 
 {/* Prova leve */}
 <div className="pt-6 text-xs md:text-sm text-white/60">
-  Método estruturado • Redução de riscos • Aplicação prática
+Consultoria • Treinamentos • Soluções Corporativas
 </div>
         </div>
       </div>
