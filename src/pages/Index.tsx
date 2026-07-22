@@ -20,7 +20,6 @@ const Index = () => {
       {/* Imagens logo depois do hero */}
       <ImageCarousel />
 
-      {/* Para quem é */}
       <AudienceSection />
 
       {/* O que fazemos */}
