@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { NavLink } from "react-router-dom";
 import { Menu, X, ChevronDown } from "lucide-react";
 import logo from "@/assets/logo-essencia.png";
 
@@ -13,12 +14,24 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
 
     window.addEventListener("scroll", handleScroll);
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    return () =>
+      window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const navClass = ({ isActive }: { isActive: boolean }) =>
+    `text-sm font-medium transition-all duration-300 ${
+      scrolled ? "text-foreground" : "text-primary-foreground/90"
+    } ${
+      isActive
+        ? "text-accent"
+        : "hover:text-accent"
+    }`;
 
   return (
     <nav
@@ -29,8 +42,13 @@ const Navbar = () => {
       }`}
     >
       <div className="container flex items-center justify-between h-20">
+
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3">
+
+        <NavLink
+          to="/"
+          className="flex items-center gap-3"
+        >
           <img
             src={logo}
             alt="Essência Gestão Psicossocial"
@@ -40,7 +58,9 @@ const Navbar = () => {
           <div className="flex flex-col">
             <span
               className={`font-heading text-lg font-semibold transition-colors ${
-                scrolled ? "text-foreground" : "text-primary-foreground"
+                scrolled
+                  ? "text-foreground"
+                  : "text-primary-foreground"
               }`}
             >
               Essência
@@ -56,162 +76,180 @@ const Navbar = () => {
               Gestão Psicossocial
             </span>
           </div>
-        </a>
+        </NavLink>
 
-        {/* ===================== DESKTOP ===================== */}
+                {/* ===================== DESKTOP ===================== */}
+
         <div className="hidden lg:flex items-center gap-8">
+
           {/* Home */}
-          <a
-            href="#home"
-            className={`text-sm font-medium transition-colors hover:opacity-70 ${
-              scrolled ? "text-foreground" : "text-primary-foreground/90"
-            }`}
-          >
+          <NavLink to="/" className={navClass}>
             Home
-          </a>
+          </NavLink>
 
           {/* Sobre */}
-          <a
-            href="#quem-somos"
-            className={`text-sm font-medium transition-colors hover:opacity-70 ${
-              scrolled ? "text-foreground" : "text-primary-foreground/90"
-            }`}
-          >
+          <NavLink to="/sobre" className={navClass}>
             Sobre
-          </a>
+          </NavLink>
 
-                    {/* Serviços */}
+          {/* Serviços */}
           <div
             className="relative"
             onMouseEnter={() => setServicesOpen(true)}
             onMouseLeave={() => setServicesOpen(false)}
           >
             <button
-              className={`flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-70 ${
-                scrolled ? "text-foreground" : "text-primary-foreground/90"
-              }`}
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-foreground"
+                  : "text-primary-foreground/90"
+              } hover:text-accent`}
             >
               Serviços
+
               <ChevronDown
                 size={16}
-                className={`transition-transform duration-200 ${
+                className={`transition-transform duration-300 ${
                   servicesOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             {servicesOpen && (
-              <div className="absolute top-full left-0 mt-3 w-64 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
-                <a
-                  href="#metodo"
+              <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
+
+                <NavLink
+                  to="/metodo"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   Método Essência
-                </a>
+                </NavLink>
 
-                <a
-                  href="#servicos"
+                <NavLink
+                  to="/solucoes"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   Soluções
-                </a>
+                </NavLink>
+
+                <NavLink
+                  to="/nr01"
+                  className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
+                >
+                  Adequação à NR-01
+                </NavLink>
+
               </div>
             )}
           </div>
 
           {/* Materiais */}
+
           <div
             className="relative"
             onMouseEnter={() => setMaterialsOpen(true)}
             onMouseLeave={() => setMaterialsOpen(false)}
           >
             <button
-              className={`flex items-center gap-1 text-sm font-medium transition-colors hover:opacity-70 ${
-                scrolled ? "text-foreground" : "text-primary-foreground/90"
-              }`}
+              className={`flex items-center gap-1 text-sm font-medium transition-colors ${
+                scrolled
+                  ? "text-foreground"
+                  : "text-primary-foreground/90"
+              } hover:text-accent`}
             >
               Materiais
+
               <ChevronDown
                 size={16}
-                className={`transition-transform duration-200 ${
+                className={`transition-transform duration-300 ${
                   materialsOpen ? "rotate-180" : ""
                 }`}
               />
             </button>
 
             {materialsOpen && (
-              <div className="absolute top-full left-0 mt-3 w-64 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
-                <a
-                  href="#"
+              <div className="absolute top-full left-0 mt-3 w-72 rounded-2xl border border-border bg-background shadow-xl overflow-hidden">
+
+                <NavLink
+                  to="/ebooks"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   E-books
-                </a>
+                </NavLink>
 
-                <a
-                  href="#"
+                <NavLink
+                  to="/plataforma"
                   className="block px-5 py-3 text-sm hover:bg-muted transition-colors"
                 >
                   Plataforma Essência
-                </a>
+                </NavLink>
+
               </div>
             )}
           </div>
 
-                    {/* Contato */}
-          <a
-            href="#contato"
-            className={`text-sm font-medium transition-colors hover:opacity-70 ${
-              scrolled ? "text-foreground" : "text-primary-foreground/90"
-            }`}
+          {/* Contato */}
+
+          <NavLink
+            to="/contato"
+            className={navClass}
           >
             Contato
-          </a>
+          </NavLink>
 
           {/* CTA */}
+
           <a
             href="https://wa.me/5511999999999"
             target="_blank"
             rel="noopener noreferrer"
-            className="bg-accent text-accent-foreground px-6 py-2.5 rounded-full text-sm font-semibold hover:opacity-90 transition-all shadow-md"
+            className="rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-accent-foreground shadow-md transition-all hover:scale-105 hover:shadow-lg"
           >
             Agendar conversa
           </a>
+
         </div>
 
         {/* Botão Mobile */}
+
         <button
           onClick={() => setOpen(!open)}
           className={`lg:hidden transition-colors ${
-            scrolled ? "text-foreground" : "text-primary-foreground"
+            scrolled
+              ? "text-foreground"
+              : "text-primary-foreground"
           }`}
         >
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
+
       </div>
 
             {/* ===================== MOBILE ===================== */}
+
       {open && (
         <div className="lg:hidden bg-background/95 backdrop-blur-xl border-t border-border px-6 py-5 space-y-2 shadow-lg">
 
-          <a
-            href="#home"
+          <NavLink
+            to="/"
             onClick={() => setOpen(false)}
             className="block py-2 text-sm font-medium"
           >
             Home
-          </a>
+          </NavLink>
 
-          <a
-            href="#quem-somos"
+          <NavLink
+            to="/sobre"
             onClick={() => setOpen(false)}
             className="block py-2 text-sm font-medium"
           >
             Sobre
-          </a>
+          </NavLink>
 
           {/* Serviços */}
+
           <div>
+
             <button
               onClick={() => setMobileServicesOpen(!mobileServicesOpen)}
               className="flex w-full items-center justify-between py-2 text-sm font-medium"
@@ -228,27 +266,40 @@ const Navbar = () => {
 
             {mobileServicesOpen && (
               <div className="ml-4 mt-2 border-l border-border pl-4 space-y-2">
-                <a
-                  href="#metodo"
+
+                <NavLink
+                  to="/metodo"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
                   Método Essência
-                </a>
+                </NavLink>
 
-                <a
-                  href="#servicos"
+                <NavLink
+                  to="/solucoes"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
                   Soluções
-                </a>
+                </NavLink>
+
+                <NavLink
+                  to="/nr01"
+                  onClick={() => setOpen(false)}
+                  className="block py-1 text-sm text-muted-foreground hover:text-foreground"
+                >
+                  Adequação à NR-01
+                </NavLink>
+
               </div>
             )}
+
           </div>
 
           {/* Materiais */}
+
           <div>
+
             <button
               onClick={() => setMobileMaterialsOpen(!mobileMaterialsOpen)}
               className="flex w-full items-center justify-between py-2 text-sm font-medium"
@@ -265,43 +316,48 @@ const Navbar = () => {
 
             {mobileMaterialsOpen && (
               <div className="ml-4 mt-2 border-l border-border pl-4 space-y-2">
-                <a
-                  href="#"
+
+                <NavLink
+                  to="/ebooks"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
                   E-books
-                </a>
+                </NavLink>
 
-                <a
-                  href="#"
+                <NavLink
+                  to="/plataforma"
                   onClick={() => setOpen(false)}
                   className="block py-1 text-sm text-muted-foreground hover:text-foreground"
                 >
                   Plataforma Essência
-                </a>
+                </NavLink>
+
               </div>
             )}
+
           </div>
 
-          <a
-            href="#contato"
+          <NavLink
+            to="/contato"
             onClick={() => setOpen(false)}
             className="block py-2 text-sm font-medium"
           >
             Contato
-          </a>
+          </NavLink>
 
           <a
             href="https://wa.me/5511999999999"
             target="_blank"
             rel="noopener noreferrer"
-            className="mt-4 block rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground"
+            className="mt-4 block rounded-full bg-accent px-5 py-3 text-center text-sm font-semibold text-accent-foreground transition-all hover:opacity-90"
           >
             Agendar conversa
           </a>
+
         </div>
       )}
+
     </nav>
   );
 };
