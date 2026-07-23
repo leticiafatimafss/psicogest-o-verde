@@ -8,50 +8,55 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_80%_30%,rgba(212,175,55,0.12),transparent_30%)]" />
 
       <div className="container relative z-10 pt-24 pb-14">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-4xl mx-auto text-center">
 
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 border border-white/10 bg-white/5 rounded-full px-4 py-2 text-xs md:text-sm text-white/70 backdrop-blur-sm">
-            <span className="w-2 h-2 rounded-full bg-accent" />
-            Consultoria em Saúde Mental Corporativa
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 backdrop-blur-sm px-5 py-2 text-xs md:text-sm font-medium tracking-wide text-white/80">
+            <span className="h-2 w-2 rounded-full bg-accent animate-pulse" />
+            Especialistas em Saúde Mental Corporativa
           </div>
 
           {/* Headline */}
-          <h1 className="mt-6 font-heading text-[2.2rem] sm:text-4xl md:text-6xl lg:text-[4.2rem] font-bold text-white leading-[1.05] tracking-tight">
-  Ambientes de trabalho
-  <br />
-  <span className="gold-gradient-hero">
-    mais saudáveis, seguros e em conformidade.
-  </span>
-</h1>
-          
-          {/* Subheadline DESKTOP */}
-         <p className="mt-8 max-w-4xl mx-auto text-lg md:text-xl text-white/85 leading-relaxed">
-  Apoiamos organizações na identificação, avaliação e gestão dos riscos psicossociais, garantindo conformidade legal e ambientes de trabalho mais saudáveis.
-</p>
-         
+          <h1 className="mt-8 font-heading text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white">
+            Construindo empresas
+            <br />
+            <span className="gold-gradient-hero">
+              mais saudáveis, seguras e em conformidade.
+            </span>
+          </h1>
+
+          {/* Subheadline */}
+          <p className="mt-8 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-white/80">
+            Atuamos na identificação, avaliação e gestão dos riscos psicossociais,
+            desenvolvendo soluções práticas para atender à NR-1, fortalecer a saúde
+            mental e promover ambientes de trabalho de alta performance.
+          </p>
+
           {/* CTA */}
-          <div className="flex flex-col sm:flex-row gap-3 justify-center pt-8">
-  <a
-    href="#contato"
-    className="inline-flex items-center justify-center gap-2 bg-accent text-accent-foreground px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:shadow-xl hover:scale-[1.02] transition-all"
-  >
-    Falar com um especialista
-    <ArrowRight size={16} />
-  </a>
+          <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
 
-  <a
-    href="#MetodoSection"
-    className="inline-flex items-center justify-center gap-2 border border-white/15 bg-white/5 text-white px-7 py-3 rounded-xl font-semibold text-sm md:text-base hover:bg-white/10 transition-all"
-  >
-    Conheça nosso método
-  </a>
-</div>
+            <a
+              href="#contato"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 font-semibold text-accent-foreground shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+            >
+              Falar com um especialista
+              <ArrowRight size={18} />
+            </a>
 
-{/* Prova leve */}
-<div className="pt-6 text-xs md:text-sm text-white/60">
-Consultoria • Treinamentos • Soluções Corporativas
-</div>
+            <a
+              href="#metodo"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white/10"
+            >
+              Conheça nosso método
+            </a>
+
+          </div>
+
+          {/* Footer */}
+          <div className="mt-8 text-sm text-white/60 tracking-wide">
+            Consultoria • Diagnóstico • Treinamentos • Gestão dos Riscos Psicossociais
+          </div>
+
         </div>
       </div>
 
@@ -60,10 +65,11 @@ Consultoria • Treinamentos • Soluções Corporativas
         <svg viewBox="0 0 1440 80" fill="none" className="w-full">
           <path
             d="M0 40C360 80 720 0 1080 40C1260 60 1380 50 1440 40V80H0V40Z"
-            fill="hsl(0 0% 100%)"
+            fill="white"
           />
         </svg>
       </div>
+
     </section>
   );
 };
