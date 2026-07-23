@@ -31,29 +31,36 @@ const slides = [
   },
 ];
 
+const AUTO_PLAY = 8000; // 8 segundos
+
 const ImageCarousel = () => {
   const [current, setCurrent] = useState(0);
+  const [paused, setPaused] = useState(false);
 
   useEffect(() => {
+    if (paused) return;
+
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, AUTO_PLAY);
 
     return () => clearInterval(timer);
-  }, []);
+  }, [paused]);
 
   return (
     <section className="py-24 bg-background">
       <div className="container">
-
-        <div className="relative overflow-hidden rounded-[2rem] shadow-2xl border border-border/30">
-
+        <div
+          className="relative overflow-hidden rounded-[2rem] border border-border/30 shadow-2xl"
+          onMouseEnter={() => setPaused(true)}
+          onMouseLeave={() => setPaused(false)}
+        >
           <div className="relative h-[430px] md:h-[560px]">
 
             <img
               src={slides[current].image}
               alt={slides[current].title}
-              className="h-full w-full object-cover transition-all duration-700"
+              className="h-full w-full object-cover transition-all duration-[1800ms] ease-in-out"
             />
 
             {/* Overlay */}
@@ -61,7 +68,6 @@ const ImageCarousel = () => {
 
             {/* Conteúdo */}
             <div className="absolute inset-0 flex items-end">
-
               <div className="max-w-3xl p-8 md:p-14">
 
                 <span className="inline-flex items-center rounded-full border border-white/20 bg-white/10 backdrop-blur-md px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/80">
@@ -77,31 +83,27 @@ const ImageCarousel = () => {
                 </p>
 
               </div>
-
             </div>
 
             {/* Indicadores */}
             <div className="absolute bottom-8 right-8 flex gap-3">
-
               {slides.map((_, index) => (
                 <button
                   key={index}
+                  type="button"
                   onClick={() => setCurrent(index)}
                   aria-label={`Slide ${index + 1}`}
-                  className={`rounded-full transition-all duration-300 ${
+                  className={`rounded-full transition-all duration-500 ${
                     current === index
                       ? "w-10 h-3 bg-accent"
-                      : "w-3 h-3 bg-white/60 hover:bg-white"
+                      : "w-3 h-3 bg-white/50 hover:bg-white"
                   }`}
                 />
               ))}
-
             </div>
 
           </div>
-
         </div>
-
       </div>
     </section>
   );
