@@ -1,79 +1,92 @@
-import { ArrowRight } from "lucide-react";
+import { useEffect, useState } from "react";
 
-const AboutSection = () => {
+const slides = [
+  {
+    image:
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+    title: "Diagnóstico da exposição psicossocial",
+    text: "Identificamos riscos, fragilidades e pontos de atenção com olhar técnico e estratégico.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=1600&q=80",
+    title: "Apoio à liderança e áreas-chave",
+    text: "Fortalecemos a atuação das lideranças para lidar com o tema com mais preparo e segurança.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=1600&q=80",
+    title: "Estruturação da adequação à NR-01",
+    text: "Transformamos exigência em processo, direcionamento e acompanhamento prático.",
+  },
+  {
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1600&q=80",
+    title: "Mais controle, menos exposição",
+    text: "Sua empresa avança para uma gestão mais preventiva, organizada e segura.",
+  },
+];
+
+const ImageCarousel = () => {
+  const [current, setCurrent] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrent((previousSlide) => (previousSlide + 1) % slides.length);
+    }, 4500);
+
+    return () => clearInterval(timer);
+  }, []);
+
   return (
-    <section id="quem-somos" className="py-24 bg-background">
+    <section className="py-24 bg-background">
       <div className="container">
+        <div className="relative overflow-hidden rounded-[2rem] border border-border/50 shadow-sm">
+          <div className="relative h-[420px] md:h-[520px]">
+            <img
+              src={slides[current].image}
+              alt={slides[current].title}
+              className="h-full w-full object-cover transition-all duration-700"
+            />
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/65 via-black/20 to-transparent" />
 
-          {/* TEXTO */}
+            <div className="absolute bottom-0 left-0 right-0 p-8 md:p-12">
+              <div className="max-w-2xl">
+                <span className="mb-3 inline-block text-xs font-semibold uppercase tracking-[0.25em] text-white/70 md:text-sm">
+                  Essência PSI
+                </span>
 
-          <div className="reveal">
+                <h3 className="mb-3 text-2xl font-bold leading-tight text-white md:text-4xl">
+                  {slides[current].title}
+                </h3>
 
-            <span className="inline-flex items-center rounded-full border border-accent/20 bg-accent/5 px-4 py-2 text-xs font-semibold uppercase tracking-[0.25em] text-accent mb-6">
-              Quem somos
-            </span>
-
-            <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-
-              Essência
-
-              <br />
-
-              <span className="gold-gradient-text">
-                Gestão Psicossocial
-              </span>
-
-            </h2>
-
-            <p className="mt-8 text-muted-foreground text-lg leading-8">
-
-              A Essência Gestão Psicossocial é uma consultoria especializada
-              em saúde mental no trabalho, gestão de riscos psicossociais e
-              adequação à NR-01.
-
-            </p>
-
-            <p className="mt-6 text-muted-foreground text-lg leading-8">
-
-              Atuamos ao lado de empresas, desenvolvendo soluções técnicas,
-              estratégicas e humanizadas para promover ambientes de trabalho
-              mais saudáveis, seguros e em conformidade com a legislação.
-
-            </p>
-
-                        <a
-              href="/sobre"
-              className="inline-flex items-center gap-2 mt-10 rounded-xl bg-primary px-7 py-3 text-sm md:text-base font-semibold text-primary-foreground hover:opacity-90 transition-all duration-300"
-            >
-              Conheça nossa história
-              <ArrowRight size={18} />
-            </a>
-
-          </div>
-
-          {/* IMAGEM */}
-
-          <div className="reveal reveal-delay-2">
-
-            <div className="overflow-hidden rounded-[32px] shadow-xl">
-
-              <img
-                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1200&q=80"
-                alt="Equipe da Essência Gestão Psicossocial"
-                className="w-full h-[420px] lg:h-[520px] object-cover hover:scale-105 transition-transform duration-700"
-              />
-
+                <p className="max-w-xl text-sm leading-relaxed text-white/85 md:text-lg">
+                  {slides[current].text}
+                </p>
+              </div>
             </div>
 
+            <div className="absolute bottom-8 right-8 flex gap-2">
+              {slides.map((slide, index) => (
+                <button
+                  key={slide.title}
+                  type="button"
+                  onClick={() => setCurrent(index)}
+                  aria-label={`Ir para o slide ${index + 1}`}
+                  className={`h-2.5 rounded-full transition-all duration-300 ${
+                    current === index
+                      ? "w-8 bg-white"
+                      : "w-2.5 bg-white/50"
+                  }`}
+                />
+              ))}
+            </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default ImageCarousel;
