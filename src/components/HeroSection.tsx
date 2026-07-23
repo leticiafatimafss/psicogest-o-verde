@@ -18,18 +18,19 @@ const HeroSection = () => {
 
           {/* Headline */}
           <h1 className="mt-8 font-heading text-[2.5rem] sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-white">
-            Construindo empresas
+            Diagnóstico, treinamento
             <br />
             <span className="gold-gradient-hero">
-              mais saudáveis, seguras e em conformidade.
+              e consultoria para empresas mais saudáveis.
             </span>
           </h1>
 
           {/* Subheadline */}
           <p className="mt-8 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed text-white/80">
-            Atuamos na identificação, avaliação e gestão dos riscos psicossociais,
-            desenvolvendo soluções práticas para atender à NR-1, fortalecer a saúde
-            mental e promover ambientes de trabalho de alta performance.
+            Desenvolvemos soluções que fortalecem lideranças, aumentam o
+            engajamento das equipes e ajudam empresas a reduzir riscos,
+            melhorar resultados e construir uma cultura organizacional
+            mais forte.
           </p>
 
           {/* CTA */}
@@ -47,14 +48,20 @@ const HeroSection = () => {
               href="#metodo"
               className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white/10"
             >
-              Conheça nosso método
+              Conheça nossas soluções
             </a>
 
           </div>
 
           {/* Footer */}
-          <div className="mt-8 text-sm text-white/60 tracking-wide">
-            Consultoria • Diagnóstico • Treinamentos • Gestão dos Riscos Psicossociais
+          <div className="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/60 tracking-wide">
+            <span>Diagnóstico Organizacional</span>
+            <span>•</span>
+            <span>Treinamentos</span>
+            <span>•</span>
+            <span>Consultoria</span>
+            <span>•</span>
+            <span>Gestão dos Riscos Psicossociais</span>
           </div>
 
         </div>
