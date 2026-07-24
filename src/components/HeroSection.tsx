@@ -2,20 +2,32 @@ import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section className="relative flex min-h-[85vh] items-center overflow-hidden bg-[linear-gradient(135deg,#0f2d22_0%,#174734_45%,#1f6a48_100%)]">
+    <section
+      id="home"
+      className="relative flex min-h-[80svh] items-center overflow-hidden bg-[linear-gradient(135deg,#0f2d22_0%,#174734_45%,#1f6a48_100%)] md:min-h-[85vh]"
+    >
       {/* Efeitos de fundo */}
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_28%),radial-gradient(circle_at_80%_30%,rgba(212,175,55,0.12),transparent_30%)]" />
 
-      <div className="container relative z-10 pb-16 pt-28 md:pb-20 md:pt-32">
+      <div className="container relative z-10 pb-12 pt-28 md:pb-20 md:pt-32">
         <div className="mx-auto max-w-5xl text-center">
+
           {/* Badge */}
-          <div className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-2 text-xs font-medium tracking-wide text-white/80 backdrop-blur-sm md:text-sm">
-            <span className="h-2 w-2 animate-pulse rounded-full bg-accent" />
+          <div className="inline-flex max-w-[290px] items-center justify-center gap-2 rounded-full border border-white/15 bg-white/10 px-4 py-2 text-[10px] font-medium leading-relaxed tracking-wide text-white/80 backdrop-blur-sm md:max-w-none md:px-5 md:text-sm">
+            <span className="h-2 w-2 shrink-0 animate-pulse rounded-full bg-accent" />
             Especialistas em Saúde Mental Corporativa
           </div>
 
-          {/* Título */}
-          <h1 className="mt-8 font-heading text-[2.5rem] font-bold leading-[1.06] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
+          {/* TÍTULO MOBILE */}
+          <h1 className="mt-6 font-heading text-[2rem] font-bold leading-[1.08] tracking-tight text-white md:hidden">
+            Saúde mental que gera
+            <span className="gold-gradient-hero block">
+              resultados para sua empresa.
+            </span>
+          </h1>
+
+          {/* TÍTULO DESKTOP — permanece igual */}
+          <h1 className="mt-8 hidden font-heading font-bold leading-[1.06] tracking-tight text-white md:block md:text-6xl lg:text-7xl">
             Diagnóstico, treinamento
             <br />
 
@@ -24,8 +36,14 @@ const HeroSection = () => {
             </span>
           </h1>
 
-          {/* Descrição */}
-          <p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-white/80 md:text-xl">
+          {/* DESCRIÇÃO MOBILE */}
+          <p className="mx-auto mt-5 max-w-sm text-[15px] leading-relaxed text-white/75 md:hidden">
+            Fortalecemos lideranças, equipes e resultados por meio de soluções
+            em saúde mental corporativa.
+          </p>
+
+          {/* DESCRIÇÃO DESKTOP — permanece igual */}
+          <p className="mx-auto mt-8 hidden max-w-3xl text-xl leading-relaxed text-white/80 md:block">
             Desenvolvemos soluções que fortalecem lideranças, aumentam o
             engajamento das equipes e ajudam empresas a reduzir riscos,
             melhorar resultados e construir uma cultura organizacional mais
@@ -33,43 +51,52 @@ const HeroSection = () => {
           </p>
 
           {/* Botões */}
-          <div className="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+          <div className="mt-8 flex flex-col justify-center gap-3 sm:flex-row md:mt-10 md:gap-4">
             <a
               href="#contato"
-              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-8 py-4 font-semibold text-accent-foreground shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-accent px-6 py-3.5 text-sm font-semibold text-accent-foreground shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl md:px-8 md:py-4 md:text-base"
             >
-              Falar com um especialista
+              <span className="md:hidden">Falar com especialista</span>
+              <span className="hidden md:inline">
+                Falar com um especialista
+              </span>
+
               <ArrowRight size={18} />
             </a>
 
             <a
               href="#metodo"
-              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-8 py-4 font-semibold text-white transition-all duration-300 hover:bg-white/10"
+              className="inline-flex items-center justify-center rounded-xl border border-white/20 bg-white/5 px-6 py-3.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 md:px-8 md:py-4 md:text-base"
             >
-              Conheça nossas soluções
+              <span className="md:hidden">Ver soluções</span>
+              <span className="hidden md:inline">
+                Conheça nossas soluções
+              </span>
             </a>
           </div>
 
-          {/* Serviços */}
-          <div className="mt-9 flex flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm tracking-wide text-white/60">
-            <span>Diagnóstico Organizacional</span>
-
+          {/* SERVIÇOS MOBILE */}
+          <div className="mt-7 flex flex-wrap items-center justify-center gap-2 text-xs leading-relaxed text-white/60 md:hidden">
+            <span>Diagnóstico</span>
             <span className="text-[#C7A56A]">•</span>
-
             <span>Treinamentos</span>
-
             <span className="text-[#C7A56A]">•</span>
-
             <span>Consultoria</span>
+          </div>
 
+          {/* SERVIÇOS DESKTOP — permanecem iguais */}
+          <div className="mt-9 hidden flex-wrap items-center justify-center gap-x-5 gap-y-2 text-sm tracking-wide text-white/60 md:flex">
+            <span>Diagnóstico Organizacional</span>
             <span className="text-[#C7A56A]">•</span>
-
+            <span>Treinamentos</span>
+            <span className="text-[#C7A56A]">•</span>
+            <span>Consultoria</span>
+            <span className="text-[#C7A56A]">•</span>
             <span>Gestão dos Riscos Psicossociais</span>
           </div>
+
         </div>
       </div>
-
-      {/* Não há mais divisor em SVG aqui */}
     </section>
   );
 };
