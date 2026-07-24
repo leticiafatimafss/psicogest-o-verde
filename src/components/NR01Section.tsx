@@ -11,15 +11,17 @@ const NR01Section = () => {
     >
       {/* Elementos decorativos */}
       <div className="pointer-events-none absolute inset-0">
+
         <div className="absolute -top-16 right-0 h-64 w-64 rounded-full bg-white/70 blur-3xl" />
 
         <div className="absolute bottom-0 left-0 h-64 w-64 rounded-full bg-accent/5 blur-3xl" />
+
       </div>
 
       <div ref={ref} className="container relative">
 
         {/* =====================================================
-            VERSÃO MOBILE — COMPACTA E COMERCIAL
+            VERSÃO MOBILE — CURTA E INSTITUCIONAL
         ====================================================== */}
         <div className="reveal mx-auto max-w-md md:hidden">
 
@@ -32,18 +34,20 @@ const NR01Section = () => {
 
               {/* Ícone */}
               <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-primary/10 text-primary">
+
                 <ShieldCheck size={21} strokeWidth={1.9} />
+
               </div>
 
-              {/* Conteúdo */}
+              {/* Título */}
               <div className="min-w-0 flex-1">
 
                 <span className="text-[10px] font-semibold uppercase tracking-[0.18em] text-accent">
-                  Nova NR-01
+                  NR-01 na prática
                 </span>
 
-                <h2 className="mt-1.5 font-heading text-[1.55rem] font-bold leading-[1.12] text-foreground">
-                  Sua empresa está preparada?
+                <h2 className="mt-1.5 font-heading text-[1.5rem] font-bold leading-[1.15] text-foreground">
+                  A prevenção precisa fazer parte da rotina da empresa.
                 </h2>
 
               </div>
@@ -51,41 +55,16 @@ const NR01Section = () => {
             </div>
 
             <p className="mt-4 text-sm leading-relaxed text-muted-foreground">
-              Transformamos as exigências da NR-01 em ações práticas,
-              organizadas e documentadas.
+              Mais do que uma ação isolada, é necessário manter organização,
+              registros e acompanhamento das medidas adotadas.
             </p>
-
-            <div className="mt-5 flex flex-wrap gap-2">
-
-              <span className="rounded-full bg-green-light px-3 py-1.5 text-[11px] font-semibold text-primary">
-                Diagnóstico
-              </span>
-
-              <span className="rounded-full bg-green-light px-3 py-1.5 text-[11px] font-semibold text-primary">
-                Plano de ação
-              </span>
-
-              <span className="rounded-full bg-green-light px-3 py-1.5 text-[11px] font-semibold text-primary">
-                Acompanhamento
-              </span>
-
-            </div>
-
-            <a
-              href="#contato"
-              className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-xl bg-accent px-5 py-3.5 text-sm font-bold text-accent-foreground transition-all hover:shadow-lg"
-            >
-              Falar com um especialista
-
-              <ArrowUpRight size={16} />
-            </a>
 
           </div>
 
         </div>
 
         {/* =====================================================
-            TABLET E DESKTOP — VERSÃO COMPLETA ORIGINAL
+            TABLET E DESKTOP — VERSÃO COMPLETA
         ====================================================== */}
         <div className="mx-auto hidden max-w-5xl md:block">
 
@@ -98,6 +77,7 @@ const NR01Section = () => {
 
             <h2 className="mt-5 font-heading text-5xl font-bold leading-[1.02] tracking-tight text-foreground">
               A nova NR-01 exige
+
               <span className="gold-gradient-text">
                 {" "}estrutura de gestão.
               </span>
@@ -117,7 +97,7 @@ const NR01Section = () => {
             <div className="grid grid-cols-2 gap-12">
 
               {/* Sem estrutura */}
-              <div className="border-border/60">
+              <div>
 
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-muted-foreground">
                   Sem estrutura
@@ -147,7 +127,7 @@ const NR01Section = () => {
 
               </div>
 
-              {/* Com estrutura */}
+              {/* Com gestão estruturada */}
               <div>
 
                 <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-accent">
@@ -206,7 +186,7 @@ const NR01Section = () => {
 
               <a
                 href="#contato"
-                className="inline-flex whitespace-nowrap items-center justify-center gap-2 rounded-full bg-accent px-5 py-3 text-base font-semibold text-accent-foreground transition-all hover:scale-[1.02] hover:shadow-lg"
+                className="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full bg-accent px-5 py-3 text-base font-semibold text-accent-foreground transition-all hover:scale-[1.02] hover:shadow-lg"
               >
                 Falar com especialista
                 <ArrowUpRight size={16} />
