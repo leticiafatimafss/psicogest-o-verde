@@ -27,11 +27,11 @@ interface MenuItem {
 const navLinks: MenuItem[] = [
   {
     label: "Home",
-    href: "#home",
+    href: "/#home",
   },
   {
     label: "Quem Somos",
-    href: "#quem-somos",
+    href: "/#quem-somos",
   },
   {
     label: "Soluções",
@@ -39,13 +39,13 @@ const navLinks: MenuItem[] = [
       {
         label: "Metodologia",
         description: "Conheça o Método Essência PSI",
-        href: "#metodologia",
+        href: "/#metodologia",
         icon: Sparkles,
       },
       {
         label: "Serviços",
-        description: "Soluções completas para sua empresa",
-        href: "#servicos",
+        description: "Consultoria, treinamentos e soluções corporativas",
+        href: "/#servicos",
         icon: Layers3,
       },
     ],
@@ -54,15 +54,15 @@ const navLinks: MenuItem[] = [
     label: "Materiais",
     children: [
       {
-        label: "eBooks",
-        description: "Guias práticos e materiais técnicos",
-        href: "#ebooks",
+        label: "Guia Prático da NR-1",
+        description: "Implementação da NR-1 e riscos psicossociais",
+        href: "/guia-nr1",
         icon: BookOpen,
       },
       {
         label: "Plataforma",
-        description: "Diagnóstico e gestão psicossocial",
-        href: "#plataforma",
+        description: "Diagnóstico e gestão dos riscos psicossociais",
+        href: "/#plataforma",
         icon: MonitorSmartphone,
       },
     ],
@@ -74,12 +74,14 @@ const Navbar = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState<string | null>(
-    null,
-  );
-  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<string | null>(
-    null,
-  );
+
+  const [desktopDropdownOpen, setDesktopDropdownOpen] = useState<
+    string | null
+  >(null);
+
+  const [mobileDropdownOpen, setMobileDropdownOpen] = useState<
+    string | null
+  >(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -116,11 +118,7 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    if (mobileMenuOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
-    }
+    document.body.style.overflow = mobileMenuOpen ? "hidden" : "";
 
     return () => {
       document.body.style.overflow = "";
@@ -157,13 +155,13 @@ const Navbar = () => {
       <div className="container flex h-[88px] items-center justify-between gap-6">
         {/* LOGO */}
         <a
-          href="#home"
+          href="/#home"
           onClick={closeAllMenus}
           className="group flex shrink-0 items-center gap-3"
-          aria-label="Ir para o início"
+          aria-label="Ir para a página inicial"
         >
           <div className="relative">
-            <div className="absolute inset-0 rounded-full bg-[#b99855]/25 blur-md opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+            <div className="absolute inset-0 rounded-full bg-[#b99855]/25 opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-100" />
 
             <img
               src={logo}
@@ -230,7 +228,7 @@ const Navbar = () => {
                   />
                 </button>
 
-                {/* Ponte invisível para o mouse não perder o dropdown */}
+                {/* Ponte invisível entre o botão e o dropdown */}
                 <div className="absolute left-0 top-full h-4 w-full" />
 
                 {/* DROPDOWN */}
@@ -242,10 +240,8 @@ const Navbar = () => {
                   }`}
                 >
                   <div className="relative overflow-hidden rounded-2xl border border-[#c6a45d]/25 bg-[#092b22] p-3 shadow-[0_28px_75px_rgba(0,0,0,0.55)]">
-                    {/* Linha dourada */}
                     <div className="absolute inset-x-8 top-0 h-px bg-gradient-to-r from-transparent via-[#d1b269]/80 to-transparent" />
 
-                    {/* Seta superior */}
                     <div className="absolute -top-1.5 left-1/2 h-3 w-3 -translate-x-1/2 rotate-45 border-l border-t border-[#c6a45d]/25 bg-[#092b22]" />
 
                     <div className="relative space-y-1.5">
@@ -259,7 +255,7 @@ const Navbar = () => {
                             onClick={closeAllMenus}
                             className="group/item flex items-center gap-4 rounded-xl border border-transparent px-4 py-4 transition-all duration-200 hover:border-white/10 hover:bg-white/[0.09]"
                           >
-                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#d0ae60]/30 bg-[#d0ae60]/10 text-[#e3c477] transition-all duration-200 group-hover/item:border-[#d0ae60]/50 group-hover/item:bg-[#d0ae60]/18">
+                            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-[#d0ae60]/30 bg-[#d0ae60]/10 text-[#e3c477] transition-all duration-200 group-hover/item:border-[#d0ae60]/50 group-hover/item:bg-[#d0ae60]/20">
                               <Icon size={19} strokeWidth={2} />
                             </div>
 
@@ -288,7 +284,7 @@ const Navbar = () => {
 
           {/* BOTÃO DESKTOP */}
           <a
-            href="#contato"
+            href="/#contato"
             onClick={closeAllMenus}
             className="ml-5 whitespace-nowrap rounded-full border border-[#d2b36e]/35 bg-[#ad8d4d] px-8 py-3.5 text-sm font-bold text-white shadow-[0_10px_26px_rgba(0,0,0,0.22)] transition-all duration-300 hover:-translate-y-0.5 hover:bg-[#bb9a58] hover:shadow-[0_14px_34px_rgba(0,0,0,0.3)]"
           >
@@ -299,7 +295,7 @@ const Navbar = () => {
         {/* MENU TABLET */}
         <div className="hidden items-center gap-3 lg:flex xl:hidden">
           <a
-            href="#contato"
+            href="/#contato"
             onClick={closeAllMenus}
             className="whitespace-nowrap rounded-full bg-[#ad8d4d] px-5 py-3 text-sm font-bold text-white"
           >
@@ -316,7 +312,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* MENU MOBILE */}
+        {/* BOTÃO MOBILE */}
         <button
           type="button"
           onClick={() => setMobileMenuOpen(true)}
@@ -336,6 +332,7 @@ const Navbar = () => {
             : "pointer-events-none opacity-0"
         }`}
         onClick={closeAllMenus}
+        aria-hidden="true"
       />
 
       {/* MENU LATERAL MOBILE */}
@@ -343,11 +340,12 @@ const Navbar = () => {
         className={`fixed right-0 top-0 z-50 flex h-dvh w-[min(90vw,400px)] flex-col bg-[#092b22] shadow-[-30px_0_80px_rgba(0,0,0,0.45)] transition-transform duration-300 ease-out xl:hidden ${
           mobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
+        aria-hidden={!mobileMenuOpen}
       >
-        {/* Cabeçalho mobile */}
+        {/* CABEÇALHO MOBILE */}
         <div className="flex h-[88px] items-center justify-between border-b border-white/10 px-6">
           <a
-            href="#home"
+            href="/#home"
             onClick={closeAllMenus}
             className="flex items-center gap-3"
           >
@@ -378,7 +376,7 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Conteúdo mobile */}
+        {/* CONTEÚDO MOBILE */}
         <div className="flex-1 overflow-y-auto px-5 py-6">
           <div className="space-y-2">
             {navLinks.map((link) => {
@@ -463,7 +461,7 @@ const Navbar = () => {
           </div>
 
           <a
-            href="#contato"
+            href="/#contato"
             onClick={closeAllMenus}
             className="mt-7 flex items-center justify-center rounded-full bg-[#ad8d4d] px-6 py-4 text-center text-sm font-bold text-white shadow-lg transition-colors hover:bg-[#bb9a58]"
           >
@@ -481,4 +479,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
