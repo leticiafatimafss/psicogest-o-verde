@@ -1,36 +1,45 @@
 import {
   AlertTriangle,
-  Brain,
+  CheckCircle2,
+  CircleHelp,
   ClipboardCheck,
   FileWarning,
   Route,
+  ShieldAlert,
   Users,
 } from "lucide-react";
 
-const desafios = [
+const situacoes = [
+  "Você ouviu falar das mudanças da NR-1, mas ainda não sabe por onde começar.",
+  "O RH ou o SESMT recebeu a responsabilidade, porém não existe um roteiro claro.",
+  "Cada fornecedor apresenta uma interpretação diferente e isso aumenta a insegurança.",
+  "Você não sabe quais documentos, registros e evidências precisam ser organizados.",
+  "Existe receio de investir tempo e dinheiro e descobrir depois que o processo ficou incompleto.",
+  "A empresa até realizou um diagnóstico, mas não sabe transformar os resultados em plano de ação.",
+  "As responsabilidades entre direção, RH, SESMT e lideranças ainda não estão definidas.",
+  "Você quer compreender o processo antes de contratar uma consultoria ou fornecedor.",
+];
+
+const impactos = [
   {
     icon: FileWarning,
-    title: "Dificuldade para interpretar a NR-1",
-    description:
-      "Muitas empresas conhecem a obrigação, mas ainda têm dúvidas sobre o que precisa ser estruturado na prática.",
-  },
-  {
-    icon: Brain,
-    title: "Insegurança sobre riscos psicossociais",
-    description:
-      "Nem sempre está claro quais fatores devem ser observados, avaliados e acompanhados dentro da organização.",
+    title: "Informações espalhadas",
+    text: "A empresa reúne vídeos, artigos e opiniões diferentes, mas continua sem uma sequência confiável.",
   },
   {
     icon: Users,
-    title: "Falta de alinhamento entre as áreas",
-    description:
-      "RH, SESMT, lideranças e direção precisam atuar de forma integrada para que o processo funcione.",
+    title: "Responsabilidades confusas",
+    text: "As áreas envolvidas não sabem exatamente quem conduz, quem aprova e quem acompanha cada etapa.",
   },
   {
     icon: ClipboardCheck,
-    title: "Dificuldade para transformar dados em ação",
-    description:
-      "Identificar problemas não é suficiente. É preciso definir prioridades, responsáveis e medidas de acompanhamento.",
+    title: "Plano de ação frágil",
+    text: "Os riscos são identificados, porém as ações não ganham prioridade, prazo, responsáveis e acompanhamento.",
+  },
+  {
+    icon: ShieldAlert,
+    title: "Insegurança para decidir",
+    text: "A falta de clareza gera medo de auditorias, fiscalizações, retrabalho e contratação de soluções inadequadas.",
   },
 ];
 
@@ -38,81 +47,90 @@ export default function EbookProblema() {
   return (
     <section className="bg-white py-12 md:py-24">
       <div className="container mx-auto px-5 md:px-8">
-        <div className="grid items-start gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          {/* Texto principal */}
-          <div className="lg:sticky lg:top-28">
-            <span className="inline-flex items-center gap-2 rounded-full bg-[#155b38]/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#155b38] md:px-4 md:py-2 md:text-xs">
-              <AlertTriangle className="h-4 w-4" />
-              O desafio das empresas
-            </span>
+        <div className="mx-auto max-w-4xl text-center">
+          <span className="inline-flex items-center gap-2 rounded-full bg-[#155b38]/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-[0.16em] text-[#155b38] md:px-4 md:py-2 md:text-xs">
+            <AlertTriangle className="h-4 w-4" />
+            Isso está acontecendo na sua empresa?
+          </span>
 
-            <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#153d2d] md:mt-6 md:text-5xl">
-              Muitas empresas sabem que precisam agir, mas ainda não sabem por
-              onde começar.
-            </h2>
+          <h2 className="mt-4 text-3xl font-semibold leading-tight text-[#153d2d] md:mt-6 md:text-5xl">
+            A NR-1 está gerando mais dúvidas do que respostas?
+          </h2>
 
-            <p className="mt-4 text-sm leading-6 text-slate-600 md:mt-6 md:text-lg md:leading-8">
-              A implementação da NR-1 exige mais do que aplicar um questionário
-              ou realizar uma ação isolada. É necessário compreender os riscos,
-              organizar responsabilidades e transformar os resultados em um
-              plano de ação possível de acompanhar.
-            </p>
+          <p className="mx-auto mt-4 max-w-3xl text-sm leading-6 text-slate-600 md:mt-6 md:text-lg md:leading-8">
+            Muitas empresas sabem que precisam olhar para os riscos psicossociais,
+            mas ainda não conseguiram transformar essa obrigação em um processo
+            organizado, documentado e aplicável.
+          </p>
+        </div>
 
-            {/* Texto extra apenas no desktop */}
-            <p className="mt-4 hidden text-base leading-7 text-slate-500 md:block">
-              Sem uma sequência clara, o processo pode ficar fragmentado,
-              gerar retrabalho e aumentar a insegurança de quem precisa conduzir
-              a implementação.
-            </p>
+        <div className="mx-auto mt-8 grid max-w-5xl gap-3 sm:grid-cols-2 md:mt-12 md:gap-4">
+          {situacoes.map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-2xl border border-slate-200 bg-[#f9f7f1] p-4 md:p-5"
+            >
+              <CircleHelp className="mt-0.5 h-5 w-5 shrink-0 text-[#155b38]" />
+              <p className="text-sm leading-6 text-slate-700 md:text-base md:leading-7">
+                {item}
+              </p>
+            </div>
+          ))}
+        </div>
 
-            <div className="mt-7 rounded-2xl border border-[#155b38]/10 bg-[#f7f4eb] p-5 md:mt-8 md:rounded-3xl md:p-7">
-              <div className="flex items-start gap-3">
-                <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#155b38]">
-                  <Route className="h-5 w-5 text-white" />
+        <div className="mx-auto mt-8 max-w-4xl rounded-2xl bg-[#153d2d] px-5 py-6 text-center text-white md:mt-12 md:rounded-3xl md:px-10 md:py-9">
+          <p className="text-sm leading-6 text-white/75 md:text-lg md:leading-8">
+            Se você se identificou com uma ou mais dessas situações, o problema
+            não é falta de interesse. O que falta é um caminho mais claro para
+            entender o que fazer primeiro, quem envolver e como avançar.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 md:mt-14">
+          {impactos.map((item) => {
+            const Icon = item.icon;
+            return (
+              <article
+                key={item.title}
+                className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:rounded-3xl md:p-6"
+              >
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#155b38]/10">
+                  <Icon className="h-5 w-5 text-[#155b38]" />
                 </div>
+                <h3 className="mt-4 text-lg font-semibold text-[#153d2d]">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {item.text}
+                </p>
+              </article>
+            );
+          })}
+        </div>
 
-                <div>
-                  <h3 className="text-lg font-semibold text-[#153d2d] md:text-xl">
-                    O guia ajuda a organizar o caminho
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                    Você entende as etapas, identifica os principais pontos de
-                    atenção e consegue visualizar os próximos passos com mais
-                    clareza.
-                  </p>
-                </div>
+        <div className="mx-auto mt-8 max-w-4xl rounded-2xl border border-[#155b38]/10 bg-[#f7f4eb] p-5 md:mt-12 md:rounded-3xl md:p-8">
+          <div className="flex items-start gap-4">
+            <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#155b38]">
+              <Route className="h-5 w-5 text-white" />
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-[#153d2d] md:text-2xl">
+                Foi para organizar esse caminho que o guia foi criado.
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                Em vez de continuar juntando informações desconectadas, você passa
+                a ter uma visão estruturada das etapas, responsabilidades,
+                registros e decisões necessárias.
+              </p>
+              <div className="mt-4 flex items-center gap-2 text-sm font-semibold text-[#155b38]">
+                <CheckCircle2 className="h-4 w-4" />
+                Clareza para compreender antes de agir.
               </div>
             </div>
-          </div>
-
-          {/* Cards */}
-          <div className="grid gap-3 sm:grid-cols-2 md:gap-5">
-            {desafios.map((item) => {
-              const Icon = item.icon;
-
-              return (
-                <article
-                  key={item.title}
-                  className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#155b38]/20 hover:shadow-xl md:rounded-3xl md:p-7"
-                >
-                  <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#155b38]/10 md:h-12 md:w-12 md:rounded-2xl">
-                    <Icon className="h-5 w-5 text-[#155b38] md:h-6 md:w-6" />
-                  </div>
-
-                  <h3 className="mt-4 text-lg font-semibold leading-snug text-[#153d2d] md:mt-5 md:text-xl">
-                    {item.title}
-                  </h3>
-
-                  <p className="mt-2 text-sm leading-6 text-slate-600 md:mt-3 md:text-base md:leading-7">
-                    {item.description}
-                  </p>
-                </article>
-              );
-            })}
           </div>
         </div>
       </div>
     </section>
   );
 }
+
