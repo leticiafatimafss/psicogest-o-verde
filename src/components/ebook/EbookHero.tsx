@@ -104,7 +104,7 @@ export default function EbookHero() {
           <div className="mx-auto w-full max-w-sm lg:max-w-md">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl md:p-6">
               <img
-                src="/ebook/capa-guia-nr1.png"
+                src="/capa-guia-nr1.png"
                 alt="Capa do Guia Prático de Implementação da NR-1"
                 className="h-auto w-full rounded-2xl object-cover shadow-xl"
               />
