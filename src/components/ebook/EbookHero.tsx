@@ -17,7 +17,7 @@ export default function EbookHero() {
   return (
     <section className="bg-[#0f2d22] pt-24 text-white md:pt-32">
       <div className="container mx-auto px-5 md:px-8">
-        <div className="grid items-center gap-10 pb-14 lg:grid-cols-2 lg:gap-16 lg:pb-20">
+        <div className="grid items-center gap-12 pb-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-20 lg:pb-24">
           {/* Conteúdo */}
           <div className="text-center lg:text-left">
             <span className="inline-block rounded-full border border-[#ddc27f]/30 bg-[#ddc27f]/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-[#ddc27f]">
@@ -101,7 +101,7 @@ export default function EbookHero() {
           </div>
 
           {/* Capa do guia */}
-          <div className="mx-auto w-full max-w-sm lg:max-w-md">
+          <div className="mx-auto w-full max-w-xl xl:max-w-2xl">
             <div className="rounded-3xl border border-white/10 bg-white/5 p-4 shadow-2xl md:p-6">
               <img
                 src="/capa-guia-nr1.png"
