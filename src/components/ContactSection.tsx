@@ -109,7 +109,7 @@ const ContactSection = () => {
 
             {/* E-mail */}
             <a
-              href="mailto:essenciapsic3@gmail.com"
+              href="mailto:contato@essenciapsicossocial.com.br"
               className="flex items-start gap-3 rounded-xl border border-border/50 bg-white/70 p-3.5 transition-colors hover:border-accent/30 md:gap-4 md:border-0 md:bg-transparent md:p-0"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-light md:h-11 md:w-11">
@@ -123,7 +123,7 @@ const ContactSection = () => {
                 </h4>
 
                 <p className="break-all text-xs text-muted-foreground md:text-sm">
-                  essenciapsic3@gmail.com
+                  contato@essenciapsicossocial.com.br
                 </p>
 
               </div>
@@ -131,7 +131,7 @@ const ContactSection = () => {
 
             {/* Telefone */}
             <a
-              href="tel:+5511941352999"
+              href="tel:+5511939193685"
               className="flex items-start gap-3 rounded-xl border border-border/50 bg-white/70 p-3.5 transition-colors hover:border-accent/30 md:gap-4 md:border-0 md:bg-transparent md:p-0"
             >
               <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-light md:h-11 md:w-11">
@@ -141,15 +141,11 @@ const ContactSection = () => {
               <div>
 
                 <h4 className="mb-0.5 text-sm font-semibold text-foreground">
-                  Telefone
+                  Telefone (Time Comercial)
                 </h4>
 
                 <p className="text-xs text-muted-foreground md:text-sm">
-                  (11) 9 4135-2999
-                </p>
-
-                <p className="text-xs text-muted-foreground md:text-sm">
-                  (11) 9 7503-0387
+                  +55 11 93919-3685
                 </p>
 
               </div>
@@ -294,5 +290,8 @@ const ContactSection = () => {
     </section>
   );
 };
+
+export default ContactSection;
+
 
 export default ContactSection;
