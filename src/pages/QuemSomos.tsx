@@ -14,6 +14,8 @@ import {
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import dayseFoto from "@/assets/dayse-baltazar.png";
+import lucianaFoto from "@/assets/luciana-do-prado.png";
 
 const principios = [
   {
@@ -194,13 +196,18 @@ export default function QuemSomos() {
 
             <div className="mx-auto mt-8 grid max-w-5xl gap-5 md:mt-12 md:grid-cols-2">
               {/* LUCIANA */}
-              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white p-6 shadow-[0_16px_45px_rgba(13,58,45,0.08)] md:p-8">
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
+              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
+                <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
 
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#155b38] font-heading text-xl font-bold text-white shadow-lg">
-                    LP
-                  </div>
+                <div className="aspect-[16/11] overflow-hidden bg-[#eee7dd]">
+                  <img
+                    src={lucianaFoto}
+                    alt="Luciana do Prado, sócia-fundadora da Essência"
+                    className="h-full w-full object-cover object-[center_24%] transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+
+                <div className="p-6 md:p-8">
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Luciana do Prado
@@ -209,30 +216,35 @@ export default function QuemSomos() {
                       Sócia-Fundadora e Psicóloga
                     </p>
                   </div>
-                </div>
 
-                <p className="mt-6 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                  Psicóloga com atuação voltada à saúde mental e ao
-                  desenvolvimento humano. Na Essência, contribui com o olhar
-                  técnico da Psicologia na construção de diagnósticos, ações
-                  preventivas, treinamentos e soluções para empresas e
-                  colaboradores.
-                </p>
+                  <p className="mt-5 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                    Psicóloga com atuação voltada à saúde mental e ao
+                    desenvolvimento humano. Na Essência, contribui com o olhar
+                    técnico da Psicologia na construção de diagnósticos, ações
+                    preventivas, treinamentos e soluções para empresas e
+                    colaboradores.
+                  </p>
 
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
-                  <HeartHandshake size={17} className="text-[#ad8d4d]" />
-                  Psicologia e desenvolvimento humano
+                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
+                    <HeartHandshake size={17} className="text-[#ad8d4d]" />
+                    Psicologia e desenvolvimento humano
+                  </div>
                 </div>
               </article>
 
               {/* DAYSE */}
-              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white p-6 shadow-[0_16px_45px_rgba(13,58,45,0.08)] md:p-8">
-                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
+              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
+                <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
 
-                <div className="flex items-center gap-4">
-                  <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-[#155b38] font-heading text-xl font-bold text-white shadow-lg">
-                    DB
-                  </div>
+                <div className="aspect-[16/11] overflow-hidden bg-[#eee7dd]">
+                  <img
+                    src={dayseFoto}
+                    alt="Dayse Baltazar, sócia-fundadora da Essência"
+                    className="h-full w-full object-cover object-[center_24%] transition-transform duration-500 group-hover:scale-[1.02]"
+                  />
+                </div>
+
+                <div className="p-6 md:p-8">
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Dayse Baltazar
@@ -241,19 +253,19 @@ export default function QuemSomos() {
                       Sócia-Fundadora e Consultora
                     </p>
                   </div>
-                </div>
 
-                <p className="mt-6 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                  Bacharel em Direito, pós-graduada em Direito Empresarial,
-                  graduanda em Psicologia e Psicanálise e pós-graduanda em
-                  Neurociência na Prática Clínica. Possui mais de 30 anos de
-                  experiência em gestão de pessoas, unindo visão jurídica,
-                  organizacional e humana.
-                </p>
+                  <p className="mt-5 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                    Bacharel em Direito, pós-graduada em Direito Empresarial,
+                    graduanda em Psicologia e Psicanálise e pós-graduanda em
+                    Neurociência na Prática Clínica. Possui mais de 30 anos de
+                    experiência em gestão de pessoas, unindo visão jurídica,
+                    organizacional e humana.
+                  </p>
 
-                <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
-                  <Scale size={17} className="text-[#ad8d4d]" />
-                  Gestão, estratégia e visão humana
+                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
+                    <Scale size={17} className="text-[#ad8d4d]" />
+                    Gestão, estratégia e visão humana
+                  </div>
                 </div>
               </article>
             </div>
