@@ -4,7 +4,6 @@ import {
   ChevronDown,
   Layers3,
   Menu,
-  MonitorSmartphone,
   Sparkles,
   X,
 } from "lucide-react";
@@ -58,12 +57,6 @@ const navLinks: MenuItem[] = [
         description: "Implementação da NR-1 e riscos psicossociais",
         href: "/guia-nr1",
         icon: BookOpen,
-      },
-      {
-        label: "Plataforma",
-        description: "Diagnóstico e gestão dos riscos psicossociais",
-        href: "/#plataforma",
-        icon: MonitorSmartphone,
       },
     ],
   },
