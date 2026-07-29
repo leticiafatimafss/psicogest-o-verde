@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
+import Blog from "./pages/blog/Blog";
 import EbookNR1 from "./pages/EbookNR1";
 import Index from "./pages/Index";
 import Metodologia from "./pages/Metodologia";
@@ -30,6 +31,9 @@ const App = () => (
           <Route path="/servicos" element={<Servicos />} />
 
           <Route path="/guia-nr1" element={<EbookNR1 />} />
+
+          {/* BLOG */}
+          <Route path="/blog" element={<Blog />} />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
