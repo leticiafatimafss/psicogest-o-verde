@@ -1,1 +1,258 @@
+/* =======================================================
+   TRANSIÇÕES GLOBAIS
+======================================================= */
 
+*{
+
+    transition:
+        color .25s ease,
+        background-color .25s ease,
+        border-color .25s ease,
+        box-shadow .25s ease;
+
+}
+
+
+/* =======================================================
+   ESTADO INICIAL
+======================================================= */
+
+.fade-up,
+.fade-left,
+.fade-right,
+.fade-in,
+.zoom-in{
+
+    opacity:0;
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease;
+
+    will-change:
+        opacity,
+        transform;
+
+}
+
+.fade-up{
+
+    transform:translateY(45px);
+
+}
+
+.fade-left{
+
+    transform:translateX(-45px);
+
+}
+
+.fade-right{
+
+    transform:translateX(45px);
+
+}
+
+.fade-in{
+
+    transform:scale(.98);
+
+}
+
+.zoom-in{
+
+    transform:scale(.88);
+
+}
+
+
+/* =======================================================
+   ESTADO VISÍVEL
+======================================================= */
+
+.show{
+
+    opacity:1;
+
+    transform:none;
+
+}
+
+
+/* =======================================================
+   HOVERS
+======================================================= */
+
+.btn-primary{
+
+    transition:
+        transform .3s ease,
+        box-shadow .3s ease,
+        background-color .3s ease;
+
+}
+
+.btn-primary:hover{
+
+    box-shadow:
+        0 18px 45px rgba(232,160,103,.35);
+
+}
+
+.benefit-card,
+.audience-card,
+.chapter-card,
+.author-card,
+.offer-card,
+.bonus-card{
+
+    transition:
+        transform .35s ease,
+        box-shadow .35s ease,
+        border-color .35s ease;
+
+}
+
+
+/* =======================================================
+   KEYFRAMES
+======================================================= */
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0);
+
+    }
+
+    50%{
+
+        transform:translateY(-10px);
+
+    }
+
+    100%{
+
+        transform:translateY(0);
+
+    }
+
+}
+
+@keyframes pulse{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.04);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+
+/* =======================================================
+   ANIMAÇÕES CONTÍNUAS
+======================================================= */
+
+.hero-image img{
+
+    animation:
+        float 5s ease-in-out infinite;
+
+}
+
+.bonus-badge{
+
+    animation:
+        pulse 3s ease-in-out infinite;
+
+}
+
+
+/* =======================================================
+   DELAYS
+======================================================= */
+
+.delay-1{
+
+    transition-delay:.15s;
+
+}
+
+.delay-2{
+
+    transition-delay:.3s;
+
+}
+
+.delay-3{
+
+    transition-delay:.45s;
+
+}
+
+.delay-4{
+
+    transition-delay:.6s;
+
+}
+
+
+/* =======================================================
+   ACESSIBILIDADE
+======================================================= */
+
+@media (prefers-reduced-motion: reduce){
+
+    *{
+
+        animation:none !important;
+
+        transition:none !important;
+
+        scroll-behavior:auto !important;
+
+    }
+
+    .fade-up,
+    .fade-left,
+    .fade-right,
+    .fade-in,
+    .zoom-in{
+
+        opacity:1 !important;
+
+        transform:none !important;
+
+    }
+
+}
