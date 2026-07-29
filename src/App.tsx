@@ -8,6 +8,7 @@ import EbookNR1 from "./pages/EbookNR1";
 import Index from "./pages/Index";
 import Metodologia from "./pages/Metodologia";
 import NotFound from "./pages/NotFound";
+import QuemSomos from "./pages/QuemSomos";
 import Servicos from "./pages/Servicos";
 
 const queryClient = new QueryClient();
@@ -21,6 +22,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+
+          <Route path="/quem-somos" element={<QuemSomos />} />
 
           <Route path="/metodologia" element={<Metodologia />} />
 
