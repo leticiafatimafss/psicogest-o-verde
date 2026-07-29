@@ -250,7 +250,7 @@ export default function QuemSomos() {
                       Dayse Baltazar
                     </h3>
                     <p className="mt-1 text-sm font-bold text-[#ad8d4d]">
-                      Sócia-Fundadora e Consultora
+                      Consultora Jurídica | Compliance Trabalhista e NR-1
                     </p>
                   </div>
 
