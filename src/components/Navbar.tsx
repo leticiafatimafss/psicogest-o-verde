@@ -30,7 +30,7 @@ const navLinks: MenuItem[] = [
   },
   {
     label: "Quem Somos",
-    href: "/#quem-somos",
+    href: "/quem-somos",
   },
   {
     label: "Soluções",
@@ -472,4 +472,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
