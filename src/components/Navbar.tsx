@@ -37,8 +37,8 @@ const navLinks: MenuItem[] = [
     children: [
       {
         label: "Metodologia",
-        description: "Conheça o Método Essência PSI",
-        href: "/#metodologia",
+        description: "Conheça o Método Essência",
+        href: "/metodologia",
         icon: Sparkles,
       },
       {
