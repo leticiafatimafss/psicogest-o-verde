@@ -292,6 +292,3 @@ const ContactSection = () => {
 };
 
 export default ContactSection;
-
-
-export default ContactSection;
