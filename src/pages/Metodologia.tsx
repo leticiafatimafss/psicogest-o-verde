@@ -1,20 +1,16 @@
 import {
   ArrowRight,
   BarChart3,
-  BookOpenCheck,
   Brain,
   BriefcaseBusiness,
   CheckCircle2,
   ClipboardCheck,
   GraduationCap,
-  HeartHandshake,
   Lightbulb,
-  LineChart,
   MessagesSquare,
   Search,
   ShieldCheck,
   Sparkles,
-  Target,
   Users,
 } from "lucide-react";
 
@@ -22,48 +18,21 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const pilares = [
-  {
-    titulo: "Base técnica",
-    descricao:
-      "Diretrizes da NR-1, GRO/PGR e boas práticas de gestão psicossocial.",
-    Icone: BookOpenCheck,
-  },
-  {
-    titulo: "Visão humana",
-    descricao:
-      "Compreensão da cultura, das relações, das lideranças e do trabalho real.",
-    Icone: HeartHandshake,
-  },
-  {
-    titulo: "Ação prática",
-    descricao:
-      "Diagnósticos transformados em prioridades, responsáveis e ações aplicáveis.",
-    Icone: Target,
-  },
-  {
-    titulo: "Evolução contínua",
-    descricao:
-      "Acompanhamento dos indicadores e aperfeiçoamento das medidas implantadas.",
-    Icone: LineChart,
-  },
-];
-
 const etapas = [
   {
     numero: "01",
     titulo: "Entendemos",
     descricao:
-      "Conhecemos a empresa, sua cultura, seus processos, desafios e objetivos.",
+      "Conhecemos a empresa, sua cultura, seus processos e seus principais desafios.",
     detalhes:
-      "Alinhamos o projeto com a diretoria, o RH, o SESMT e as lideranças.",
+      "O projeto começa com escuta e alinhamento entre diretoria, RH, SESMT e lideranças.",
     Icone: Search,
   },
   {
     numero: "02",
     titulo: "Analisamos",
     descricao:
-      "Avaliamos riscos, necessidades e oportunidades de desenvolvimento.",
+      "Transformamos informações em riscos, prioridades e oportunidades de melhoria.",
     detalhes:
       "Organizamos os dados por unidade, setor, função ou grupo ocupacional.",
     Icone: BarChart3,
@@ -72,7 +41,7 @@ const etapas = [
     numero: "03",
     titulo: "Agimos",
     descricao:
-      "Construímos soluções adequadas à realidade e às prioridades da organização.",
+      "Aplicamos as soluções mais adequadas às necessidades identificadas.",
     detalhes:
       "Definimos ações, responsáveis, prazos, indicadores e evidências.",
     Icone: Lightbulb,
@@ -81,7 +50,7 @@ const etapas = [
     numero: "04",
     titulo: "Acompanhamos",
     descricao:
-      "Monitoramos as ações e apoiamos a evolução contínua da empresa.",
+      "Monitoramos as ações, os indicadores e a evolução da organização.",
     detalhes:
       "Avaliamos resultados, ajustamos estratégias e fortalecemos a prevenção.",
     Icone: ClipboardCheck,
@@ -150,23 +119,22 @@ export default function Metodologia() {
               </div>
 
               <h1 className="mt-5 max-w-4xl font-heading text-[2.3rem] font-bold leading-[1.08] md:mt-7 md:text-6xl lg:text-7xl">
-                Técnica para compreender.
+                Entender antes de agir.
                 <span className="block text-[#d9b969]">
-                  Estratégia para transformar.
+                  Agir para transformar.
                 </span>
               </h1>
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 md:mt-7 md:text-xl md:leading-8">
-                Unimos diagnóstico, desenvolvimento humano e ações práticas
-                para prevenir riscos, fortalecer pessoas e melhorar o ambiente
-                de trabalho.
+                Nosso método começa pela realidade da empresa e avança até a
+                implantação e o acompanhamento das melhorias.
               </p>
 
               {/* Texto complementar somente em telas maiores */}
               <p className="mt-4 hidden max-w-2xl text-base leading-7 text-white/60 md:block">
-                Nossa metodologia integra gestão de riscos psicossociais,
-                consultoria, treinamentos, palestras e programas corporativos
-                em uma atuação adaptada à realidade de cada organização.
+                Em cada etapa, conectamos base técnica, visão humana e ação
+                prática para gerar soluções coerentes com os desafios da
+                organização.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
@@ -189,59 +157,31 @@ export default function Metodologia() {
           </div>
         </section>
 
-        {/* PILARES */}
-        <section className="px-5 py-12 md:px-6 md:py-20">
+        {/* CONTEXTO: POR QUE O MÉTODO EXISTE */}
+        <section className="px-5 py-10 md:px-6 md:py-16">
           <div className="mx-auto max-w-7xl">
-            <div className="mx-auto max-w-3xl text-center">
-              <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ad8d4d]">
-                Nossos pilares
-              </span>
+            <div className="grid gap-6 rounded-[1.75rem] border border-[#155b38]/10 bg-white p-6 shadow-[0_16px_45px_rgba(13,58,45,0.07)] md:grid-cols-[0.9fr_1.1fr] md:items-center md:p-10 lg:p-12">
+              <div>
+                <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ad8d4d] md:text-xs">
+                  Nosso ponto de partida
+                </span>
+                <h2 className="mt-3 font-heading text-2xl font-bold leading-tight text-[#0f2d22] md:text-4xl">
+                  Diagnosticar é importante. Transformar é o objetivo.
+                </h2>
+              </div>
 
-              <h2 className="mt-3 font-heading text-3xl font-bold text-[#0f2d22] md:text-5xl">
-                Conhecimento que se transforma em ação
-              </h2>
-
-              <p className="mx-auto mt-4 hidden max-w-2xl text-lg leading-8 text-slate-600 md:block">
-                Equilibramos rigor técnico, escuta qualificada e aplicação
-                prática para construir soluções possíveis e sustentáveis.
-              </p>
-            </div>
-
-            {/* Mobile: grade compacta */}
-            <div className="mt-7 grid grid-cols-2 gap-3 md:hidden">
-              {pilares.map(({ titulo, Icone }) => (
-                <article
-                  key={titulo}
-                  className="rounded-2xl border border-[#155b38]/10 bg-white p-4 shadow-[0_10px_30px_rgba(13,58,45,0.07)]"
-                >
-                  <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#155b38]/10 text-[#155b38]">
-                    <Icone size={18} />
-                  </div>
-                  <h3 className="mt-3 text-sm font-bold leading-tight text-[#0f2d22]">
-                    {titulo}
-                  </h3>
-                </article>
-              ))}
-            </div>
-
-            {/* Desktop e tablet: cards completos */}
-            <div className="mt-12 hidden grid-cols-2 gap-5 md:grid lg:grid-cols-4">
-              {pilares.map(({ titulo, descricao, Icone }) => (
-                <article
-                  key={titulo}
-                  className="group rounded-[1.75rem] border border-[#155b38]/10 bg-white p-6 shadow-[0_16px_45px_rgba(13,58,45,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_22px_55px_rgba(13,58,45,0.14)]"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-[#155b38]/10 text-[#155b38] transition-colors group-hover:bg-[#155b38] group-hover:text-white">
-                    <Icone size={22} />
-                  </div>
-                  <h3 className="mt-5 font-heading text-xl font-bold text-[#0f2d22]">
-                    {titulo}
-                  </h3>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">
-                    {descricao}
-                  </p>
-                </article>
-              ))}
+              <div className="border-t border-[#155b38]/10 pt-5 md:border-l md:border-t-0 md:pl-10 md:pt-0">
+                <p className="text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                  Não aplicamos soluções prontas. Primeiro entendemos o
+                  contexto, depois definimos prioridades e só então escolhemos
+                  as ações mais adequadas.
+                </p>
+                <p className="mt-3 hidden text-sm leading-6 text-slate-500 md:block">
+                  Assim, diagnóstico, consultoria, NR-1, treinamentos, palestras
+                  e desenvolvimento de lideranças passam a fazer parte de uma
+                  mesma estratégia.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -255,16 +195,16 @@ export default function Metodologia() {
             <div className="flex flex-col justify-between gap-5 md:flex-row md:items-end">
               <div>
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d9b969]">
-                  Como trabalhamos
+                  O caminho
                 </span>
                 <h2 className="mt-3 font-heading text-3xl font-bold md:text-5xl">
-                  Da compreensão à evolução
+                  Uma etapa conduz à próxima
                 </h2>
               </div>
 
               <p className="hidden max-w-xl text-base leading-7 text-white/65 md:block">
-                Um processo estruturado para compreender o cenário, priorizar
-                necessidades e colocar as melhorias em prática.
+                Entendemos o cenário, definimos prioridades, aplicamos as
+                soluções e acompanhamos sua evolução.
               </p>
             </div>
 
@@ -331,14 +271,14 @@ export default function Metodologia() {
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ad8d4d]">
-                Método em ação
+                Depois do diagnóstico
               </span>
               <h2 className="mt-3 font-heading text-3xl font-bold text-[#0f2d22] md:text-5xl">
-                Cada necessidade pede uma solução
+                As prioridades definem as ações
               </h2>
               <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-lg md:leading-8">
-                A NR-1 faz parte da nossa atuação, mas nosso trabalho vai além:
-                desenvolvemos soluções para pessoas, lideranças e organizações.
+                A partir do que foi identificado, selecionamos as soluções que
+                realmente fazem sentido para a empresa.
               </p>
             </div>
 
@@ -391,14 +331,14 @@ export default function Metodologia() {
               <div>
                 <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#d9b969]">
                   <Brain size={16} />
-                  Resultados acompanhados
+                  O ciclo continua
                 </div>
                 <h2 className="mt-4 font-heading text-3xl font-bold leading-tight md:text-5xl">
-                  Não paramos no diagnóstico
+                  Acompanhamos para evoluir
                 </h2>
                 <p className="mt-4 text-sm leading-6 text-white/70 md:text-base md:leading-7">
-                  Apoiamos a empresa na transformação dos dados em ações,
-                  desenvolvimento e melhoria contínua.
+                  Verificamos o andamento das ações, observamos os indicadores
+                  e ajustamos a estratégia sempre que necessário.
                 </p>
               </div>
 
