@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Blog from "./pages/blog/Blog";
+import DiagnosticoPsicossocial from "./pages/blog/DiagnosticoPsicossocial";
 import EbookNR1 from "./pages/EbookNR1";
 import Index from "./pages/Index";
 import Metodologia from "./pages/Metodologia";
@@ -34,6 +35,11 @@ const App = () => (
 
           {/* BLOG */}
           <Route path="/blog" element={<Blog />} />
+
+          <Route
+            path="/blog/diagnostico-psicossocial-organizacional"
+            element={<DiagnosticoPsicossocial />}
+          />
 
           <Route path="*" element={<NotFound />} />
         </Routes>
