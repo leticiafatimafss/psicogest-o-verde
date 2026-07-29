@@ -8,6 +8,7 @@ import EbookNR1 from "./pages/EbookNR1";
 import Index from "./pages/Index";
 import Metodologia from "./pages/Metodologia";
 import NotFound from "./pages/NotFound";
+import Servicos from "./pages/Servicos";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
 
           <Route path="/metodologia" element={<Metodologia />} />
+
+          <Route path="/servicos" element={<Servicos />} />
 
           <Route path="/guia-nr1" element={<EbookNR1 />} />
 
