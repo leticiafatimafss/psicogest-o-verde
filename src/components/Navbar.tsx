@@ -44,7 +44,7 @@ const navLinks: MenuItem[] = [
       {
         label: "Serviços",
         description: "Consultoria, treinamentos e soluções corporativas",
-        href: "/#servicos",
+        href: "/servicos",
         icon: Layers3,
       },
     ],
@@ -472,3 +472,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
