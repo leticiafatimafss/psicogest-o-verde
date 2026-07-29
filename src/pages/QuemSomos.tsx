@@ -65,9 +65,9 @@ export default function QuemSomos() {
               </div>
 
               <h1 className="mt-5 max-w-4xl font-heading text-[2.35rem] font-bold leading-[1.08] md:mt-7 md:text-6xl lg:text-7xl">
-                Cuidamos das empresas
+                Transformamos desafios humanos
                 <span className="block text-[#d9b969]">
-                  sem perder de vista as pessoas.
+                  em soluções estratégicas.
                 </span>
               </h1>
 
@@ -326,3 +326,4 @@ export default function QuemSomos() {
     </div>
   );
 }
+
