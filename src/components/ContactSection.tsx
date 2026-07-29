@@ -141,7 +141,7 @@ const ContactSection = () => {
               <div>
 
                 <h4 className="mb-0.5 text-sm font-semibold text-foreground">
-                  Telefone (Time Comercial)
+                  Telefone
                 </h4>
 
                 <p className="text-xs text-muted-foreground md:text-sm">
@@ -290,7 +290,5 @@ const ContactSection = () => {
     </section>
   );
 };
-
-export default ContactSection;
 
 export default ContactSection;
