@@ -1,1 +1,399 @@
+/* =======================================================
+   NOTEBOOKS
+======================================================= */
 
+@media (max-width:1100px){
+
+    .container{
+        width:min(100%,calc(100% - 40px));
+    }
+
+    .hero-content,
+    .overview-grid{
+
+        gap:50px;
+
+    }
+
+    .hero h1{
+
+        font-size:3.2rem;
+
+    }
+
+    .authors-grid{
+
+        gap:24px;
+
+    }
+
+}
+
+
+/* =======================================================
+   TABLETS
+======================================================= */
+
+@media (max-width:900px){
+
+    .section{
+
+        padding:90px 0;
+
+    }
+
+    .hero{
+
+        padding-bottom:70px;
+
+    }
+
+    .hero-top{
+
+        flex-direction:column;
+
+        gap:30px;
+
+        text-align:center;
+
+    }
+
+    .hero-content,
+    .overview-grid,
+    .bonus-card{
+
+        grid-template-columns:1fr;
+
+        text-align:center;
+
+    }
+
+    .hero-text,
+    .overview-content{
+
+        max-width:none;
+
+    }
+
+    .hero-buttons{
+
+        display:flex;
+
+        justify-content:center;
+
+    }
+
+    .hero-guarantees{
+
+        justify-content:center;
+
+    }
+
+    .overview-list{
+
+        align-items:flex-start;
+
+        text-align:left;
+
+        max-width:500px;
+
+        margin-inline:auto;
+
+    }
+
+    .benefits-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .audience-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .chapters-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+    .authors-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .bonus-badge{
+
+        margin:auto;
+
+    }
+
+}
+/* =======================================================
+   TABLETS PEQUENOS
+======================================================= */
+
+@media (max-width:768px){
+
+    .section{
+
+        padding:75px 0;
+
+    }
+
+    .hero h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .section-header{
+
+        margin-bottom:45px;
+
+    }
+
+    .section-header h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .countdown{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+    }
+
+    .countdown-item{
+
+        width:68px;
+
+    }
+
+    .audience-grid,
+    .chapters-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .offer-card{
+
+        padding:45px 28px;
+
+    }
+
+    .bonus-card{
+
+        padding:40px 30px;
+
+    }
+
+    .cta-box{
+
+        padding:50px 30px;
+
+    }
+
+    .author-card img{
+
+        height:320px;
+
+    }
+
+}
+/* =======================================================
+   MOBILE
+======================================================= */
+
+@media (max-width:576px){
+
+    .container{
+
+        width:calc(100% - 32px);
+
+    }
+
+    .logo{
+
+        width:170px;
+
+    }
+
+    .hero{
+
+        padding-top:25px;
+
+    }
+
+    .hero h1{
+
+        font-size:2.15rem;
+
+    }
+
+    .hero-description{
+
+        font-size:1rem;
+
+    }
+
+    .hero-bonus{
+
+        padding:18px;
+
+        gap:14px;
+
+    }
+
+    .btn-primary{
+
+        width:100%;
+
+        padding:18px 20px;
+
+        font-size:.95rem;
+
+    }
+
+    .btn-large{
+
+        max-width:none;
+
+    }
+
+    .section-header h2{
+
+        font-size:1.9rem;
+
+    }
+
+    .benefit-card,
+    .audience-card,
+    .chapter-card{
+
+        padding:28px;
+
+    }
+
+    .bonus-card{
+
+        padding:32px 24px;
+
+    }
+
+    .bonus-badge{
+
+        width:170px;
+        height:170px;
+
+        font-size:.9rem;
+
+    }
+
+    .bonus-badge strong{
+
+        font-size:1rem;
+
+    }
+
+    .current-price strong{
+
+        font-size:3rem;
+
+    }
+
+    .offer-item{
+
+        padding:16px;
+
+        font-size:.95rem;
+
+    }
+
+    .faq-question{
+
+        padding:20px;
+
+        font-size:1rem;
+
+    }
+
+    .faq-answer p{
+
+        padding:0 20px 20px;
+
+    }
+
+    .footer-links{
+
+        flex-direction:column;
+
+        gap:14px;
+
+    }
+
+}
+/* =======================================================
+   CELULARES PEQUENOS
+======================================================= */
+
+@media (max-width:420px){
+
+    .hero h1{
+
+        font-size:1.85rem;
+
+    }
+
+    .section{
+
+        padding:60px 0;
+
+    }
+
+    .countdown{
+
+        gap:8px;
+
+    }
+
+    .countdown-item{
+
+        width:60px;
+
+        padding:12px 8px;
+
+    }
+
+    .countdown-item span{
+
+        font-size:1.3rem;
+
+    }
+
+    .section-header h2{
+
+        font-size:1.7rem;
+
+    }
+
+    .offer-card{
+
+        padding:36px 20px;
+
+    }
+
+    .cta-box{
+
+        padding:40px 20px;
+
+    }
+
+}
