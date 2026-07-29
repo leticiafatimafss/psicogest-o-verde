@@ -1,8 +1,11 @@
+import { useState } from "react";
+
 import {
   ArrowRight,
   BarChart3,
   BriefcaseBusiness,
   Check,
+  ChevronDown,
   ChevronRight,
   ClipboardCheck,
   GraduationCap,
@@ -160,13 +163,19 @@ const comparacao = [
 ];
 
 export default function Servicos() {
+  const [servicoAberto, setServicoAberto] = useState<string | null>("01");
+
+  const alternarServico = (numero: string) => {
+    setServicoAberto((atual) => (atual === numero ? null : numero));
+  };
+
   return (
     <div className="min-h-screen bg-[#f7f5ef]">
       <Navbar />
 
       <main>
         {/* HERO */}
-        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#092b22_0%,#0d3a2d_48%,#155b38_100%)] px-5 pb-14 pt-32 text-white md:px-6 md:pb-24 md:pt-40">
+        <section className="relative overflow-hidden bg-[linear-gradient(135deg,#092b22_0%,#0d3a2d_48%,#155b38_100%)] px-5 pb-10 pt-28 text-white md:px-6 md:pb-24 md:pt-40">
           <div className="pointer-events-none absolute -left-24 top-10 h-80 w-80 rounded-full bg-white/[0.04] blur-3xl" />
           <div className="pointer-events-none absolute -right-20 bottom-0 h-80 w-80 rounded-full bg-[#c7a56a]/20 blur-3xl" />
           <div className="absolute inset-x-0 top-[88px] h-px bg-gradient-to-r from-transparent via-[#d8ba72]/40 to-transparent" />
@@ -178,19 +187,19 @@ export default function Servicos() {
                 Soluções Essência
               </div>
 
-              <h1 className="mt-5 max-w-4xl font-heading text-[2.35rem] font-bold leading-[1.08] md:mt-7 md:text-6xl lg:text-7xl">
+              <h1 className="mt-4 max-w-4xl font-heading text-[2.15rem] font-bold leading-[1.08] md:mt-7 md:text-6xl lg:text-7xl">
                 O desafio da sua empresa
                 <span className="block text-[#d9b969]">
                   pede a solução certa.
                 </span>
               </h1>
 
-              <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 md:mt-7 md:text-xl md:leading-8">
+              <p className="mt-4 max-w-2xl text-sm leading-6 text-white/75 md:mt-7 md:text-xl md:leading-8">
                 A Essência identifica o que precisa mudar, estrutura as ações e
                 apoia sua empresa na implantação das melhorias.
               </p>
 
-              <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row md:mt-9">
                 <a
                   href="#solucoes"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-[#c7a56a] px-6 py-3.5 text-sm font-bold text-[#092b22] transition-all hover:-translate-y-0.5 hover:bg-[#d8b971]"
@@ -201,7 +210,7 @@ export default function Servicos() {
 
                 <a
                   href="/#contato"
-                  className="inline-flex items-center justify-center rounded-full border border-white/20 bg-white/[0.07] px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-white/[0.12]"
+                  className="hidden items-center justify-center rounded-full border border-white/20 bg-white/[0.07] px-6 py-3.5 text-sm font-bold text-white transition-all hover:bg-white/[0.12] sm:inline-flex"
                 >
                   Solicitar proposta
                 </a>
@@ -211,7 +220,7 @@ export default function Servicos() {
         </section>
 
         {/* ENTRADA COMERCIAL */}
-        <section className="px-5 py-10 md:px-6 md:py-16">
+        <section className="hidden px-5 py-10 md:block md:px-6 md:py-16">
           <div className="mx-auto grid max-w-7xl gap-6 rounded-[1.75rem] border border-[#155b38]/10 bg-white p-6 shadow-[0_16px_45px_rgba(13,58,45,0.07)] md:grid-cols-[0.9fr_1.1fr] md:items-center md:p-10 lg:p-12">
             <div>
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ad8d4d] md:text-xs">
@@ -235,7 +244,7 @@ export default function Servicos() {
         {/* SERVIÇOS */}
         <section
           id="solucoes"
-          className="scroll-mt-24 px-5 pb-12 md:px-6 md:pb-20"
+          className="scroll-mt-24 px-5 py-10 md:px-6 md:pb-20 md:pt-0"
         >
           <div className="mx-auto max-w-7xl">
             <div className="mx-auto max-w-3xl text-center">
@@ -252,55 +261,70 @@ export default function Servicos() {
             </div>
 
             {/* Mobile: cards com conteúdo essencial */}
-            <div className="mt-7 space-y-3 md:hidden">
+            <div className="mt-6 space-y-2.5 md:hidden">
               {servicos.map(
                 ({
                   numero,
                   categoria,
                   titulo,
-                  resumo,
                   beneficio,
                   chamada,
                   Icone,
                 }) => (
                   <article
                     key={numero}
-                    className="rounded-2xl border border-[#155b38]/10 bg-white p-5 shadow-[0_12px_35px_rgba(13,58,45,0.07)]"
+                    className="overflow-hidden rounded-2xl border border-[#155b38]/10 bg-white shadow-[0_10px_28px_rgba(13,58,45,0.06)]"
                   >
-                    <div className="flex items-start gap-4">
-                      <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#155b38] text-white">
-                        <Icone size={20} />
+                    <button
+                      type="button"
+                      onClick={() => alternarServico(numero)}
+                      aria-expanded={servicoAberto === numero}
+                      className="flex w-full items-center gap-3 p-4 text-left"
+                    >
+                      <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-[#155b38] text-white">
+                        <Icone size={18} />
                       </div>
-                      <div className="min-w-0">
-                        <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#ad8d4d]">
+
+                      <div className="min-w-0 flex-1">
+                        <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-[#ad8d4d]">
                           {categoria}
                         </span>
-                        <h3 className="mt-1 text-lg font-bold leading-tight text-[#0f2d22]">
+                        <h3 className="mt-0.5 text-sm font-bold leading-tight text-[#0f2d22]">
                           {titulo}
                         </h3>
                       </div>
-                    </div>
 
-                    <p className="mt-4 text-sm leading-6 text-slate-600">
-                      {resumo}
-                    </p>
+                      <ChevronDown
+                        size={18}
+                        className={`shrink-0 text-[#ad8d4d] transition-transform duration-300 ${
+                          servicoAberto === numero ? "rotate-180" : ""
+                        }`}
+                      />
+                    </button>
 
-                    <div className="mt-4 rounded-xl bg-[#155b38]/[0.06] px-4 py-3">
-                      <span className="text-[9px] font-bold uppercase tracking-[0.16em] text-[#155b38]">
-                        Principal benefício
-                      </span>
-                      <p className="mt-1 text-xs font-semibold leading-5 text-[#0f2d22]">
-                        {beneficio}
-                      </p>
-                    </div>
-
-                    <a
-                      href="/#contato"
-                      className="mt-4 flex items-center justify-between rounded-xl bg-[#155b38] px-4 py-3 text-xs font-bold text-white"
+                    <div
+                      className={`grid transition-all duration-300 ${
+                        servicoAberto === numero
+                          ? "grid-rows-[1fr] opacity-100"
+                          : "grid-rows-[0fr] opacity-0"
+                      }`}
                     >
-                      {chamada}
-                      <ChevronRight size={16} />
-                    </a>
+                      <div className="overflow-hidden">
+                        <div className="border-t border-[#155b38]/10 px-4 pb-4 pt-3">
+                          <p className="text-xs font-semibold leading-5 text-[#0f2d22]">
+                            {beneficio}
+                          </p>
+
+                          <a
+                            href="/#contato"
+                            className="mt-3 flex items-center justify-between rounded-xl bg-[#155b38] px-4 py-3 text-xs font-bold text-white"
+                          >
+                            {chamada}
+                            <ChevronRight size={16} />
+                          </a>
+                        </div>
+                      </div>
+                    </div>
                   </article>
                 ),
               )}
@@ -396,7 +420,7 @@ export default function Servicos() {
         </section>
 
         {/* COMPARAÇÃO */}
-        <section className="bg-[#0d3a2d] px-5 py-12 text-white md:px-6 md:py-20">
+        <section className="hidden bg-[#0d3a2d] px-5 py-12 text-white md:block md:px-6 md:py-20">
           <div className="mx-auto max-w-7xl">
             <div className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-center">
               <div>
@@ -445,25 +469,25 @@ export default function Servicos() {
         </section>
 
         {/* BENEFÍCIOS + CTA */}
-        <section className="px-5 py-12 md:px-6 md:py-20">
+        <section className="px-5 pb-10 md:px-6 md:py-20">
           <div className="mx-auto max-w-7xl">
-            <div className="grid gap-8 rounded-[2rem] bg-white p-6 shadow-[0_20px_65px_rgba(13,58,45,0.1)] md:p-10 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:p-14">
+            <div className="grid gap-6 rounded-[1.5rem] bg-white p-5 shadow-[0_20px_65px_rgba(13,58,45,0.1)] md:gap-8 md:rounded-[2rem] md:p-10 lg:grid-cols-[1fr_0.9fr] lg:items-center lg:p-14">
               <div>
                 <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.18em] text-[#ad8d4d]">
                   <TrendingUp size={16} />
                   Uma solução para a sua realidade
                 </div>
-                <h2 className="mt-4 font-heading text-3xl font-bold leading-tight text-[#0f2d22] md:text-5xl">
+                <h2 className="mt-3 font-heading text-2xl font-bold leading-tight text-[#0f2d22] md:mt-4 md:text-5xl">
                   Não sabe qual serviço escolher?
                 </h2>
-                <p className="mt-4 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
+                <p className="mt-3 text-sm leading-6 text-slate-600 md:mt-4 md:text-base md:leading-7">
                   Conte o momento da sua empresa. Nós analisamos a necessidade e
                   indicamos o melhor ponto de partida, sem soluções genéricas.
                 </p>
               </div>
 
               <div>
-                <div className="grid grid-cols-2 gap-3">
+                <div className="hidden grid-cols-2 gap-3 md:grid">
                   {[
                     "Soluções personalizadas",
                     "Visão técnica e humana",
@@ -484,7 +508,7 @@ export default function Servicos() {
 
                 <a
                   href="/#contato"
-                  className="mt-6 inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ad8d4d] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#bb9a58]"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-full bg-[#ad8d4d] px-6 py-4 text-sm font-bold text-white transition-all hover:-translate-y-0.5 hover:bg-[#bb9a58] md:mt-6"
                 >
                   Solicitar uma proposta personalizada
                   <ChevronRight size={17} />
