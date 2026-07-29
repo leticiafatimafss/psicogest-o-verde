@@ -9,244 +9,294 @@
     <title>Guia Prático de Implementação da NR-01 | Essência Gestão Psicossocial</title>
 
     <meta name="description"
-        content="Aprenda como implementar a nova NR-01 na sua empresa de forma prática, segura e alinhada às exigências da legislação.">
+        content="Aprenda como implementar a nova NR-01 de forma prática, segura e alinhada às exigências da legislação.">
 
     <meta name="keywords"
-        content="NR-01, riscos psicossociais, ebook NR01, saúde mental, SST, RH">
+        content="NR-01, riscos psicossociais, ebook NR01, saúde mental no trabalho, SST, RH">
+
+    <meta name="author"
+        content="Essência Gestão Psicossocial">
 
     <meta property="og:title"
         content="Guia Prático de Implementação da NR-01">
 
     <meta property="og:description"
-        content="Aprenda a implementar a nova NR-01 na prática.">
+        content="Aprenda a implementar a NR-01 com segurança e apoio de especialistas.">
 
     <meta property="og:image"
-        content="assets/images/ebook.webp">
+        content="assets/images/ebook-mockup.webp">
 
     <meta property="og:type"
         content="website">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <meta name="theme-color"
+        content="#171717">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
 
     <link rel="preconnect"
         href="https://fonts.gstatic.com"
         crossorigin>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet"
+        href="css/style.css">
 
-    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet"
+        href="css/responsive.css">
 
-    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet"
+        href="css/animations.css">
 
 </head>
 
 <body>
 
-<header class="hero">
-
-<div class="container">
-
-<div class="hero-top">
-
-<a href="https://www.essenciapsicossocial.com.br/"
-target="_blank">
-
-<img
-src="assets/images/logo.png"
-alt="Essência Gestão Psicossocial"
-class="logo">
-
-</a>
-
-<div id="countdown"
-class="countdown">
-
-<div class="time-box">
-
-<span id="days">00</span>
-
-<p>Dias</p>
-
-</div>
-
-<div class="separator">:</div>
-
-<div class="time-box">
-
-<span id="hours">00</span>
-
-<p>Horas</p>
-
-</div>
-
-<div class="separator">:</div>
-
-<div class="time-box">
-
-<span id="minutes">00</span>
-
-<p>Minutos</p>
-
-</div>
-
-<div class="separator">:</div>
-
-<div class="time-box">
-
-<span id="seconds">00</span>
-
-<p>Segundos</p>
-
-</div>
-
-</div>
-
-</div>
-
-<div class="hero-content">
-
-<div class="hero-text">
-
-<h1>
-
-<span class="gold">
-
-Não faça no automático.
-
-</span>
-
-Saiba exatamente como implementar
-as novas exigências da NR-01
-na sua empresa.
-
-</h1>
-
-<p class="description">
-
-Aprenda, de forma prática,
-como identificar riscos psicossociais,
-atender às exigências da legislação
-e conduzir a implementação da NR-01
-com mais segurança.
-
-</p>
-
-<p class="bonus">
-
-🎁 <strong>Bônus:</strong>
-
-1 hora de mentoria gratuita
-para apoiar a aplicação do conteúdo.
-
-</p>
-
-<a
-
-class="btn-primary"
-
-href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
-
-target="_blank">
-
-QUERO GARANTIR MEU E-BOOK
-
-</a>
-
-<div class="mentor-tag">
-
-<svg width="18"
-height="18"
-viewBox="0 0 24 24"
-fill="currentColor">
-
-<path d="M10 13a5 5 0 1 0 0-10a5 5 0 0 0 0 10Zm-7 8a7 7 0 0 1 14 0H3Zm16.59-9.41L18.17 13l-1.41-1.41L15.34 13l1.42 1.41L15.34 15l1.42 1.41L18.17 15l1.42 1.41L21 15l-1.41-1.59L21 12l-1.41-1.41Z"/>
-
-</svg>
-
-<span>
-
-MENTORIA INCLUSA
-
-</span>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<img
-
-src="assets/images/ebook.webp"
-
-alt="Guia Prático NR-01"
-
-loading="eager">
-
-</div>
-
-</div>
-
-</div>
-
-</header>
-<main>
-
     <!-- ===================================================== -->
-    <!-- MUITO MAIS QUE UM E-BOOK -->
+    <!-- HERO -->
     <!-- ===================================================== -->
 
-    <section class="benefits">
+    <header class="hero">
 
         <div class="container">
 
-            <div class="section-title">
+            <div class="hero-top">
+
+                <img
+                    src="assets/images/logo.webp"
+                    alt="Essência Gestão Psicossocial"
+                    class="logo">
+
+                <div
+                    class="countdown"
+                    id="countdown">
+
+                    <div class="countdown-item">
+
+                        <span id="days">
+                            00
+                        </span>
+
+                        <small>Dias</small>
+
+                    </div>
+
+                    <div class="countdown-item">
+
+                        <span id="hours">
+                            00
+                        </span>
+
+                        <small>Horas</small>
+
+                    </div>
+
+                    <div class="countdown-item">
+
+                        <span id="minutes">
+                            00
+                        </span>
+
+                        <small>Min.</small>
+
+                    </div>
+
+                    <div class="countdown-item">
+
+                        <span id="seconds">
+                            00
+                        </span>
+
+                        <small>Seg.</small>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="hero-content">
+
+                <div class="hero-text fade-up">
+
+                    <span class="hero-tag">
+
+                        GUIA PRÁTICO • NR-01
+
+                    </span>
+
+                    <h1>
+
+                        Não faça no automático.
+
+                        <span>
+
+                            Saiba exatamente como implementar
+                            as novas exigências da NR-01
+                            na sua empresa.
+
+                        </span>
+
+                    </h1>
+
+                    <p class="hero-description">
+
+                        Aprenda, de forma prática, como identificar riscos psicossociais,
+                        atender às exigências da legislação e conduzir toda a implementação
+                        da NR-01 com mais segurança.
+
+                    </p>
+
+                    <div class="hero-bonus">
+
+                        <div class="bonus-icon">
+
+                            <!-- SVG -->
+
+                        </div>
+
+                        <p>
+
+                            <strong>Bônus incluso:</strong>
+
+                            1 hora de mentoria gratuita para apoiar
+                            a aplicação do conteúdo.
+
+                        </p>
+
+                    </div>
+
+                    <div class="hero-buttons">
+
+                        <a
+                            href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
+                            target="_blank"
+                            class="btn-primary">
+
+                            QUERO GARANTIR MEU E-BOOK
+
+                        </a>
+
+                    </div>
+
+                    <div class="hero-guarantees">
+
+                        <div class="guarantee">
+
+                            <span></span>
+
+                            Compra Segura
+
+                        </div>
+
+                        <div class="guarantee">
+
+                            <span></span>
+
+                            Acesso Imediato
+
+                        </div>
+
+                        <div class="guarantee">
+
+                            <span></span>
+
+                            Mentoria Inclusa
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="hero-image fade-in">
+
+                    <img
+                        src="assets/images/ebook-mockup.webp"
+                        alt="Guia Prático de Implementação da NR-01">
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    <main>
+            <!-- ===================================================== -->
+    <!-- BENEFÍCIOS -->
+    <!-- ===================================================== -->
+
+    <section class="benefits section">
+
+        <div class="container">
+
+            <div class="section-header center fade-up">
 
                 <span class="section-tag">
-                    MUITO MAIS QUE UM E-BOOK
+
+                    MUITO MAIS DO QUE UM E-BOOK
+
                 </span>
 
                 <h2>
-                    Um guia prático.
+
+                    Um guia prático para implementar
+                    a NR-01 com segurança.
+
                 </h2>
 
             </div>
 
             <div class="benefits-grid">
 
-                <article class="benefit-card">
+                <article class="benefit-card fade-up">
 
                     <div class="benefit-icon">
-                        📘
+
+                        <!-- Ícone -->
+
                     </div>
 
                     <h3>
+
                         Conteúdo completo
+
                     </h3>
 
                     <p>
-                        Tudo o que você precisa para compreender as novas exigências da NR-01
-                        e iniciar a implementação na sua empresa.
+
+                        Tudo o que você precisa para compreender
+                        as novas exigências da NR-01 e iniciar a
+                        implementação na prática.
+
                     </p>
 
                 </article>
 
-                <article class="benefit-card">
+                <article class="benefit-card fade-up">
 
                     <div class="benefit-icon">
-                        ✅
+
+                        <!-- Ícone -->
+
                     </div>
 
                     <h3>
-                        Implementação
+
+                        Implementação prática
+
                     </h3>
 
                     <p>
-                        Aprenda um método prático para aplicar a legislação com segurança,
-                        organização e confiança.
+
+                        Aprenda uma metodologia organizada,
+                        objetiva e aplicável à realidade das empresas.
+
                     </p>
 
                 </article>
@@ -258,14 +308,14 @@ loading="eager">
     </section>
 
     <!-- ===================================================== -->
-    <!-- PÚBLICO -->
+    <!-- PARA QUEM É -->
     <!-- ===================================================== -->
 
-    <section class="audience">
+    <section class="audience section">
 
         <div class="container">
 
-            <div class="section-title center">
+            <div class="section-header center fade-up">
 
                 <span class="section-tag">
 
@@ -285,7 +335,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">01</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            01
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -295,7 +351,8 @@ loading="eager">
 
                     <p>
 
-                        que precisam implementar a NR-01 com segurança.
+                        que precisam implementar a NR-01
+                        com segurança e organização.
 
                     </p>
 
@@ -303,7 +360,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">02</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            02
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -313,7 +376,8 @@ loading="eager">
 
                     <p>
 
-                        que buscam atender às novas exigências legais.
+                        que buscam atender às novas
+                        exigências legais.
 
                     </p>
 
@@ -321,7 +385,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">03</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            03
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -331,7 +401,8 @@ loading="eager">
 
                     <p>
 
-                        que desejam atuar na gestão dos riscos psicossociais.
+                        que desejam atuar na gestão
+                        dos riscos psicossociais.
 
                     </p>
 
@@ -339,7 +410,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">04</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            04
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -349,7 +426,8 @@ loading="eager">
 
                     <p>
 
-                        que querem promover saúde mental e conformidade.
+                        que desejam promover saúde
+                        mental dentro da organização.
 
                     </p>
 
@@ -357,7 +435,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">05</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            05
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -367,7 +451,8 @@ loading="eager">
 
                     <p>
 
-                        que desejam oferecer mais valor aos seus clientes.
+                        que desejam entregar mais
+                        valor aos seus clientes.
 
                     </p>
 
@@ -375,7 +460,13 @@ loading="eager">
 
                 <article class="audience-card">
 
-                    <div class="card-number">06</div>
+                    <div class="card-top">
+
+                        <span class="card-number">
+                            06
+                        </span>
+
+                    </div>
 
                     <h3>
 
@@ -385,7 +476,8 @@ loading="eager">
 
                     <p>
 
-                        que precisam se preparar para a nova NR-01.
+                        que precisam se preparar
+                        para atender à nova NR-01.
 
                     </p>
 
@@ -393,7 +485,7 @@ loading="eager">
 
             </div>
 
-            <div class="section-cta">
+            <div class="section-button fade-up">
 
                 <a
                     href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
@@ -410,28 +502,30 @@ loading="eager">
 
     </section>
         <!-- ===================================================== -->
-    <!-- PALMA DA MÃO -->
+    <!-- ACESSO IMEDIATO -->
     <!-- ===================================================== -->
 
-    <section class="ebook-overview">
+    <section class="overview section">
 
         <div class="container">
 
             <div class="overview-grid">
 
-                <div class="overview-image">
+                <div class="overview-image fade-left">
 
                     <img
                         src="assets/images/ebook-mockup.webp"
-                        alt="E-book NR-01"
+                        alt="Mockup do Guia Prático NR-01"
                         loading="lazy">
 
                 </div>
 
-                <div class="overview-content">
+                <div class="overview-content fade-right">
 
                     <span class="section-tag">
+
                         ACESSO IMEDIATO
+
                     </span>
 
                     <h2>
@@ -452,15 +546,27 @@ loading="eager">
                     <ul class="overview-list">
 
                         <li>
-                            ✔ Conteúdo objetivo e fácil de aplicar.
+
+                            <span class="check-icon"></span>
+
+                            Conteúdo objetivo e fácil de aplicar.
+
                         </li>
 
                         <li>
-                            ✔ Receba o e-book logo após a compra.
+
+                            <span class="check-icon"></span>
+
+                            Receba o e-book imediatamente após a confirmação da compra.
+
                         </li>
 
                         <li>
-                            ✔ 1 hora de mentoria gratuita.
+
+                            <span class="check-icon"></span>
+
+                            1 hora de mentoria gratuita inclusa.
+
                         </li>
 
                     </ul>
@@ -486,11 +592,11 @@ loading="eager">
     <!-- CONTEÚDO -->
     <!-- ===================================================== -->
 
-    <section class="chapters">
+    <section class="chapters section">
 
         <div class="container">
 
-            <div class="section-title center">
+            <div class="section-header center fade-up">
 
                 <span class="section-tag">
 
@@ -511,9 +617,7 @@ loading="eager">
                 <article class="chapter-card">
 
                     <span class="chapter-number">
-
                         Capítulo 01
-
                     </span>
 
                     <h3>
@@ -525,11 +629,12 @@ loading="eager">
                     <p>
 
                         Conheça as mudanças da legislação,
-                        os conceitos fundamentais e os riscos psicossociais.
+                        compreenda os riscos psicossociais
+                        e seus impactos nas organizações.
 
                     </p>
 
-                    <span class="chapter-label">
+                    <span class="chapter-badge">
 
                         Fundamentos
 
@@ -540,9 +645,7 @@ loading="eager">
                 <article class="chapter-card">
 
                     <span class="chapter-number">
-
                         Capítulo 02
-
                     </span>
 
                     <h3>
@@ -553,12 +656,12 @@ loading="eager">
 
                     <p>
 
-                        Aprenda uma jornada completa em seis etapas para adequação
-                        da empresa.
+                        Aprenda toda a jornada de implementação
+                        em seis etapas práticas.
 
                     </p>
 
-                    <span class="chapter-label">
+                    <span class="chapter-badge">
 
                         Passo a passo
 
@@ -569,9 +672,7 @@ loading="eager">
                 <article class="chapter-card">
 
                     <span class="chapter-number">
-
                         Capítulo 03
-
                     </span>
 
                     <h3>
@@ -582,12 +683,12 @@ loading="eager">
 
                     <p>
 
-                        Descubra como identificar fontes de risco
-                        e interpretar os resultados.
+                        Identifique fontes de risco,
+                        interprete resultados e priorize ações.
 
                     </p>
 
-                    <span class="chapter-label">
+                    <span class="chapter-badge">
 
                         Aplicação prática
 
@@ -598,9 +699,7 @@ loading="eager">
                 <article class="chapter-card">
 
                     <span class="chapter-number">
-
                         Capítulo 04
-
                     </span>
 
                     <h3>
@@ -616,7 +715,7 @@ loading="eager">
 
                     </p>
 
-                    <span class="chapter-label">
+                    <span class="chapter-badge">
 
                         Modelo pronto
 
@@ -627,9 +726,7 @@ loading="eager">
                 <article class="chapter-card">
 
                     <span class="chapter-number">
-
                         Capítulo 05
-
                     </span>
 
                     <h3>
@@ -640,12 +737,12 @@ loading="eager">
 
                     <p>
 
-                        Acompanhe KPIs e avalie a conformidade
-                        da empresa com segurança.
+                        Monitore KPIs, acompanhe resultados
+                        e mantenha a empresa em conformidade.
 
                     </p>
 
-                    <span class="chapter-label">
+                    <span class="chapter-badge">
 
                         Ferramentas práticas
 
@@ -655,7 +752,7 @@ loading="eager">
 
             </div>
 
-            <div class="section-cta">
+            <div class="section-button">
 
                 <a
                     href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
@@ -675,81 +772,89 @@ loading="eager">
     <!-- BÔNUS -->
     <!-- ===================================================== -->
 
-    <section class="bonus">
+    <section class="bonus section">
 
         <div class="container">
 
-            <div class="section-title center">
+            <div class="section-header center fade-up">
 
                 <span class="section-tag">
-                    OFERTA ESPECIAL
+
+                    INCLUSO NA SUA COMPRA
+
                 </span>
 
                 <h2>
-                    Se você comprar agora,
-                    vai receber bônus incríveis.
+
+                    Você não leva apenas um e-book.
+
                 </h2>
 
-            </div>
+                <p>
 
-            <div class="bonus-grid">
+                    Além do Guia Prático de Implementação da NR-01, você receberá
+                    acesso a uma mentoria exclusiva para esclarecer dúvidas e apoiar
+                    a aplicação do conteúdo na prática.
 
-                <article class="bonus-card">
-
-                    <div class="bonus-icon">
-                        🎁
-                    </div>
-
-                    <span class="bonus-number">
-                        BÔNUS 01
-                    </span>
-
-                    <h3>
-                        1 hora de mentoria gratuita
-                    </h3>
-
-                    <p>
-                        Tire dúvidas diretamente com especialistas e receba
-                        orientação prática para aplicar o conteúdo do e-book
-                        na realidade da sua empresa.
-                    </p>
-
-                </article>
-
-                <article class="bonus-card">
-
-                    <div class="bonus-icon">
-                        ⭐
-                    </div>
-
-                    <span class="bonus-number">
-                        BÔNUS 02
-                    </span>
-
-                    <h3>
-                        Condições especiais
-                    </h3>
-
-                    <p>
-                        Receba condições exclusivas para contratação dos
-                        nossos serviços e acesso às plataformas da
-                        Essência Gestão Psicossocial.
-                    </p>
-
-                </article>
+                </p>
 
             </div>
 
-            <div class="section-cta">
+            <div class="bonus-card fade-up">
 
-                <a
-                    href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
-                    target="_blank"
-                    class="btn-primary">
+                <div class="bonus-content">
 
-                    QUERO GARANTIR MEUS BÔNUS
+                    <span class="bonus-label">
 
-                </a>
+                        BÔNUS EXCLUSIVO
+
+                    </span>
+
+                    <h3>
+
+                        1 hora de mentoria individual
+
+                    </h3>
+
+                    <p>
+
+                        Um encontro on-line para esclarecer dúvidas sobre a implementação
+                        da NR-01, discutir situações reais da sua empresa e orientar os
+                        próximos passos com especialistas.
+
+                    </p>
+
+                    <ul class="bonus-list">
+
+                        <li>
+                            <span class="check-icon"></span>
+                            Atendimento personalizado.
+                        </li>
+
+                        <li>
+                            <span class="check-icon"></span>
+                            Orientação prática para aplicação da NR-01.
+                        </li>
+
+                        <li>
+                            <span class="check-icon"></span>
+                            Exclusiva para compradores do e-book.
+                        </li>
+
+                    </ul>
+
+                </div>
+
+                <div class="bonus-badge">
+
+                    <span>
+
+                        INCLUSO
+                        <strong>SEM CUSTO ADICIONAL</strong>
+
+                    </span>
+
+                </div>
 
             </div>
 
@@ -758,122 +863,108 @@ loading="eager">
     </section>
 
     <!-- ===================================================== -->
-    <!-- INVESTIMENTO -->
+    <!-- OFERTA -->
     <!-- ===================================================== -->
 
-    <section class="pricing">
+    <section class="offer section">
 
         <div class="container">
 
-            <div class="pricing-card">
+            <div class="offer-card fade-up">
 
-                <div class="pricing-left">
+                <span class="offer-tag">
 
-                    <img
-                        src="assets/images/logo.png"
-                        alt="Essência Gestão Psicossocial"
-                        class="pricing-logo">
+                    OFERTA ESPECIAL
 
-                    <div class="countdown pricing-countdown">
+                </span>
 
-                        <div class="time-box">
-                            <span id="days2">00</span>
-                            <p>Dias</p>
-                        </div>
+                <h2>
 
-                        <div class="separator">:</div>
+                    Garanta agora o seu acesso.
 
-                        <div class="time-box">
-                            <span id="hours2">00</span>
-                            <p>Horas</p>
-                        </div>
+                </h2>
 
-                        <div class="separator">:</div>
+                <p class="offer-description">
 
-                        <div class="time-box">
-                            <span id="minutes2">00</span>
-                            <p>Min.</p>
-                        </div>
+                    Receba imediatamente o Guia Prático de Implementação da NR-01
+                    e a mentoria exclusiva inclusa na sua compra.
 
-                        <div class="separator">:</div>
+                </p>
 
-                        <div class="time-box">
-                            <span id="seconds2">00</span>
-                            <p>Seg.</p>
-                        </div>
+                <div class="offer-includes">
+
+                    <div class="offer-item">
+
+                        <span class="check-icon"></span>
+
+                        Guia Prático de Implementação da NR-01
+
+                    </div>
+
+                    <div class="offer-item">
+
+                        <span class="check-icon"></span>
+
+                        Acesso digital imediato
+
+                    </div>
+
+                    <div class="offer-item">
+
+                        <span class="check-icon"></span>
+
+                        1 hora de mentoria individual inclusa
+
+                    </div>
+
+                    <div class="offer-item">
+
+                        <span class="check-icon"></span>
+
+                        Atualizações da edição adquirida
 
                     </div>
 
                 </div>
 
-                <div class="pricing-right">
+                <div class="offer-price">
 
-                    <span class="section-tag">
-                        INVESTIMENTO
+                    <span class="old-price">
+
+                        De R$ 197,00
+
                     </span>
 
-                    <h2>
-                        Oferta especial de lançamento
-                    </h2>
+                    <div class="current-price">
 
-                    <p class="old-price">
+                        <small>Por apenas</small>
 
-                        De <span>R$129,99</span>
-
-                    </p>
-
-                    <div class="price">
-
-                        R$84,99
+                        <strong>R$ 69,00</strong>
 
                     </div>
 
-                    <p class="installments">
+                    <span class="installments">
 
-                        ou 9x de R$11,17
+                        Pagamento único.
 
-                    </p>
-
-                    <ul class="price-list">
-
-                        <li>
-                            ✔ Guia Prático de Implementação da NR-01
-                        </li>
-
-                        <li>
-                            ✔ Passo a passo da implementação
-                        </li>
-
-                        <li>
-                            ✔ Modelos de plano de ação
-                        </li>
-
-                        <li>
-                            ✔ Indicadores e checklist
-                        </li>
-
-                        <li>
-                            🎁 1 hora de mentoria gratuita
-                        </li>
-
-                    </ul>
-
-                    <a
-                        href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
-                        target="_blank"
-                        class="btn-primary btn-large">
-
-                        QUERO GARANTIR MINHA OFERTA
-
-                    </a>
-
-                    <p class="secure-payment">
-
-                        🔒 Compra 100% segura pela Hotmart.
-
-                    </p>
+                    </span>
 
                 </div>
+
+                <a
+                    href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
+                    target="_blank"
+                    class="btn-primary btn-large">
+
+                    QUERO GARANTIR MEU E-BOOK
+
+                </a>
+
+                <p class="offer-security">
+
+                    🔒 Pagamento processado com segurança pela Hotmart.
+
+                </p>
 
             </div>
 
@@ -884,100 +975,86 @@ loading="eager">
     <!-- IDEALIZADORAS -->
     <!-- ===================================================== -->
 
-    <section class="authors">
+    <section class="authors section">
 
         <div class="container">
 
-            <div class="section-title center">
+            <div class="section-header center fade-up">
 
                 <span class="section-tag">
-                    CONHEÇA AS IDEALIZADORAS
+
+                    QUEM DESENVOLVEU ESTE MATERIAL
+
                 </span>
 
                 <h2>
-                    A experiência de quem transforma a NR-01 em soluções aplicáveis.
+
+                    Conheça as idealizadoras.
+
                 </h2>
 
                 <p>
-                    Este e-book foi desenvolvido por profissionais que unem décadas de experiência em psicologia,
-                    gestão organizacional e saúde mental corporativa.
+
+                    Um conteúdo desenvolvido por profissionais com ampla experiência
+                    em gestão de pessoas, saúde mental no trabalho e implementação da NR-01.
+
                 </p>
 
             </div>
 
             <div class="authors-grid">
 
-                <article class="author-card">
+                <article class="author-card fade-up">
 
                     <img
                         src="assets/images/luciana.webp"
-                        alt="Luciana do Prado"
-                        loading="lazy">
+                        alt="Luciana">
 
-                    <div class="author-content">
+                    <div class="author-info">
 
-                        <h3>Luciana do Prado</h3>
+                        <h3>
+
+                            Luciana
+
+                        </h3>
 
                         <p>
-                            Bacharel em Direito, pós-graduada em Direito Empresarial,
-                            Docência do Ensino Superior, graduanda em Psicologia e
-                            Psicanálise, com mais de 30 anos de experiência em Gestão
-                            de Pessoas, Desenvolvimento Humano e Saúde Mental Corporativa.
+
+                            Especialista em Gestão de Pessoas, Saúde Mental no Trabalho
+                            e implementação da NR-01, com mais de 30 anos de experiência
+                            em desenvolvimento humano e gestão organizacional.
+
                         </p>
-
-                        <div class="social-links">
-
-                            <a href="#" target="_blank">LinkedIn</a>
-
-                            <a href="#" target="_blank">Instagram</a>
-
-                        </div>
 
                     </div>
 
                 </article>
 
-                <article class="author-card">
+                <article class="author-card fade-up">
 
                     <img
                         src="assets/images/dayse.webp"
-                        alt="Dayse Silva"
-                        loading="lazy">
+                        alt="Dayse">
 
-                    <div class="author-content">
+                    <div class="author-info">
 
-                        <h3>Dayse Silva</h3>
+                        <h3>
+
+                            Dayse
+
+                        </h3>
 
                         <p>
-                            Psicóloga com ampla experiência em desenvolvimento humano,
-                            gestão psicossocial e implementação de programas voltados
-                            à promoção da saúde mental nas organizações.
+
+                            Psicóloga, consultora e especialista em gestão psicossocial,
+                            atuando na implementação de programas voltados à promoção da
+                            saúde mental e conformidade com a legislação.
+
                         </p>
-
-                        <div class="social-links">
-
-                            <a href="#" target="_blank">LinkedIn</a>
-
-                            <a href="#" target="_blank">Instagram</a>
-
-                        </div>
 
                     </div>
 
                 </article>
-
-            </div>
-
-            <div class="section-cta">
-
-                <a
-                    href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
-                    class="btn-primary"
-                    target="_blank">
-
-                    QUERO GARANTIR O MATERIAL
-
-                </a>
 
             </div>
 
@@ -989,92 +1066,110 @@ loading="eager">
     <!-- FAQ -->
     <!-- ===================================================== -->
 
-    <section class="faq">
+    <section class="faq section">
 
         <div class="container">
 
-            <div class="section-title center">
+            <div class="section-header center">
 
                 <span class="section-tag">
+
                     DÚVIDAS FREQUENTES
+
                 </span>
 
                 <h2>
-                    Perguntas Frequentes
-                </h2>
 
-                <p>
-                    Caso ainda tenha dúvidas, nossa equipe estará pronta para ajudar.
-                </p>
+                    Perguntas frequentes.
+
+                </h2>
 
             </div>
 
             <div class="faq-list">
 
-                <details>
+                <div class="faq-item">
 
-                    <summary>
-                        O que está incluso no e-book?
-                    </summary>
+                    <button class="faq-question">
 
-                    <p>
-                        O material completo, modelos práticos, checklist,
-                        indicadores e acesso aos bônus da oferta.
-                    </p>
+                        Como recebo o e-book?
 
-                </details>
+                    </button>
 
-                <details>
+                    <div class="faq-answer">
 
-                    <summary>
-                        Como funciona a mentoria gratuita?
-                    </summary>
+                        <p>
 
-                    <p>
-                        Após a compra você receberá as orientações para agendamento
-                        da mentoria de uma hora com nossa equipe.
-                    </p>
+                            Após a confirmação do pagamento, o acesso é enviado
+                            automaticamente para o seu e-mail.
 
-                </details>
+                        </p>
 
-                <details>
+                    </div>
 
-                    <summary>
-                        Como receberei o e-book?
-                    </summary>
+                </div>
 
-                    <p>
-                        Logo após a confirmação do pagamento você receberá
-                        o acesso por e-mail através da Hotmart.
-                    </p>
+                <div class="faq-item">
 
-                </details>
+                    <button class="faq-question">
 
-                <details>
+                        O acesso é vitalício?
 
-                    <summary>
-                        O conteúdo está atualizado?
-                    </summary>
+                    </button>
 
-                    <p>
-                        Sim. Todo o material foi desenvolvido considerando
-                        as exigências atuais da NR-01.
-                    </p>
+                    <div class="faq-answer">
 
-                </details>
+                        <p>
 
-                <details>
+                            Sim. Você poderá acessar o material sempre que precisar.
 
-                    <summary>
-                        Quais são as formas de pagamento?
-                    </summary>
+                        </p>
 
-                    <p>
-                        Cartão de crédito, PIX, boleto e demais formas
-                        disponibilizadas pela Hotmart.
-                    </p>
+                    </div>
 
-                </details>
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        A mentoria está inclusa?
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            Sim. A compra do e-book já inclui uma hora de mentoria
+                            para apoiar a aplicação do conteúdo.
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <div class="faq-item">
+
+                    <button class="faq-question">
+
+                        O material serve para qualquer empresa?
+
+                    </button>
+
+                    <div class="faq-answer">
+
+                        <p>
+
+                            Sim. O conteúdo foi desenvolvido para profissionais,
+                            consultores e empresas de diferentes segmentos.
+
+                        </p>
+
+                    </div>
+
+                </div>
 
             </div>
 
@@ -1083,41 +1178,37 @@ loading="eager">
     </section>
 
     <!-- ===================================================== -->
-    <!-- NEWSLETTER -->
+    <!-- CTA FINAL -->
     <!-- ===================================================== -->
 
-    <section class="newsletter">
+    <section class="final-cta">
 
         <div class="container">
 
-            <div class="newsletter-content">
+            <div class="cta-box fade-up">
 
                 <h2>
 
-                    Fique por dentro das atualizações da NR-01
+                    Comece hoje a implementação da NR-01
+                    com mais segurança.
 
                 </h2>
 
                 <p>
 
-                    Receba conteúdos exclusivos sobre saúde mental,
-                    riscos psicossociais e legislação.
+                    Tenha acesso imediato ao Guia Prático e conte
+                    com especialistas para apoiar sua jornada.
 
                 </p>
 
-                <form class="newsletter-form">
+                <a
+                    href="https://pay.hotmart.com/B106840356R?off=f0oqqbru"
+                    target="_blank"
+                    class="btn-primary btn-large">
 
-                    <input
-                        type="email"
-                        placeholder="Digite seu e-mail">
+                    GARANTIR MEU ACESSO
 
-                    <button type="submit">
-
-                        Quero receber
-
-                    </button>
-
-                </form>
+                </a>
 
             </div>
 
@@ -1125,46 +1216,47 @@ loading="eager">
 
     </section>
 
-</main>
+    </main>
 
-<!-- ===================================================== -->
-<!-- FOOTER -->
-<!-- ===================================================== -->
+    <!-- ===================================================== -->
+    <!-- FOOTER -->
+    <!-- ===================================================== -->
 
-<footer>
+    <footer class="footer">
 
-    <div class="container footer-content">
+        <div class="container">
 
-        <img
-            src="assets/images/logo.png"
-            alt="Essência Gestão Psicossocial">
+            <img
+                src="assets/images/logo-footer.webp"
+                alt="Essência Gestão Psicossocial"
+                class="footer-logo">
 
-        <p>
+            <p>
 
-            © 2026 Essência Gestão Psicossocial.
-            Todos os direitos reservados.
+                © 2026 Essência Gestão Psicossocial.
+                Todos os direitos reservados.
 
-        </p>
+            </p>
 
-        <nav>
+            <nav class="footer-links">
 
-            <a href="#">Termos de Uso</a>
+                <a href="#">
+                    Política de Privacidade
+                </a>
 
-            <a href="#">Política de Privacidade</a>
+                <a href="#">
+                    Termos de Uso
+                </a>
 
-            <a href="#">Política de Cookies</a>
+            </nav>
 
-        </nav>
+        </div>
 
-    </div>
+    </footer>
 
-</footer>
-
-<script src="js/countdown.js"></script>
-
-<script src="js/faq.js"></script>
-
-<script src="js/script.js"></script>
+    <script src="js/countdown.js"></script>
+    <script src="js/faq.js"></script>
+    <script src="js/script.js"></script>
 
 </body>
 
