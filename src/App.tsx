@@ -6,6 +6,8 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import Blog from "./pages/blog/Blog";
 import DiagnosticoPsicossocial from "./pages/blog/DiagnosticoPsicossocial";
+import ImplantacaoNR1 from "./pages/blog/ImplantacaoNR1";
+import SaudeMentalCorporativa from "./pages/blog/SaudeMentalCorporativa";
 import EbookNR1 from "./pages/EbookNR1";
 import Index from "./pages/Index";
 import Metodologia from "./pages/Metodologia";
@@ -26,11 +28,8 @@ const App = () => (
           <Route path="/" element={<Index />} />
 
           <Route path="/quem-somos" element={<QuemSomos />} />
-
           <Route path="/metodologia" element={<Metodologia />} />
-
           <Route path="/servicos" element={<Servicos />} />
-
           <Route path="/guia-nr1" element={<EbookNR1 />} />
 
           {/* BLOG */}
@@ -41,11 +40,24 @@ const App = () => (
             element={<DiagnosticoPsicossocial />}
           />
 
+          <Route
+            path="/blog/implantacao-nr-01"
+            element={<ImplantacaoNR1 />}
+          />
+
+          <Route
+            path="/blog/programas-de-saude-mental-corporativa"
+            element={<SaudeMentalCorporativa />}
+          />
+
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+);
+
+export default App;
 );
 
 export default App;
