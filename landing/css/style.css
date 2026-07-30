@@ -341,18 +341,19 @@ ul{
 
 .hero h1{
 
-    font-family:var(--font-title);
+    font-family: var(--font-title);
 
-    font-size:clamp(2rem,3.5vw,3.2rem);
+    font-size: clamp(1.8rem, 3vw, 2.9rem);
 
-    line-height:1.15;
+    line-height: 1.12;
 
-    margin-bottom:24px;
+    margin-bottom: 20px;
 
-    color:var(--primary);
+    color: var(--primary);
+
+    font-weight: 700;
 
 }
-
 .hero h1 span{
 
     display:block;
@@ -451,8 +452,7 @@ ul{
 .hero-image img{
 
     width:100%;
-
-    max-width:700px;
+    max-width:none;
 
     filter:
         drop-shadow(0 35px 60px rgba(0,0,0,.45));
