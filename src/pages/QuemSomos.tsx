@@ -204,7 +204,7 @@ export default function QuemSomos() {
 
             <div className="mx-auto mt-8 grid max-w-5xl gap-5 md:mt-12 md:grid-cols-2">
               {/* LUCIANA */}
-              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
                 <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
 
                 <div className="aspect-[16/11] overflow-hidden bg-[#eee7dd]">
@@ -215,7 +215,7 @@ export default function QuemSomos() {
                   />
                 </div>
 
-                <div className="p-6 md:p-8">
+                <div className="flex flex-1 flex-col p-6 md:p-8">
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Luciana do Prado
@@ -236,7 +236,7 @@ export default function QuemSomos() {
                     voltadas às empresas e aos colaboradores.
                   </p>
 
-                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
+                  <div className="mt-auto flex items-center gap-2 pt-6 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
                     <HeartHandshake size={17} className="text-[#ad8d4d]" />
                     Psicologia e desenvolvimento humano
                   </div>
@@ -244,7 +244,7 @@ export default function QuemSomos() {
               </article>
 
               {/* DAYSE */}
-              <article className="group relative overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
+              <article className="group relative flex h-full flex-col overflow-hidden rounded-[1.75rem] border border-[#155b38]/10 bg-white shadow-[0_16px_45px_rgba(13,58,45,0.08)]">
                 <div className="absolute inset-x-0 top-0 z-10 h-1 bg-gradient-to-r from-[#ad8d4d] to-[#e3c477]" />
 
                 <div className="aspect-[16/11] overflow-hidden bg-[#eee7dd]">
@@ -255,7 +255,7 @@ export default function QuemSomos() {
                   />
                 </div>
 
-                <div className="p-6 md:p-8">
+                <div className="flex flex-1 flex-col p-6 md:p-8">
                   <div>
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Dayse Baltazar
@@ -270,11 +270,14 @@ export default function QuemSomos() {
                     Bacharel em Direito, pós-graduada em Direito Empresarial,
                     graduanda em Psicologia e Psicanálise e pós-graduanda em
                     Neurociência na Prática Clínica. Possui mais de 30 anos de
-                    experiência em gestão de pessoas, unindo visão jurídica,
-                    organizacional e humana.
+                    experiência em gestão de pessoas e processos
+                    organizacionais. Na Essência, integra as perspectivas
+                    jurídica, empresarial e humana na construção de
+                    diagnósticos, ações preventivas, treinamentos e soluções
+                    voltadas às empresas e aos colaboradores.
                   </p>
 
-                  <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
+                  <div className="mt-auto flex items-center gap-2 pt-6 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
                     <Scale size={17} className="text-[#ad8d4d]" />
                     Gestão, estratégia e visão humana
                   </div>
