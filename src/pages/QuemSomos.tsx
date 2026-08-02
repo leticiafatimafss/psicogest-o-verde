@@ -272,8 +272,7 @@ export default function QuemSomos() {
                     Neurociência na Prática Clínica. Possui mais de 30 anos de
                     experiência em gestão de pessoas e processos
                     organizacionais. Na Essência, integra as perspectivas
-                    jurídica, empresarial e humana na construção de
-                    diagnósticos, ações preventivas, treinamentos e soluções
+                    jurídica, empresarial com soluções
                     voltadas às empresas e aos colaboradores.
                   </p>
 
