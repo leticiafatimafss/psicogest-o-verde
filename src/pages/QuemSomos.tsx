@@ -8,7 +8,6 @@ import {
   ShieldCheck,
   Sparkles,
   Target,
-  Users,
 } from "lucide-react";
 
 import Footer from "@/components/Footer";
@@ -73,8 +72,8 @@ export default function QuemSomos() {
 
               <p className="mt-5 max-w-2xl text-base leading-7 text-white/75 md:mt-7 md:text-xl md:leading-8">
                 A Essência une experiência em gestão, Psicologia e
-                desenvolvimento humano para transformar desafios
-                psicossociais em estratégias aplicáveis.
+                desenvolvimento humano para transformar desafios psicossociais
+                em estratégias aplicáveis.
               </p>
 
               <div className="mt-7 flex flex-col gap-3 sm:flex-row md:mt-9">
@@ -107,6 +106,7 @@ export default function QuemSomos() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ad8d4d]">
                 Nossa história
               </span>
+
               <h2 className="mt-3 font-heading text-3xl font-bold leading-tight text-[#0f2d22] md:text-5xl">
                 Experiência que se transforma em cuidado e estratégia
               </h2>
@@ -119,6 +119,7 @@ export default function QuemSomos() {
                 cada organização possui desafios próprios e que soluções
                 genéricas raramente produzem mudanças consistentes.
               </p>
+
               <p className="mt-4 hidden text-base leading-7 text-slate-600 md:block">
                 Por isso, aproximamos conhecimento técnico da realidade do
                 trabalho para ajudar empresas a prevenir riscos, preparar
@@ -130,6 +131,7 @@ export default function QuemSomos() {
                   size={20}
                   className="mt-0.5 shrink-0 text-[#ad8d4d]"
                 />
+
                 <p className="text-sm font-semibold leading-6 text-[#0f2d22]">
                   Mais do que apontar problemas, ajudamos a construir o caminho
                   para solucioná-los.
@@ -146,9 +148,11 @@ export default function QuemSomos() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d9b969]">
                 O que nos move
               </span>
+
               <h2 className="mt-3 font-heading text-3xl font-bold md:text-5xl">
                 Técnica, proximidade e ação
               </h2>
+
               <p className="mx-auto mt-4 hidden max-w-2xl text-base leading-7 text-white/65 md:block">
                 Princípios que orientam cada diagnóstico, decisão e projeto
                 desenvolvido pela Essência.
@@ -164,10 +168,12 @@ export default function QuemSomos() {
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-[#c7a56a]/15 text-[#e3c477] md:h-12 md:w-12 md:rounded-2xl">
                     <Icone size={21} />
                   </div>
+
                   <div>
                     <h3 className="font-heading text-lg font-bold md:mt-5 md:text-2xl">
                       {titulo}
                     </h3>
+
                     <p className="mt-1 text-xs leading-5 text-white/65 md:mt-3 md:text-sm md:leading-6">
                       {descricao}
                     </p>
@@ -185,9 +191,11 @@ export default function QuemSomos() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ad8d4d]">
                 Nossas sócias
               </span>
+
               <h2 className="mt-3 font-heading text-3xl font-bold text-[#0f2d22] md:text-5xl">
                 Quem está à frente da Essência
               </h2>
+
               <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-lg md:leading-8">
                 Duas trajetórias que unem visão humana, experiência empresarial
                 e compromisso com a saúde no trabalho.
@@ -212,17 +220,20 @@ export default function QuemSomos() {
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Luciana do Prado
                     </h3>
+
                     <p className="mt-1 text-sm font-bold text-[#ad8d4d]">
                       Sócia-Fundadora e Psicóloga
                     </p>
                   </div>
 
                   <p className="mt-5 text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                    Psicóloga com atuação voltada à saúde mental e ao
-                    desenvolvimento humano. Na Essência, contribui com o olhar
-                    técnico da Psicologia na construção de diagnósticos, ações
-                    preventivas, treinamentos e soluções para empresas e
-                    colaboradores.
+                    Bacharel em Psicologia, pós-graduada em Gestão de Recursos
+                    Humanos e Psicologia do Trabalho e pós-graduanda em
+                    Psicopatologia. Especialista em Terapia
+                    Cognitivo-Comportamental (TCC) e Suicidologia. Na Essência,
+                    contribui com seu olhar técnico na construção de
+                    diagnósticos, ações preventivas, treinamentos e soluções
+                    voltadas às empresas e aos colaboradores.
                   </p>
 
                   <div className="mt-6 flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-[#155b38]">
@@ -249,6 +260,7 @@ export default function QuemSomos() {
                     <h3 className="font-heading text-2xl font-bold text-[#0f2d22]">
                       Dayse Baltazar
                     </h3>
+
                     <p className="mt-1 text-sm font-bold text-[#ad8d4d]">
                       Consultora Jurídica | Compliance Trabalhista e NR-1
                     </p>
@@ -281,9 +293,11 @@ export default function QuemSomos() {
                   <BriefcaseBusiness size={16} />
                   Nosso diferencial
                 </div>
+
                 <h2 className="mt-4 font-heading text-3xl font-bold leading-tight md:text-5xl">
                   Diferentes experiências. Uma atuação integrada.
                 </h2>
+
                 <p className="mt-4 text-sm leading-6 text-white/70 md:text-base md:leading-7">
                   Essa combinação permite compreender as necessidades da
                   empresa e das pessoas para construir soluções mais completas.
@@ -301,6 +315,7 @@ export default function QuemSomos() {
                         size={17}
                         className="shrink-0 text-[#e3c477]"
                       />
+
                       <span className="text-xs font-semibold leading-5 text-white/85 md:text-sm">
                         {diferencial}
                       </span>
@@ -326,4 +341,3 @@ export default function QuemSomos() {
     </div>
   );
 }
-
