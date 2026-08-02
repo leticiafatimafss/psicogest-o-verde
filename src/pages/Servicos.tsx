@@ -10,6 +10,7 @@ import {
   ClipboardCheck,
   GraduationCap,
   HeartHandshake,
+  Lightbulb,
   Megaphone,
   MessagesSquare,
   ShieldCheck,
@@ -30,8 +31,7 @@ const servicos = [
     titulo: "Gestão de Riscos Psicossociais e NR-1",
     resumo:
       "Identificamos riscos, definimos prioridades e estruturamos um plano de ação aplicável à realidade da empresa.",
-    ideal:
-      "Empresas que precisam mapear riscos e avançar com segurança na NR-1.",
+    ideal: "Empresas que precisam mapear riscos e avançar com segurança na NR-1.",
     entregas: [
       "Diagnóstico por setores e grupos",
       "Dashboards e classificação dos riscos",
@@ -117,21 +117,20 @@ const servicos = [
   },
   {
     numero: "06",
-    categoria: "Cuidar, acolher e prevenir",
-    titulo: "Saúde Mental, Bem-Estar e Apoio Psicológico",
+    categoria: "Cuidar e prevenir",
+    titulo: "Programas de Saúde Mental e Bem-Estar",
     resumo:
-      "Desenvolvemos programas contínuos de prevenção e promoção da saúde emocional, com ações de bem-estar, psicoterapia e atendimento psicológico para os colaboradores.",
+      "Desenvolvemos jornadas contínuas de prevenção e promoção da saúde emocional, alinhadas às necessidades da organização.",
     ideal:
-      "Empresas que desejam oferecer apoio psicológico e construir uma cultura permanente de cuidado, acolhimento e prevenção.",
+      "Empresas que desejam construir uma cultura permanente de cuidado e prevenção.",
     entregas: [
-      "Psicoterapia e atendimento psicológico",
       "Programas preventivos personalizados",
       "Calendário de ações e conteúdos",
       "Eventos e iniciativas de bem-estar",
     ],
     beneficio:
-      "Acolhimento psicológico, cuidado contínuo e fortalecimento da saúde emocional e da cultura organizacional.",
-    chamada: "Quero conhecer as soluções",
+      "Cuidado contínuo, fortalecimento da cultura e ações com propósito.",
+    chamada: "Quero conhecer os programas",
     Icone: HeartHandshake,
   },
 ];
@@ -160,12 +159,6 @@ const comparacao = [
     solucao: "Palestras e Campanhas",
     resultado: "Conscientização e engajamento",
     Icone: MessagesSquare,
-  },
-  {
-    necessidade: "Oferecer cuidado e apoio emocional",
-    solucao: "Saúde Mental e Apoio Psicológico",
-    resultado: "Acolhimento, prevenção e cuidado contínuo",
-    Icone: HeartHandshake,
   },
 ];
 
@@ -233,7 +226,6 @@ export default function Servicos() {
               <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#ad8d4d] md:text-xs">
                 Por onde começar?
               </span>
-
               <h2 className="mt-3 font-heading text-2xl font-bold leading-tight text-[#0f2d22] md:text-4xl">
                 Primeiro entendemos o momento da sua empresa.
               </h2>
@@ -242,9 +234,8 @@ export default function Servicos() {
             <div className="border-t border-[#155b38]/10 pt-5 md:border-l md:border-t-0 md:pl-10 md:pt-0">
               <p className="text-sm leading-6 text-slate-600 md:text-base md:leading-7">
                 Seja para atender à NR-1, implantar um plano de ação, preparar
-                lideranças, engajar equipes ou oferecer apoio psicológico,
-                indicamos uma solução coerente com a necessidade e o resultado
-                esperado.
+                lideranças ou engajar equipes, indicamos uma solução coerente
+                com a necessidade e o resultado esperado.
               </p>
             </div>
           </div>
@@ -260,18 +251,16 @@ export default function Servicos() {
               <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#ad8d4d]">
                 Nossos serviços
               </span>
-
               <h2 className="mt-3 font-heading text-3xl font-bold text-[#0f2d22] md:text-5xl">
                 Encontre a solução para o seu desafio
               </h2>
-
               <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-slate-600 md:text-lg md:leading-8">
                 Conheça as diferenças, as entregas e o principal benefício de
                 cada serviço.
               </p>
             </div>
 
-            {/* MOBILE */}
+            {/* Mobile: cards com conteúdo essencial */}
             <div className="mt-6 space-y-2.5 md:hidden">
               {servicos.map(
                 ({
@@ -300,7 +289,6 @@ export default function Servicos() {
                         <span className="text-[8px] font-bold uppercase tracking-[0.14em] text-[#ad8d4d]">
                           {categoria}
                         </span>
-
                         <h3 className="mt-0.5 text-sm font-bold leading-tight text-[#0f2d22]">
                           {titulo}
                         </h3>
@@ -342,7 +330,7 @@ export default function Servicos() {
               )}
             </div>
 
-            {/* DESKTOP */}
+            {/* Desktop: cards comerciais completos */}
             <div className="mt-12 hidden grid-cols-2 gap-5 md:grid">
               {servicos.map(
                 ({
@@ -378,11 +366,9 @@ export default function Servicos() {
                     <span className="mt-6 block text-[10px] font-bold uppercase tracking-[0.18em] text-[#ad8d4d]">
                       {numero} · {categoria}
                     </span>
-
                     <h3 className="mt-2 max-w-lg font-heading text-2xl font-bold leading-tight text-[#0f2d22]">
                       {titulo}
                     </h3>
-
                     <p className="mt-3 text-sm leading-6 text-slate-600">
                       {resumo}
                     </p>
@@ -391,7 +377,6 @@ export default function Servicos() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#155b38]">
                         Ideal para
                       </span>
-
                       <p className="mt-1.5 text-sm leading-6 text-slate-600">
                         {ideal}
                       </p>
@@ -406,7 +391,6 @@ export default function Servicos() {
                           <div className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#c7a56a]/20 text-[#8d6d2f]">
                             <Check size={13} strokeWidth={3} />
                           </div>
-
                           {entrega}
                         </div>
                       ))}
@@ -416,7 +400,6 @@ export default function Servicos() {
                       <span className="text-[10px] font-bold uppercase tracking-[0.15em] text-[#ad8d4d]">
                         Benefício principal
                       </span>
-
                       <p className="mt-1.5 text-sm font-semibold leading-6 text-[#0f2d22]">
                         {beneficio}
                       </p>
@@ -444,11 +427,9 @@ export default function Servicos() {
                 <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#d9b969]">
                   Escolha com clareza
                 </span>
-
                 <h2 className="mt-3 font-heading text-3xl font-bold leading-tight md:text-5xl">
                   Qual é o momento da sua empresa?
                 </h2>
-
                 <p className="mt-4 text-sm leading-6 text-white/65 md:text-base md:leading-7">
                   Veja qual solução atende melhor à necessidade atual. Quando
                   necessário, combinamos diferentes serviços no mesmo projeto.
@@ -465,25 +446,19 @@ export default function Servicos() {
                       <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#c7a56a]/15 text-[#e3c477]">
                         <Icone size={19} />
                       </div>
-
                       <div>
                         <span className="text-[9px] font-bold uppercase tracking-[0.15em] text-white/45">
                           Se a empresa precisa
                         </span>
-
                         <p className="mt-1 text-sm font-semibold text-white">
                           {necessidade}
                         </p>
                       </div>
-
                       <div className="border-t border-white/10 pt-3 sm:border-l sm:border-t-0 sm:pl-5 sm:pt-0">
                         <p className="text-sm font-bold text-[#e3c477]">
                           {solucao}
                         </p>
-
-                        <p className="mt-1 text-xs text-white/55">
-                          {resultado}
-                        </p>
+                        <p className="mt-1 text-xs text-white/55">{resultado}</p>
                       </div>
                     </article>
                   ),
@@ -502,11 +477,9 @@ export default function Servicos() {
                   <TrendingUp size={16} />
                   Uma solução para a sua realidade
                 </div>
-
                 <h2 className="mt-3 font-heading text-2xl font-bold leading-tight text-[#0f2d22] md:mt-4 md:text-5xl">
                   Não sabe qual serviço escolher?
                 </h2>
-
                 <p className="mt-3 text-sm leading-6 text-slate-600 md:mt-4 md:text-base md:leading-7">
                   Conte o momento da sua empresa. Nós analisamos a necessidade e
                   indicamos o melhor ponto de partida, sem soluções genéricas.
@@ -526,7 +499,6 @@ export default function Servicos() {
                       className="rounded-xl border border-[#155b38]/10 bg-[#155b38]/[0.05] p-3.5"
                     >
                       <Target size={17} className="text-[#ad8d4d]" />
-
                       <p className="mt-2 text-xs font-bold leading-5 text-[#0f2d22] md:text-sm">
                         {beneficio}
                       </p>
