@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import {
   Mail,
   Phone,
@@ -63,10 +64,8 @@ const ContactSection = () => {
       <div className="absolute bottom-0 right-0 h-72 w-72 translate-x-1/3 translate-y-1/3 rounded-full bg-green-light" />
 
       <div ref={ref} className="container relative">
-
         {/* CABEÇALHO */}
         <div className="mx-auto mb-7 max-w-3xl text-center md:mb-16">
-
           <span className="reveal text-[10px] font-semibold uppercase tracking-[0.22em] text-accent md:text-xs md:tracking-[0.25em]">
             Fale com a Essência Psi
           </span>
@@ -79,10 +78,9 @@ const ContactSection = () => {
             </span>
           </h2>
 
-          {/* TÍTULO DESKTOP — ORIGINAL */}
+          {/* TÍTULO DESKTOP */}
           <h2 className="reveal reveal-delay-1 mt-4 hidden font-heading font-bold leading-tight text-foreground md:block md:text-4xl lg:text-[2.75rem]">
             Dê o primeiro passo para reduzir riscos e fortalecer a
-
             <span className="gold-gradient-text">
               {" "}conformidade da sua empresa
             </span>
@@ -93,20 +91,16 @@ const ContactSection = () => {
             Preencha os dados e conte como podemos ajudar.
           </p>
 
-          {/* DESCRIÇÃO DESKTOP — ORIGINAL */}
+          {/* DESCRIÇÃO DESKTOP */}
           <p className="reveal reveal-delay-2 mx-auto mt-5 hidden max-w-2xl text-lg leading-relaxed text-muted-foreground md:block">
             Entenda como estruturar a adequação à NR-01 e a gestão dos riscos
             psicossociais com mais clareza, método e respaldo técnico.
           </p>
-
         </div>
 
         <div className="reveal reveal-delay-2 mx-auto grid max-w-5xl gap-6 lg:grid-cols-5 lg:gap-10">
-
-          {/* INFORMAÇÕES DE CONTATO
-              No mobile aparecem depois do formulário */}
+          {/* INFORMAÇÕES DE CONTATO */}
           <div className="order-2 space-y-4 md:space-y-6 lg:order-1 lg:col-span-2">
-
             {/* E-mail */}
             <a
               href="mailto:contato@essenciapsicossocial.com.br"
@@ -117,15 +111,13 @@ const ContactSection = () => {
               </div>
 
               <div className="min-w-0">
-
                 <h4 className="mb-0.5 text-sm font-semibold text-foreground">
-                  Email
+                  E-mail
                 </h4>
 
                 <p className="break-all text-xs text-muted-foreground md:text-sm">
                   contato@essenciapsicossocial.com.br
                 </p>
-
               </div>
             </a>
 
@@ -139,7 +131,6 @@ const ContactSection = () => {
               </div>
 
               <div>
-
                 <h4 className="mb-0.5 text-sm font-semibold text-foreground">
                   Telefone
                 </h4>
@@ -147,34 +138,67 @@ const ContactSection = () => {
                 <p className="text-xs text-muted-foreground md:text-sm">
                   +55 11 93919-3685
                 </p>
-
               </div>
             </a>
 
-            {/* Localização — SOMENTE TABLET E DESKTOP */}
-            <div className="hidden items-start gap-4 md:flex">
-
-              <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-green-light">
+            {/* Unidade São Paulo */}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Av.+Paulista,+2073,+Cerqueira+César,+São+Paulo,+SP,+01311-940"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 rounded-xl border border-border/50 bg-white/70 p-3.5 transition-colors hover:border-accent/30 md:gap-4 md:border-0 md:bg-transparent md:p-0"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-light md:h-11 md:w-11">
                 <MapPin className="text-primary" size={18} />
               </div>
 
               <div>
-
                 <h4 className="mb-0.5 text-sm font-semibold text-foreground">
-                  Localização
+                  Unidade São Paulo
                 </h4>
 
-                <p className="text-sm text-muted-foreground">
-                  São Paulo, SP — Brasil
+                <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">
+                  Condomínio Conjunto Nacional
+                  <br />
+                  Av. Paulista, 2073 – 17º andar
+                  <br />
+                  Cerqueira César, São Paulo – SP
+                  <br />
+                  CEP 01311-940
                 </p>
+              </div>
+            </a>
 
+            {/* Unidade São Bernardo do Campo */}
+            <a
+              href="https://www.google.com/maps/search/?api=1&query=Rua+José+Versolato,+111,+Conjunto+1101,+Centro,+São+Bernardo+do+Campo,+SP,+09750-730"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-start gap-3 rounded-xl border border-border/50 bg-white/70 p-3.5 transition-colors hover:border-accent/30 md:gap-4 md:border-0 md:bg-transparent md:p-0"
+            >
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-green-light md:h-11 md:w-11">
+                <MapPin className="text-primary" size={18} />
               </div>
 
-            </div>
+              <div>
+                <h4 className="mb-0.5 text-sm font-semibold text-foreground">
+                  Unidade São Bernardo do Campo
+                </h4>
 
-            {/* Diagnóstico inicial — SOMENTE TABLET E DESKTOP */}
+                <p className="text-xs leading-relaxed text-muted-foreground md:text-sm">
+                  Rua José Versolato, 111
+                  <br />
+                  Conjunto 1101 – Centro
+                  <br />
+                  São Bernardo do Campo – SP
+                  <br />
+                  CEP 09750-730
+                </p>
+              </div>
+            </a>
+
+            {/* Diagnóstico inicial */}
             <div className="mt-4 hidden rounded-2xl border border-accent/10 bg-gold-muted p-5 md:block">
-
               <p className="mb-1 flex items-center gap-2 text-sm font-medium text-foreground">
                 <ArrowRight size={14} className="text-accent" />
                 Diagnóstico inicial
@@ -184,18 +208,13 @@ const ContactSection = () => {
                 Converse com a gente e entenda o nível de exposição da sua
                 empresa.
               </p>
-
             </div>
-
           </div>
 
-          {/* FORMULÁRIO
-              No mobile aparece primeiro */}
+          {/* FORMULÁRIO */}
           <div className="order-1 lg:order-2 lg:col-span-3">
-
             {submitted ? (
               <div className="rounded-2xl bg-green-light p-8 text-center md:p-12">
-
                 <div className="mx-auto mb-4 flex h-14 w-14 items-center justify-center rounded-full bg-primary/10 md:h-16 md:w-16">
                   <Send className="text-primary" size={26} />
                 </div>
@@ -207,14 +226,12 @@ const ContactSection = () => {
                 <p className="text-sm leading-relaxed text-muted-foreground md:text-base">
                   Em breve entraremos em contato para entender sua necessidade.
                 </p>
-
               </div>
             ) : (
               <form
                 onSubmit={handleSubmit}
                 className="space-y-4 rounded-2xl border border-border/50 bg-background p-5 shadow-sm md:space-y-5 md:p-8"
               >
-
                 {[
                   {
                     label: "Nome *",
@@ -236,7 +253,6 @@ const ContactSection = () => {
                   },
                 ].map((field) => (
                   <div key={field.label}>
-
                     <label className="mb-1.5 block text-sm font-medium text-foreground">
                       {field.label}
                     </label>
@@ -247,13 +263,11 @@ const ContactSection = () => {
                       className="w-full rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                       placeholder={field.placeholder}
                     />
-
                   </div>
                 ))}
 
                 {/* MENSAGEM — SOMENTE TABLET E DESKTOP */}
                 <div className="hidden md:block">
-
                   <label className="mb-1.5 block text-sm font-medium text-foreground">
                     Mensagem
                   </label>
@@ -263,7 +277,6 @@ const ContactSection = () => {
                     className="w-full resize-none rounded-xl border border-input bg-background px-4 py-3 text-sm text-foreground transition-all placeholder:text-muted-foreground/70 focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/20"
                     placeholder="Conte brevemente o cenário da sua empresa ou a sua necessidade."
                   />
-
                 </div>
 
                 <button
@@ -278,14 +291,10 @@ const ContactSection = () => {
                     Solicitar diagnóstico
                   </span>
                 </button>
-
               </form>
             )}
-
           </div>
-
         </div>
-
       </div>
     </section>
   );
