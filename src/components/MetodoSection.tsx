@@ -80,7 +80,6 @@ function EtapaCard({ etapa }: { etapa: Etapa }) {
 
   return (
     <article className="group relative h-full min-h-[185px] overflow-hidden rounded-[1.75rem] border border-white/10 bg-white p-6 shadow-[0_16px_45px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_24px_65px_rgba(0,0,0,0.28)] md:p-7">
-
       {/* Círculo decorativo */}
       <div className="pointer-events-none absolute -right-12 -top-12 h-32 w-32 rounded-full bg-[#155B38]/5 transition-all duration-500 group-hover:scale-150 group-hover:bg-[#C7A56A]/10" />
 
@@ -108,7 +107,6 @@ function EtapaCard({ etapa }: { etapa: Etapa }) {
 
       {/* Linha inferior */}
       <div className="absolute bottom-0 left-0 h-[3px] w-0 bg-gradient-to-r from-[#C7A56A] to-[#E6C98B] transition-all duration-500 group-hover:w-full" />
-
     </article>
   );
 }
@@ -125,10 +123,8 @@ function MobileEtapaCard({
 
   return (
     <article className="relative flex items-start gap-4">
-
       {/* Número e conexão */}
       <div className="relative flex shrink-0 flex-col items-center">
-
         <div className="relative z-10 flex h-11 w-11 items-center justify-center rounded-2xl border border-[#C7A56A]/25 bg-[#C7A56A]/10 text-[#E2C47C]">
           <Icone size={20} strokeWidth={1.8} />
         </div>
@@ -136,12 +132,10 @@ function MobileEtapaCard({
         {!ultima && (
           <div className="mt-2 h-10 w-px bg-gradient-to-b from-[#C7A56A]/60 to-white/10" />
         )}
-
       </div>
 
       {/* Conteúdo */}
       <div className="min-w-0 flex-1 pb-5">
-
         <span className="text-[10px] font-bold uppercase tracking-[0.18em] text-[#C7A56A]">
           Etapa {numero}
         </span>
@@ -153,13 +147,12 @@ function MobileEtapaCard({
         <p className="mt-1.5 text-sm leading-relaxed text-white/65">
           {descricao}
         </p>
-
       </div>
-
     </article>
   );
 }
 
+/* SETAS HORIZONTAIS — DESKTOP */
 function DesktopArrow() {
   return (
     <div
@@ -169,21 +162,6 @@ function DesktopArrow() {
       <div className="h-px w-8 bg-white/30 xl:w-12" />
 
       <div className="h-0 w-0 border-y-[5px] border-l-[8px] border-y-transparent border-l-[#C7A56A]" />
-    </div>
-  );
-}
-
-function DesktopVerticalArrow() {
-  return (
-    <div
-      aria-hidden="true"
-      className="hidden justify-end pr-[15%] lg:flex"
-    >
-      <div className="flex flex-col items-center py-5">
-        <div className="h-9 w-px bg-white/30" />
-
-        <div className="h-0 w-0 border-x-[5px] border-t-[8px] border-x-transparent border-t-[#C7A56A]" />
-      </div>
     </div>
   );
 }
@@ -204,10 +182,8 @@ export default function MetodoSection() {
       <div className="pointer-events-none absolute left-1/2 top-0 h-px w-[80%] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
       <div ref={ref} className="relative mx-auto max-w-7xl">
-
         {/* CABEÇALHO */}
         <div className="mx-auto mb-8 max-w-3xl text-center md:mb-16">
-
           <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-2 text-[10px] font-semibold uppercase tracking-[0.16em] text-white backdrop-blur-md md:text-xs md:tracking-[0.18em]">
             <span className="h-1.5 w-1.5 rounded-full bg-[#C7A56A]" />
             Método Essência
@@ -233,12 +209,10 @@ export default function MetodoSection() {
             Um processo simples, estruturado e contínuo para fortalecer a
             gestão psicossocial da sua empresa.
           </p>
-
         </div>
 
         {/* MOBILE — 3 ETAPAS COMPACTAS */}
         <div className="reveal rounded-[24px] border border-white/10 bg-white/[0.06] px-5 py-6 shadow-[0_18px_55px_rgba(0,0,0,0.16)] backdrop-blur-sm md:hidden">
-
           {etapasMobile.map((etapa, index) => (
             <MobileEtapaCard
               key={etapa.numero}
@@ -253,14 +227,12 @@ export default function MetodoSection() {
           >
             Falar com um especialista
           </a>
-
         </div>
 
         {/* DESKTOP */}
         <div className="hidden lg:block">
-
+          {/* PRIMEIRA FILEIRA */}
           <div className="reveal reveal-delay-1 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-4 xl:gap-6">
-
             <EtapaCard etapa={etapas[0]} />
             <DesktopArrow />
 
@@ -268,13 +240,10 @@ export default function MetodoSection() {
             <DesktopArrow />
 
             <EtapaCard etapa={etapas[2]} />
-
           </div>
 
-          <DesktopVerticalArrow />
-
-          <div className="reveal reveal-delay-2 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-4 xl:gap-6">
-
+          {/* SEGUNDA FILEIRA — SEM SETA VERTICAL */}
+          <div className="reveal reveal-delay-2 mt-20 grid grid-cols-[1fr_auto_1fr_auto_1fr] items-stretch gap-4 xl:gap-6">
             <EtapaCard etapa={etapas[3]} />
             <DesktopArrow />
 
@@ -282,14 +251,11 @@ export default function MetodoSection() {
             <DesktopArrow />
 
             <EtapaCard etapa={etapas[5]} />
-
           </div>
-
         </div>
 
         {/* TABLET */}
         <div className="hidden grid-cols-2 gap-5 md:grid lg:hidden">
-
           {etapas.map((etapa, index) => (
             <div
               key={etapa.numero}
@@ -304,9 +270,7 @@ export default function MetodoSection() {
               <EtapaCard etapa={etapa} />
             </div>
           ))}
-
         </div>
-
       </div>
     </section>
   );
