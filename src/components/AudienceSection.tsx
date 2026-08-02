@@ -6,9 +6,9 @@ export default function AudienceSection() {
 
   const segmentos = [
     "Indústrias",
-    "Logística",
+    "Transporte",
     "Hospitais",
-    "Escritórios",
+    "Segurança do Trabalho",
     "Comércio",
     "Tecnologia",
   ];
@@ -16,16 +16,12 @@ export default function AudienceSection() {
   return (
     <section className="bg-white px-5 py-10 md:px-6 md:py-20">
       <div ref={ref} className="mx-auto max-w-6xl">
-
         {/* CABEÇALHO */}
         <div className="mb-7 text-center md:mb-14">
-
           {/* TÍTULO MOBILE */}
           <h2 className="reveal reveal-delay-1 font-heading text-[1.8rem] font-bold leading-[1.12] text-black md:hidden">
             Soluções para o
-            <span className="gold-gradient-text block">
-              seu segmento
-            </span>
+            <span className="gold-gradient-text block">seu segmento</span>
           </h2>
 
           {/* TÍTULO DESKTOP */}
@@ -45,12 +41,10 @@ export default function AudienceSection() {
             setores, garantindo conformidade com a NR-01 e fortalecendo a saúde
             psicossocial no ambiente de trabalho.
           </p>
-
         </div>
 
         {/* SEGMENTOS */}
         <div className="grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-6 lg:grid-cols-3">
-
           {segmentos.map((segmento, i) => (
             <div
               key={segmento}
@@ -76,12 +70,10 @@ export default function AudienceSection() {
               </span>
             </div>
           ))}
-
         </div>
 
         {/* BOTÃO */}
         <div className="reveal reveal-delay-3 mt-7 flex justify-center md:mt-12">
-
           <a
             href="/servicos"
             className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 text-sm font-semibold text-primary-foreground transition-all duration-300 hover:opacity-90 sm:w-auto md:px-7 md:py-3 md:text-base"
@@ -94,10 +86,8 @@ export default function AudienceSection() {
 
             <ArrowRight size={17} />
           </a>
-
         </div>
-
       </div>
     </section>
   );
-}
+}s
