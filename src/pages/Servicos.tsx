@@ -45,20 +45,21 @@ const servicos = [
   },
   {
     numero: "02",
-    categoria: "Orientar e acompanhar",
-    titulo: "Consultoria Psicossocial",
+    categoria: "Orientar, proteger e acompanhar",
+    titulo: "Consultoria Psicossocial e Compliance",
     resumo:
-      "Apoiamos diretoria, RH e SESMT na implantação das melhorias e na condução das demandas psicossociais.",
+      "Apoiamos diretoria, RH e SESMT na condução das demandas psicossociais e na estruturação de práticas de ética, escuta e prevenção.",
     ideal:
-      "Empresas que precisam de apoio especializado nas decisões e na execução.",
+      "Empresas que precisam de apoio especializado para conduzir situações sensíveis, estruturar processos e tomar decisões com mais segurança.",
     entregas: [
       "Reuniões técnicas e estratégicas",
-      "Acompanhamento do plano de ação",
-      "Indicadores, evidências e recomendações",
+      "Canal de escuta e denúncias",
+      "Código de ética e prevenção ao assédio",
+      "Fluxos, indicadores e recomendações",
     ],
     beneficio:
-      "Decisões mais seguras e continuidade após o diagnóstico.",
-    chamada: "Quero apoio na implantação",
+      "Mais segurança nas decisões, proteção das pessoas e fortalecimento da governança organizacional.",
+    chamada: "Quero conhecer essa solução",
     Icone: BriefcaseBusiness,
   },
   {
@@ -144,9 +145,9 @@ const comparacao = [
     Icone: BarChart3,
   },
   {
-    necessidade: "Executar e acompanhar melhorias",
-    solucao: "Consultoria Psicossocial",
-    resultado: "Suporte técnico contínuo",
+    necessidade: "Estruturar processos de ética e proteção",
+    solucao: "Consultoria Psicossocial e Compliance",
+    resultado: "Escuta, orientação e governança",
     Icone: ClipboardCheck,
   },
   {
@@ -241,10 +242,10 @@ export default function Servicos() {
 
             <div className="border-t border-[#155b38]/10 pt-5 md:border-l md:border-t-0 md:pl-10 md:pt-0">
               <p className="text-sm leading-6 text-slate-600 md:text-base md:leading-7">
-                Seja para atender à NR-1, implantar um plano de ação, preparar
-                lideranças, engajar equipes ou oferecer apoio psicológico,
-                indicamos uma solução coerente com a necessidade e o resultado
-                esperado.
+                Seja para atender à NR-1, implantar um plano de ação, estruturar
+                práticas de compliance, preparar lideranças, engajar equipes ou
+                oferecer apoio psicológico, indicamos uma solução coerente com a
+                necessidade e o resultado esperado.
               </p>
             </div>
           </div>
